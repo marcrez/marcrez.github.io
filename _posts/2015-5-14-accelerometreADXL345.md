@@ -1,11 +1,11 @@
---
+---
 layout: default
 title: RaspberryPi : Faire fonctionner l'accéléromètre ADXL345
 date: 2015-05-14 13:30
 tags: Raspberry, Python
 permalink: accelerometre-adxl345-sous-raspberry-pi
 category: Raspberry
---
+---
 
 # Connexions
 

@@ -1,10 +1,11 @@
---
+---
+layout: default
 title: RaspberryPi : Compteur avec un afficheur 7 segments
 date: 2015-05-15 17:40
 tags: Raspberry, Python
 permalink: afficheur-7segments-sous-raspberry-pi
 category: Raspberry
---
+---
 
 
 # Schémas de branchement
