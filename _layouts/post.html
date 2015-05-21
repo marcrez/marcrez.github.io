@@ -9,8 +9,16 @@ layout: default
     {{ content }}
   </div>
 
+  <div class="category">
+    Catégorie(s) {{ page.categories | array_to_sentence_string }}
+  </div>
+
+  <div class="tags">
+   Tag(s) {{ page.tags | array_to_sentence_string }}
+  </div>
+
   <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
+    Rédigé le {{ page.date | date: "%B %e, %Y" }}
   </div>
 
   {% include disqus.html %}
