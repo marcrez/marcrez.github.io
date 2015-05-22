@@ -34,28 +34,23 @@ Sous Raspbian, il reste du travail à faire.
 1. Lancer la commande `sudo nano /etc/modules` pour ajouter au fichier
    `modules` les deux lignes suivantes 
    *(Ctrl+O puis Ctrl+X pour enregistrer puis quitter nano)*
-
    ```
    i2c-bcm2708 
    i2c-dev
    ```
-
 2. Si le fichier `/etc/modprobe.d/raspi-blacklist.conf` existe 
    (`ls /etc/modprobe.d/` pour vérifier),
    lancer la commande `sudo nano /etc/modprobe.d/raspi-blacklist.conf` 
    pour commenter avec un `#` les éventuelles
    lignes suivantes 
    *(Ctrl+O puis Ctrl+X pour enregistrer puis quitter nano)*
-   
    ```
    # blacklist spi-bcm2708
    # blacklist i2c-bcm2708
    ```
-
 3. Dans le fichier `/boot/config.txt`, si les deux lignes suivantes ne sont pas présentes,
    les ajouter en fin de fichier en lançant la commande `sudo nano /boot/config.txt`
    *(Ctrl+O puis Ctrl+X pour enregistrer puis quitter nano)*
-   
    ```
    dtparam=i2c1=on
    dtparam=i2c_arm=on
@@ -66,6 +61,7 @@ Pour plus de détails, voir https://learn.adafruit.com/adafruits-raspberry-pi-le
 
 ## Récupérer une librairie pour piloter le module
 
+*(Ctrl+O puis Ctrl+X pour enregistrer puis quitter nano)*
 Un projet qui fonctionne :
 https://github.com/pimoroni/adxl345-python/blob/master/adxl345.py
 
