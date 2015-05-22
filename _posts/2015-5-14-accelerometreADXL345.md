@@ -41,7 +41,7 @@ Sous Raspbian, il reste du travail à faire.
   i2c-bcm2708 
   i2c-dev
   ```
-- Si le fichier `/etc/modprobe.d/raspi-blacklist.conf` existe 
+- Si le fichier de blacklist existe
   (`ls /etc/modprobe.d/` pour vérifier),
    lancer la commande `sudo nano /etc/modprobe.d/raspi-blacklist.conf` 
    pour commenter avec un `#` les éventuelles
@@ -61,38 +61,123 @@ Sous Raspbian, il reste du travail à faire.
    dtparam=i2c_arm=on
    ```
 
+
 Pour plus de détails, voir https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c
 
 
-## Récupérer une librairie pour piloter le module
+## Une librairie pour piloter le module
 
-Un projet qui fonctionne :
-https://github.com/pimoroni/adxl345-python/blob/master/adxl345.py
-
-Mais on va utiliser celui proposé par AdaFruit
+On va utiliser celui proposé par AdaFruit
 
 ```
 $ wget https://raw.githubusercontent.com/adafruit/Adafruit-Raspberry-Pi-Python-Code/master/Adafruit_I2C/Adafruit_I2C.py
+$ wget https://raw.githubusercontent.com/adafruit/Adafruit-Raspberry-Pi-Python-Code/master/Adafruit_ADXL345/Adafruit_ADXL345.py
 ```
 
+Un autre projet qui fonctionne :
+https://github.com/pimoroni/adxl345-python/blob/master/adxl345.py
 
-## Montage
+
+## Premier montage
 
 Commençons par raccorder les pattes du module au Raspberry
 
-ADXL345 | Raspberry Pi
---------|-------------
-   GND  | GND
-  3.3V  | 3.3V
-  SCL0  | SCL
-  SDA0  | SDA
-    CS  | 3.3V
-   SDO  | GND
+   ADXL345 | Raspberry Pi
+----------:|:------------
+      GND  | GND
+  VCC3.3V  | 3.3V
+      SCL  | SCL
+      SDA  | SDA
+       CS  | 3.3V
+      SDO  | GND
 
-Maintenant, les quatre LEDs qui indiqueront la direction où le module penche.
+On verifie que la détection des périphériques i2c renvoie bien au moins une
+valeur. SI c'est bien le cas, on va pouvoir continuer, sinon, reprendre le
+premier paragraphe sur les installations et configurations
+
+```
+$ sudo i2cdetect -y 1
+```
+
+
+On va Maintenant vérifier que le module communique avec le Raspberry. En
+penchant le module, les valeurs sont modifiées.
+
+```
+$ sudo python Adafruit_ADXL345.py
+[5, -13, -258]
+[6, -15, -257]
+[5, -13, -255]
+```
+
+## Le niveau à bulle électronique
+
+On va raccorder les quatre LEDs sur les pin GPIO 12, 16, 20 et 21
+qui indiqueront en s'allumant la direction où le module penche.
 
 ![ADXL345]({{ site.baseurl }}/images/accelerometreADXL345/schema.png)
 
-
 # Code Python
+
+```python
+#!/usr/bin/env python
+
+from Adafruit_I2C import *
+from Adafruit_ADXL345 import *
+import RPi.GPIO as GPIO
+from time import sleep
+
+FREQ = 100 #Hz 
+RUNNING = True
+
+GPIO.setmode(GPIO.BOARD)
+
+fwd = 18 # GPIO24
+GPIO.setup(fwd, GPIO.OUT)
+FWD = GPIO.PWM(fwd, FREQ)
+FWD.start(0)
+
+bwd = 22 # GPIO25
+GPIO.setup(bwd, GPIO.OUT)
+BWD = GPIO.PWM(bwd, 100)
+BWD.start(0) 
+
+lft = 12 # GPIO18 
+GPIO.setup(lft, GPIO.OUT)
+LFT = GPIO.PWM(lft, 100) 
+LFT.start(0)
+
+rgt = 16 # GPIO23
+GPIO.setup(rgt, GPIO.OUT)
+RGT = GPIO.PWM(rgt, 100)
+RGT.start(0)
+
+accel = Adafruit_ADXL345()
+
+try:
+    while RUNNING:
+        print accel.read()
+        RGT.start(0)
+        FWD.start(0)
+        BWD.start(0)
+        LFT.start(0)
+        if (accel.read()[0]<-15):
+          RGT.ChangeDutyCycle(100)
+        if (accel.read()[1]<-23):
+          FWD.ChangeDutyCycle(100)
+        if (accel.read()[1]>5):
+          BWD.ChangeDutyCycle(100)
+        if (accel.read()[0]>10):
+          LFT.ChangeDutyCycle(100)
+        sleep(0.1) # Output is fun to watch if this is commented out
+
+except KeyboardInterrupt:
+    RUNNING = False
+    print("\nOn eteint la lumiere.")
+
+finally:
+    # Arrete et nettoie les broches pour les liberer
+    # en vue d'une prochaine utilisation.
+    GPIO.cleanup()
+```
 
