@@ -6,6 +6,9 @@ category: Raspberry
 ---
 
 
+![_config.yml]({{ site.baseurl }}/7segments/anim.gif)
+
+
 # Schémas de branchement
 
 ## branchements du 8 bit-shift register 74HC595N
