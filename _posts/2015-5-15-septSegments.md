@@ -12,7 +12,7 @@ category: Raspberry
 # Schémas de branchement
 
 ## branchements du 8 bit-shift register 74HC595N
-        _____
+            _____
      Q1 -1-|  7  |-16- Vcc      --> to 5V
      Q2 -2-|  4  |-15- Q0
      Q3 -3-|  H  |-14- Data     --> to GPIO 18
