@@ -10,6 +10,8 @@ Le module ADXL345 est un accéléromètre à trois axes.
 Dans cet article, nous allons voir comment l'utiliser pour construire un
 niveau à bulle éléctronique.
 
+![ADXL345]({{ site.baseurl }}/images/accelerometreADXL345/ADXL345.png)
+
 ## Installations et configurations
 
 Sous Raspbian, pour pouvoir communiquer avec le module ADXL345,
@@ -41,26 +43,25 @@ Sous Raspbian, il reste du travail à faire.
   ```
 - Si le fichier `/etc/modprobe.d/raspi-blacklist.conf` existe 
   (`ls /etc/modprobe.d/` pour vérifier),
-  lancer la commande `sudo nano /etc/modprobe.d/raspi-blacklist.conf` 
-  pour commenter avec un `#` les éventuelles
-  lignes suivantes 
-  *(Ctrl+O puis Ctrl+X pour enregistrer puis quitter nano)*
+   lancer la commande `sudo nano /etc/modprobe.d/raspi-blacklist.conf` 
+   pour commenter avec un `#` les éventuelles
+   lignes suivantes 
+   *(Ctrl+O puis Ctrl+X pour enregistrer puis quitter nano)*
 
-  ```
-  # blacklist spi-bcm2708
-  # blacklist i2c-bcm2708
-  ```
-- Dans le fichier `/boot/config.txt`, si les deux lignes suivantes ne sont pas présentes,
-  les ajouter en fin de fichier en lançant la commande `sudo nano /boot/config.txt`
-  *(Ctrl+O puis Ctrl+X pour enregistrer puis quitter nano)*
+   ```
+   # blacklist spi-bcm2708
+   # blacklist i2c-bcm2708
+   ```
+3. Dans le fichier `/boot/config.txt`, si les deux lignes suivantes ne sont pas présentes,
+   les ajouter en fin de fichier en lançant la commande `sudo nano /boot/config.txt`
+   *(Ctrl+O puis Ctrl+X pour enregistrer puis quitter nano)*
 
-  ```
-  dtparam=i2c1=on
-  dtparam=i2c_arm=on
-  ```
+   ```
+   dtparam=i2c1=on
+   dtparam=i2c_arm=on
+   ```
 
-Pour plus de détails, voir\
-https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c
+Pour plus de détails, voir https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c
 
 
 ## Récupérer une librairie pour piloter le module
@@ -90,7 +91,8 @@ ADXL345 | Raspberry Pi
 
 Maintenant, les quatre LEDs qui indiqueront la direction où le module penche.
 
-![ADXL345]({{ site.baseurl }}/images/accelerometreADXL345/ADXL345.png)
+![ADXL345]({{ site.baseurl }}/images/accelerometreADXL345/schema.png)
+
 
 # Code Python
 
