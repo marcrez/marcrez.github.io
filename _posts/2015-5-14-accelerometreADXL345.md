@@ -1,4 +1,5 @@
 ---
+title: Acceleromètre ADXL345 sous Raspberry Pi
 layout: post
 date: 2015-05-14 13:30:00
 tags: [Raspberry, Python]
@@ -9,7 +10,7 @@ Le module ADXL345 est un accéléromètre à trois axes.
 Dans cet article, nous allons voir comment l'utiliser pour construire un
 niveau à bulle éléctronique.
 
-# Installations et configurations
+## Installations et configurations
 
 Sous Raspbian, pour pouvoir communiquer avec le module ADXL345,
 il faut installer des outils complémentaires
@@ -151,7 +152,7 @@ if __name__ == '__main__':
         sleep(1) # Output is fun to watch if this is commented out
 ```
 
-# Montage
+## Montage
 
 Commençons par raccorder les pattes du module au Raspberry
 
