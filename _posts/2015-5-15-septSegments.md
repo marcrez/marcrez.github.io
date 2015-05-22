@@ -6,8 +6,8 @@ category: Raspberry
 ---
 
 
-![_config.yml]({{ site.baseurl }}/7segments/anim.gif)
 
+![_config.yml]({{ site.baseurl }}/images/7segments/anim.gif)
 
 # Schémas de branchement
 
