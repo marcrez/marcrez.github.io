@@ -166,7 +166,7 @@ ADXL345 | Raspberry Pi
 
 Maintenant, les quatre LEDs qui indiqueront la direction où le module penche.
 
-![ADXL345]({{ site.baseurl }}/images/7segments/anim.gif)
+![ADXL345]({{ site.baseurl }}/images/accelerometreADXL345/ADXL345.png)
 
 # Code Python
 
