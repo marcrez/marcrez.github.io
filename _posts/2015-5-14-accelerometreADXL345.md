@@ -15,7 +15,7 @@ niveau à bulle éléctronique.
 Sous Raspbian, pour pouvoir communiquer avec le module ADXL345,
 il faut installer des outils complémentaires
 
-```bash
+```
 $ sudo apt-get update
 $ sudo apt-get install python-smbus i2c-tools
 ```
