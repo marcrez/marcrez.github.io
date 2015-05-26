@@ -52,9 +52,8 @@ Explications ligne par ligne
    de parler de la broche nommée GPIO21 plutôt que de la broche numéro 40
    de la carte. Choisir BCM plutôt que BOARD permet permet juste de se
    simplifier le repérage.
-3. On déclare la broche GPIO21 comme sortie. Elle délivrera 
-
-   - soit un signal haut (un 1, c'est à dire une tension de +3,3V) 
+3. On déclare la broche GPIO21 comme sortie. Elle délivrera    
+   - soit un signal haut (un 1, c'est à dire une tension de +3,3V)    
    - soit un signal bas (un 0, c'est à dire 0V)
 4. On modifie l'état de sortie de la broche GPIO21, qui passe à 1. Cela devrait
    envoyer un courant de 3,3V dans le circuit de la LED qui va s'allumer.
