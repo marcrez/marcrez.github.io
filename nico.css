@@ -7,7 +7,9 @@ margin: 20px;
 }
 
 .lineno {
-color: #333;
+color: #aaa;
+font-size: x-small;
+font-style: italic;
 }
 
 td, th {
