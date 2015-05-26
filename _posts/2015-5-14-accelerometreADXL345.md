@@ -1,5 +1,5 @@
 ---
-title: Acceleromètre ADXL345 sous RaspberryPi
+title: Accéleromètre ADXL345 sous RaspberryPi
 layout: post
 date: 2015-05-14 13:30:00
 tags: [Raspberry, Python]
@@ -122,58 +122,55 @@ qui indiqueront en s'allumant la direction où le module penche.
 ```python
 #!/usr/bin/env python
 
+from time import sleep
+import RPi.GPIO as GPIO
 from Adafruit_I2C import *
 from Adafruit_ADXL345 import *
-import RPi.GPIO as GPIO
-from time import sleep
 
 FREQ = 100 #Hz 
 RUNNING = True
 
-GPIO.setmode(GPIO.BOARD)
+GPIO.setmode(GPIO.BCM)
+i
 
-fwd = 18 # GPIO24
+fwd = 21
 GPIO.setup(fwd, GPIO.OUT)
 FWD = GPIO.PWM(fwd, FREQ)
-FWD.start(0)
 
-bwd = 22 # GPIO25
+bwd = 16
 GPIO.setup(bwd, GPIO.OUT)
 BWD = GPIO.PWM(bwd, 100)
-BWD.start(0) 
 
-lft = 12 # GPIO18 
+lft = 12
 GPIO.setup(lft, GPIO.OUT)
 LFT = GPIO.PWM(lft, 100) 
-LFT.start(0)
 
-rgt = 16 # GPIO23
+rgt = 20
 GPIO.setup(rgt, GPIO.OUT)
 RGT = GPIO.PWM(rgt, 100)
-RGT.start(0)
 
 accel = Adafruit_ADXL345()
 
 try:
     while RUNNING:
+        sleep(0.1) 
         print accel.read()
         RGT.start(0)
         FWD.start(0)
         BWD.start(0)
         LFT.start(0)
-        if (accel.read()[0]<-15):
+        if (accel.read()[0]<-5):
           RGT.ChangeDutyCycle(100)
-        if (accel.read()[1]<-23):
+        if (accel.read()[1]<-5):
           FWD.ChangeDutyCycle(100)
         if (accel.read()[1]>5):
           BWD.ChangeDutyCycle(100)
-        if (accel.read()[0]>10):
+        if (accel.read()[0]>5):
           LFT.ChangeDutyCycle(100)
-        sleep(0.1) # Output is fun to watch if this is commented out
 
 except KeyboardInterrupt:
     RUNNING = False
-    print("\nOn eteint la lumiere.")
+    print("\nFin. On eteint les lumieres.")
 
 finally:
     # Arrete et nettoie les broches pour les liberer
