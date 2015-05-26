@@ -96,20 +96,20 @@ Un court-circuit sur une sortie sur RaspberryPi pourrait l'endommager.
 
 ![Montage LED avec BP]({{ site.baseurl }}/images/iniRasp/ledEtBp.png)
 
-Le programme `led.py` est modifié en conséquence.
+Le programme `led.py`
 
 {% highlight python linenos %}
 import RPi.GPIO as GPIO
-// La numerotation suivant la carte BROADCOM
+# La numerotation suivant la carte BROADCOM
 GPIO.setmode(GPIO.BCM)
-// Une broche pour la sortie : la LED
+# Une broche pour la sortie : la LED
 GPIO.setup(21, GPIO.OUT)
-// Une broche pour l'entree : Le poussoir
+# Une broche pour l'entree : Le poussoir
 GPIO.setup(16, GPIO.IN)
 
 while True:
-// Le programme tourne en boucle dans
-// l'attente d'evenement sur le poussoir
+# Le programme tourne en boucle dans
+# l'attente d'evenement sur le poussoir
 if (GPIO.input(16) == True):
     GPIO.output(21, GPIO.LOW)
   else :
