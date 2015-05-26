@@ -24,6 +24,15 @@ RaspberryPi 2 est doté de 40 broches de sortie dont 25 broches GPIO.
 
 ![GPIO]({{ site.baseurl }}/images/iniRasp/rPi-GPIO.png)
 
+Pour désigner les broches GPIO, on peut 
+- soit donner leur numéro sur la carte *BOARD* en anglais, de 1 à 40
+- soit donner le nom de GPIO de 2 à 26 dans la nomenclature *BCM* (pour *Broadcom SoC channel*)
+
+Par exemple la broche 18 dans la nomenclature BOARD correspond 
+à la GPIO 18 dans la nomenclature BCM.
+
+On on reparlera dans le paragraphe qui vient.
+
 ## Premier montage : allumer une LED
 
 Pour programmer les états allumé/éteitnt d'une diode, il faut un langage
@@ -112,7 +121,7 @@ Le programme `led.py` s'écrit donc de la manière suivante
 
 {% highlight python linenos %}
 import RPi.GPIO as GPIO
-# La numerotation suivant la carte BROADCOM
+# La numerotation choisie pour nommer les broches
 GPIO.setmode(GPIO.BCM)
 # Une broche pour la sortie : la LED
 GPIO.setup(21, GPIO.OUT)
@@ -127,5 +136,53 @@ while True:
   else :
     GPIO.output(21, GPIO.HIGH)
 {% endhighlight %}
+
+## Mise au propre du code
+
+La boucle `while True` de la ligne 9 du programme précédent permet de détecter
+les changements d'état : à chaque tour de boucle, on vérifie quel est l'état de
+l'entrée GPIO. Cela fonctionne mais c'est gourmand en ressources processeur pour
+pas grand chose.
+
+Une meilleure façon de procéder ici, c'est d'utiliser une détection de front : 
+on surveille les changemets d'état du bouton poussoir pour déclencher une 
+interruption.
+
+{% highlight python linenos %}
+import RPi.GPIO as GPIO  # Gestion des GPIO
+from time import sleep   # Gestion du temps
+
+GPIO.setmode(GPIO.BCM)   # La numerotation choisie
+GPIO.setup(21, GPIO.OUT) # Une sortie : la LED
+GPIO.setup(16, GPIO.IN)  # Une entree : le poussoir
+
+def my_callback(channel):
+  if GPIO.input(channel):
+    print('GPIO %s 0->1' %channel)
+    GPIO.output(21, GPIO.LOW)
+  else:
+    print('GPIO %s 1->0' %channel)
+    GPIO.output(21, GPIO.HIGH)
+
+print("Le programme prendra fin dans 30s.")
+print("Vous pouvez aussi terminer avec CTRL+C \n")
+
+GPIO.add_event_detect(16, GPIO.BOTH, callback=my_callback)
+print("Maintenant, le programme surveille les actions sur le poussoir\n")
+
+try:
+  sleep(30)
+
+except KeyboardInterrupt:
+  print("\nInterruption par clavier.")
+
+finally:
+  print("On arrete et nettoie les broches pour les liberer")
+  print("en vue d'une prochaine utilisation.")
+  GPIO.cleanup()
+{% endhighlight %}
+
+
+
 
 
