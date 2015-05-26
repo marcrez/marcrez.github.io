@@ -36,7 +36,7 @@ la librairie RPi.GPIO.
 
 Dans l'editeur de texte Leafpad, on va créer un programme python nommé `led.py`
 
-{% highlight python linenos=table %}
+{% highlight python linenos %}
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(21, GPIO.OUT)
