@@ -89,10 +89,15 @@ via un bouton poussoir.
 
 On choisit ici de raccorder (pourquoi pas ?)  la broche GPIO16 au bouton 
 poussoir. 
-Par mesure de sécurité, le bouton poussoir est raccordé à la terre via 
+Par mesure de sécurité, le raccordement au 3,3V se fait via
 une résistance pour éviter un court circuit si par erreur le GPIO16 était
 configuré en sortie plutôt qu'en entrée.
 Un court-circuit sur une sortie sur RaspberryPi pourrait l'endommager.
+
+
+![PullUp](http://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Switch_Pull_Up_Circuit.png/220px-Switch_Pull_Up_Circuit.png)
+
+Voici donc le montage
 
 ![Montage LED avec BP]({{ site.baseurl }}/images/iniRasp/ledEtBp.png)
 
@@ -110,8 +115,10 @@ GPIO.setup(16, GPIO.IN)
 while True:
 # Le programme tourne en boucle dans
 # l'attente d'evenement sur le poussoir
-if (GPIO.input(16) == True):
-    GPIO.output(21, GPIO.LOW)
+  if (GPIO.input(16) == True):
+  # en cas d'appui, le GPIO16 ne reçoit plus le signal
+  # qui part directement à la terre etat 0 : la LED s'eteint.
+  GPIO.output(21, GPIO.LOW)
   else :
     GPIO.output(21, GPIO.HIGH)
 {% endhighlight %}
