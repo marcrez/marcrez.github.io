@@ -17,8 +17,8 @@ RaspberryPi ne dispose pas d'entrée/sortie analogique. La connexion à un
 dispositif analogique devra passer donc passer par un A/D (Analog to Digital
 Converter) comme le MCP3008.
 
-Remarque : C'est une différence importante avec Arduino qui est capable, lui,
-de lire les signaux digitaux aussi bien qu'analogiques.
+>  Remarque : C'est une différence importante avec Arduino qui est capable, lui,
+>  de lire les signaux digitaux aussi bien qu'analogiques.
 
 RaspberryPi 2 est doté de 40 broches de sortie dont 25 broches GPIO.
 
@@ -52,15 +52,17 @@ Explications ligne par ligne
    de parler de la broche nommée GPIO21 plutôt que de la broche numéro 40
    de la carte. Choisir BCM plutôt que BOARD permet permet juste de se
    simplifier le repérage.
-3. On déclare la broche GPIO21 comme sortie. Elle délivrera soit un
-   signal haut (un 1, c'est à dire une tension de +3,3V) soit un signal
-   bas (un 0, c'est à dire 0V)
-4. On modifie l'état de sortie de la broche GPIO21, qui passe à 1.
+3. On déclare la broche GPIO21 comme sortie. Elle délivrera 
 
-Concernant le montage, on raccorde l'anode (patte longue) sur la GPIO21 puis
-on raccorde à la masse (broche GND) en intercalant en serie une resistance de
-500 à 1k Ohms afin de limiter l'intensité (la résistance interne d'une LED étant
-très faible).
+   - soit un signal haut (un 1, c'est à dire une tension de +3,3V) 
+   - soit un signal bas (un 0, c'est à dire 0V)
+4. On modifie l'état de sortie de la broche GPIO21, qui passe à 1. Cela devrait
+   envoyer un courant de 3,3V dans le circuit de la LED qui va s'allumer.
+
+Concernant le montage, on raccorde l'anode de la LED (patte longue) sur la
+GPIO21 puis on raccorde à la masse (broche GND) en intercalant en serie une
+resistance de 500 à 1k Ohms afin de limiter l'intensité (la résistance interne
+d'une LED étant très faible).
 
 ![Montage LED]({{ site.baseurl }}/images/iniRasp/led.png)
 
@@ -79,8 +81,8 @@ avant de relancer le programme.
 GPIO.output(21, GPIO.LOW)
 ```
 
-Remarque : Un message Warning apparaît. Il dit que le GPIO21 n'a pas été purgé
-lors de la précédente session. On verra comment régler ce problème.
+>  Remarque : Un message Warning apparaît. Il dit que le GPIO21 n'a pas été purgé
+>  lors de la précédente session. On verra comment régler ce problème.
 
 ## Suite : commander une LED avec un bouton pousoir
 
@@ -101,7 +103,13 @@ Voici donc le montage
 
 ![Montage LED avec BP]({{ site.baseurl }}/images/iniRasp/ledEtBp.png)
 
-Le programme `led.py`
+En cas d'appui sur le bouton poussoir, le GPIO16 ne reçoit plus le signal
+qui part directement à la terre On a donc
+
+    Bouton relâché : GPIO16 à l'état 1 (ou True)
+    Bouton enfoncé : GPIO16 à l'état 0 (ou False)
+
+Le programme `led.py` s'écrit donc de la manière suivante
 
 {% highlight python linenos %}
 import RPi.GPIO as GPIO
@@ -116,8 +124,6 @@ while True:
 # Le programme tourne en boucle dans
 # l'attente d'evenement sur le poussoir
   if (GPIO.input(16) == True):
-  # en cas d'appui, le GPIO16 ne reçoit plus le signal
-  # qui part directement à la terre etat 0 : la LED s'eteint.
   GPIO.output(21, GPIO.LOW)
   else :
     GPIO.output(21, GPIO.HIGH)
