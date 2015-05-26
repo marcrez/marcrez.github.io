@@ -6,6 +6,10 @@ collapse; border-spacing: 0;
 margin: 20px;
 }
 
+.lineno {
+color: #333;
+}
+
 td, th {
 border: 1px solid transparent; /* No more visible border */
 height: 30px;
