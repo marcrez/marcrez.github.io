@@ -82,6 +82,38 @@ GPIO.output(21, GPIO.LOW)
 Remarque : Un message Warning apparaît. Il dit que le GPIO21 n'a pas été purgé
 lors de la précédente session. On verra comment régler ce problème.
 
+## Suite : commander une LED avec un bouton pousoir
 
+Le principe de base étant posé, on va maintenant intéragir avec le RaspberryPi
+via un bouton poussoir.
+
+On choisit ici de raccorder (pourquoi pas ?)  la broche GPIO16 au bouton 
+poussoir. 
+Par mesure de sécurité, le bouton poussoir est raccordé à la terre via 
+une résistance pour éviter un court circuit si par erreur le GPIO16 était
+configuré en sortie plutôt qu'en entrée.
+Un court-circuit sur une sortie sur RaspberryPi pourrait l'endommager.
+
+![Montage LED avec BP]({{ site.baseurl }}/images/iniRasp/ledEtBp.png)
+
+Le programme `led.py` est modifié en conséquence.
+
+{% highlight python linenos %}
+import RPi.GPIO as GPIO
+// La numerotation suivant la carte BROADCOM
+GPIO.setmode(GPIO.BCM)
+// Une broche pour la sortie : la LED
+GPIO.setup(21, GPIO.OUT)
+// Une broche pour l'entree : Le poussoir
+GPIO.setup(16, GPIO.IN)
+
+while True:
+// Le programme tourne en boucle dans
+// l'attente d'evenement sur le poussoir
+if (GPIO.input(16) == True):
+    GPIO.output(21, GPIO.LOW)
+  else :
+    GPIO.output(21, GPIO.HIGH)
+{% endhighlight %}
 
 
