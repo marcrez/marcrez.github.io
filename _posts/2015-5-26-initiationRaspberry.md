@@ -43,6 +43,12 @@ GPIO.setup(21, GPIO.OUT)
 GPIO.output(21, GPIO.HIGH)
 ```
 
+{% highlight ruby linenos %}
+def foo
+  puts 'foo'
+end
+{% endhighlight %}
+
 Explications ligne par ligne
 
 1. On commence par importer la librairie RPi.GPIO qu'on nomme GPIO. 
