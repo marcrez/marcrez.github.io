@@ -32,7 +32,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Brand</a>
+            <a class="navbar-brand" href="{{ site.baseurl }}/blog">Blog</a>
+            <a hclass="navbar-brand" ref="{{ site.baseurl }}/about">About</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -71,9 +72,6 @@
 
 
 
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
           <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
 
           <div class="site-info">
@@ -81,13 +79,6 @@
             <p class="site-description">{{ site.description }}</p>
           </div>
 
-          <nav>
-            <a href="{{ site.baseurl }}/blog">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
-      </div>
-    </div>
 
     <div id="main" role="main" class="container">
       {{ content }}
