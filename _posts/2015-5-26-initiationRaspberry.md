@@ -144,9 +144,17 @@ les changements d'état : à chaque tour de boucle, on vérifie quel est l'état
 l'entrée GPIO. Cela fonctionne mais c'est gourmand en ressources processeur pour
 pas grand chose.
 
-Une meilleure façon de procéder ici, c'est d'utiliser une détection de front : 
-on surveille les changemets d'état du bouton poussoir pour déclencher une 
+Une meilleure façon de procéder ici, c'est d'utiliser une détection de front :
+on surveille les changemets d'état du bouton poussoir pour déclencher une
 interruption.
+
+La fonction `GPIO.add_event_detect(channel, GPIO.BOTH, callback=my_callback)`
+ajoute sur la broche `channel` une detection de front `GPIO.BOTH` qui déclenche
+une un thread parallèle `my_callback`.
+
+voir http://deusyss.developpez.com/tutoriels/RaspberryPi/PythonEtLeGpio/#LIII-B-9
+et http://sourceforge.net/p/raspberry-gpio-python/wiki/Inputs/
+pour plus de détails
 
 {% highlight python linenos %}
 import RPi.GPIO as GPIO  # Gestion des GPIO
@@ -183,6 +191,7 @@ finally:
 {% endhighlight %}
 
 
-
+Un article complémentaire très bien fait : 
+http://eskimon.fr/96-arduino-204-un-simple-bouton
 
 
