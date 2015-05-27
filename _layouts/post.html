@@ -26,10 +26,12 @@ layout: default
 {{ page.date | date: '%Y' }} 
     </div>
     <div class="category">
-     Catégorie(s) <span class="label label-primary">{{ page.categories | array_to_sentence_string }}</span>
-    </div>
-    <div class="tags">
-       <span class="glyphicon glyphicon-tags" aria-hidden="true"></span> Tag(s) {{ page.tags | array_to_sentence_string }}
+     Catégorie : <span class="label label-primary">{{ page.categories }}</span>
+     
+    {% for tag in page.tags %}
+    <span class="glyphicon glyphicon-tag" aria-hidden="true">{{ tag }}</span> &nbsp; - &nbsp;
+    {% endfor %}
+     
     </div>
   </div>
 
