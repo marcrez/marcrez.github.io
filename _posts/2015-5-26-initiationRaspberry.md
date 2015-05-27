@@ -1,5 +1,6 @@
 ---
-title: Initiation RaspberryPi
+title: Un RaspberryPi, une LED, un bouton poussoir
+permalink: raspberry-led-poussoir
 layout: post
 date: 2015-05-26 13:30:00
 tags: [Raspberry, Python]
