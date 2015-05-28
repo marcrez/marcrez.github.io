@@ -1,10 +1,10 @@
 ---
 title: Un RaspberryPi, une LED, un bouton poussoir
-permalink: raspberry-led-poussoir
+permalink: raspberryPi-led-poussoir
 layout: post
 date: 2015-05-26 13:30:00
-tags: [Raspberry, Python]
-category: Raspberry
+tags: [raspberryPi , python]
+category: RaspberryPi
 ---
 
 ## Les connecteurs GPIO

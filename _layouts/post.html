@@ -26,8 +26,8 @@ layout: default
 {{ page.date | date: '%Y' }} 
     </div>
     <div class="category">
-     Catégorie : <span class="label label-primary">{{ page.categories }}</span>
-     
+    Catégorie <span class="label label-primary">{{ page.categories }}</span>
+    &nbsp;&mdash;&nbsp;Tags :
     {% for tag in page.tags %}
     <i class="fa fa-tag"></i>{{ tag }}, &nbsp;
     {% endfor %}
