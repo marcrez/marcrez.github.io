@@ -10,6 +10,7 @@ category: raspberryPi
 Dans cet article, on va décrire comment faire fonctionner un codeur rotatif
 pour piloter un affichier LED à sept segments.
 Le but est le suivant 
+
 - L'appui sur le bouton central, allume ou éteint l'afficheur LED
 - La rotation dans le sens des aiguilles d'une montre incrémente 
   le compteur qui s'affiche avec un maximum à 9
@@ -170,19 +171,21 @@ GPIO.cleanup()
 ```
 
 
-
-
-
-
-
-
 # Se simplifier la tâche de programmation
 
-Maintenant, reste à connaitre le schema de branchement 
-pour afficher des chiffres en allumant les bons segments.
+Afin d'accéder plus facilement au multiplexeur 74HC595N, nous utilisons la
+library *PiShiftPy*
+Auparavant, on raccorde directement la broche 10 (`MR`) sur le +5V car
+PiShiftPy ne gère pas le reset qui doit donc être relié au potentile haut.
 
+Pour télécharger PiShiftPy, c'est simple
 
-On a donc
+```
+$ wget https://raw.githubusercontent.com/shrikantpatnaik/PiShiftPy/master/build/lib/PiShiftPy.py
+```
+
+Nous allons pouvoir désormais facilement afficher des chiffres dès lors qu'on
+sait comment les représenter sur l'afficheur
 
 Chiffre | `DP G  F  E  D  C  B  A` | Valeur Hexa
 --------|--------------------------|:-----------
@@ -197,6 +200,8 @@ Chiffre | `DP G  F  E  D  C  B  A` | Valeur Hexa
    8    | `0  1  1  1  1  1  1  1` | 7F
    9    | `0  1  1  0  1  1  1  1` | 6F
 
+
+
 ```python
 #!/usr/bin/env python
 
@@ -208,22 +213,17 @@ tab = [0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x6F]
 RUNNING = True
 print("de 0 a 9 sur 7 segments : CTRL+C pour quitter")
 
+shift.init(18, 23, 24) # Data_in, clock, latch
+for i in tab:
+  shift.write(i)
+  time.sleep(1)
+
+print("\nOn eteint la lumiere.")
+
+# Arrete et nettoie les broches pour les liberer
+# en vue d'une prochaine utilisation.
 shift.init()
-try:
-  while RUNNING:
-    for i in tab:
-      shift.write(i)
-      time.sleep(1)
-
-except KeyboardInterrupt:
-  RUNNING = False
-  print("\nOn eteint la lumiere.")
-
-finally:
-  # Arrete et nettoie les broches pour les liberer
-  # en vue d'une prochaine utilisation.
-  shift.init()
-  GPIO.cleanup()
+GPIO.cleanup()
 ```
 
 
