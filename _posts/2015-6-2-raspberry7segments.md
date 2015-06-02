@@ -176,7 +176,7 @@ GPIO.cleanup()
 Afin d'accéder plus facilement au multiplexeur 74HC595N, nous utilisons la
 library *PiShiftPy*
 Auparavant, on raccorde directement la broche 10 (`MR`) sur le +5V car
-PiShiftPy ne gère pas le reset qui doit donc être relié au potentile haut.
+PiShiftPy ne gère pas le reset qui doit donc être relié au potentiel haut.
 
 Pour télécharger PiShiftPy, c'est simple
 
@@ -210,8 +210,7 @@ import time
 import RPi.GPIO as GPIO
 
 tab = [0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x6F]
-RUNNING = True
-print("de 0 a 9 sur 7 segments : CTRL+C pour quitter")
+print("de 0 a 9, c'est parti")
 
 shift.init(18, 23, 24) # Data_in, clock, latch
 for i in tab:
