@@ -113,10 +113,10 @@ Concernant les trois dernières broches, on a
 
 
 Mettons tout cela en application dans un petit programme Python.
-Pour obtenir l'animation suivante dans laquelle chaue segment est allumé tour à
-tour. 
+Pour obtenir l'animation suivante dans laquelle chaque segment est allumé tour à
+tour.
 
-![Anim]({{ site.baseurl }}/images/7segments/7segAnim48.gif)
+![Anim]({{ site.baseurl }}/images/7segments/7segAnim96.gif)
 
 Se référer à 
 l'article [*LED et poussoir*]({% post_url 2015-5-26-raspberryLedPoussoir %})
