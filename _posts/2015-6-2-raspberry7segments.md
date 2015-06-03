@@ -171,6 +171,57 @@ GPIO.cleanup()
 ```
 
 
+Les bases sont maintenant posées, on peut théoriquement afficher des chiffres.
+Essayons avec le chiffre 2. Pour cela il va falloir allumer les segments 
+A, B, D, E et G.
+Autrement dit, remplir le STORAGE REGISTER avec `11011010`.
+On va donc pousser successivement les bits dans l'ordre inverse
+`01011011` ce qui revient à `1011011`, le premier 0 étant inutile.
+
+```python
+#!/usr/bin/python
+import RPi.GPIO as GPIO
+import time
+
+# Init
+DATA=18   #DS
+CLOCK=23  #SHCP
+LATCH=24  #STCP
+CLEAR=25  #MR
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(DATA,GPIO.OUT, initial=GPIO.LOW)
+GPIO.setup(CLOCK,GPIO.OUT, initial=GPIO.LOW)
+GPIO.setup(LATCH,GPIO.OUT, initial=GPIO.LOW)
+GPIO.setup(CLEAR,GPIO.OUT, initial=GPIO.LOW)
+GPIO.output(CLEAR,GPIO.HIGH)
+
+seq = [1,0,1,1,0,1,1]
+
+# on envoie la sequence dqns le STORAGE REGISTER
+for i in seq:
+  if i==1:
+    GPIO.output(DATA,GPIO.HIGH)
+  else:
+    GPIO.output(DATA,GPIO.LOW)
+  GPIO.output(CLOCK,GPIO.HIGH)
+  GPIO.output(CLOCK,GPIO.LOW)
+
+# On affiche le contenu du STORAGE REGISTER
+# le chiffre 2 apparait
+GPIO.output(LATCH,GPIO.HIGH)
+GPIO.output(LATCH,GPIO.LOW)
+
+time.sleep(5)
+# Extinction des segments
+GPIO.setup(CLEAR,GPIO.OUT, initial=GPIO.LOW)
+GPIO.output(LATCH,GPIO.HIGH)
+
+# Nettoyage des broches
+GPIO.cleanup()
+```
+
+
 # Se simplifier la tâche de programmation
 
 Afin d'accéder plus facilement au multiplexeur 74HC595N, nous utilisons la
