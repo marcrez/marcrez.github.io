@@ -7,9 +7,12 @@ tags: [raspberryPi, python, rotaryEncoder, led]
 category: raspberryPi
 ---
 
-Dans cet article, on va décrire comment faire fonctionner un codeur rotatif
-pour piloter un affichier LED à sept segments.
-Le but est le suivant 
+Dans cet article, on va décrire comment pour piloter un affichier LED à sept
+segments via un multiplexeur 74HC595N.
+On va aussi faire fonctionner un codeur rotatif.
+Le but est de simuler le comportement un bouton de volume.
+
+Le comportement sera le suivant 
 
 - L'appui sur le bouton central, allume ou éteint l'afficheur LED
 - La rotation dans le sens des aiguilles d'une montre incrémente 
