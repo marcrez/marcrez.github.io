@@ -178,6 +178,9 @@ Autrement dit, remplir le STORAGE REGISTER avec `11011010`.
 On va donc pousser successivement les bits dans l'ordre inverse
 `01011011` ce qui revient à `1011011`, le premier 0 étant inutile.
 
+![2](http://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/7-segment_abdeg.svg/144px-7-segment_abdeg.svg.png)
+
+
 ```python
 #!/usr/bin/python
 import RPi.GPIO as GPIO
