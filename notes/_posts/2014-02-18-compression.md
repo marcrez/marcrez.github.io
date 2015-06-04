@@ -44,7 +44,7 @@ On dispose d'un message M et d'un algorithme de compression C.
 - L'application de compression $C$ est inversible :  $C\circ C^{-1}=Id$
 
 
-```sequence
+```
 Message M->Message compressé C(M): Compression
 Message compressé C(M)-->Message M: Décompression
 ```
