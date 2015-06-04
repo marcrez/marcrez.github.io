@@ -5,14 +5,6 @@ tags: [algorithmique, informatique]
 category: notes
 ---
 
-<!-- *Commande pour générer le pdf*
-file=compression \
-&& pandoc --toc --number-sections --smart --highlight-style=pygments \
-          --template ../../pandocUtils/templates/pandoc_template.tex \
-   $file.md -o $file.pdf \
-&& evince $file.pdf
--->
-
 # Introduction
 ## Pourquoi compresser un fichier ?
 
