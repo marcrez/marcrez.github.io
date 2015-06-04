@@ -3,6 +3,7 @@ title: Changer de clavier
 layout: post
 date: 2015-04-06 09:17
 tags: [Linux]
+category: notes
 ---
 
 # Changer de clavier
