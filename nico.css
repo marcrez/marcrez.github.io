@@ -4,6 +4,11 @@ font-size: 30px;
 h2 {
 font-size: 25px;
 }
+.well {
+padding: 10px;
+font-size:0.85em;
+}
+
 table {
 color: #333;
 font-family: Helvetica, Arial, sans-serif;
