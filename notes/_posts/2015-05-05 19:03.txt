@@ -1,0 +1,28 @@
+MySQL insert into 2 tables
+
+I want to make a insert into 2 tables
+
+    visits:
+      visit_id int
+      card_id int
+    registration:
+      registration_id int
+      type enum('in','out')
+      timestamp int 
+      visit_id  int
+
+i want something like:
+
+INSERT INTO `visits` as v ,`registration` as v
+(v.`visit_id`,v.`card_id`,r.`registration_id`, r.`type`, r.`timestamp`, r.`visit_id`) 
+VALUES (NULL, 12131141,NULL, UNIX_TIMESTAMP(), v.`visit_id`);
+
+
+It seems like the problem you are trying to solve is to get the auto-increment value from the "visits" row to insert into "registration". Am I right?
+
+If so, you can just use the LAST_INSERT_ID() function like this:
+
+INSERT INTO `visits` (`visit_id`,`card_id`) 
+VALUES (NULL, 12131141);
+INSERT INTO `registration` (`registration_id`, `type`, `timestamp`, `visit_id`) 
+VALUES (NULL, 'in', UNIX_TIMESTAMP(), LAST_INSERT_ID());
