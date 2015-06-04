@@ -36,6 +36,5 @@ un fichier php de test
     $ sudo apache2ctl restart
 
 Les infos php devraient s'afficher sur
-
-    http://localhost/~moiMeme/test.php
+http://localhost/~moiMeme/test.php
 
