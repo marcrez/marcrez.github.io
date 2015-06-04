@@ -3,9 +3,45 @@ layout: default
 ---
 
 <div class="posts">
-  <ul>
-    {% for post in site.posts %}
-      <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+  {% for post in site.posts %}
+  <article class="post">
+
+    <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+
+    <div class="well">
+      <div class="date">
+        Rédigé le {{ page.date | date: '%d' }} 
+        {% assign m = page.date | date: "%-m" %}
+        {% case m %}
+        {% when '1' %}janvier
+        {% when '2' %}février
+        {% when '3' %}mars
+        {% when '4' %}avril
+        {% when '5' %}mai
+        {% when '6' %}juin
+        {% when '7' %}juillet
+        {% when '8' %}août
+        {% when '9' %}septembre
+        {% when '10' %}octobre
+        {% when '11' %}novembre
+        {% when '12' %}décembre
+        {% endcase %} 
+        {{ page.date | date: '%Y' }} 
+      </div>
+      <div class="category">
+        Catégorie <span class="label label-primary">{{ page.categories }}</span>
+        &nbsp;&mdash;&nbsp;Tags :
+        {% for tag in page.tags %}
+        <i class="fa fa-tag"></i>{{ tag }}, &nbsp;
+        {% endfor %}
+
+      </div>
+    </div>
+    <div class="entry">
+      {{ post.excerpt }}
+    </div>
+
+    <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+  </article>
+  {% endfor %}
 </div>
