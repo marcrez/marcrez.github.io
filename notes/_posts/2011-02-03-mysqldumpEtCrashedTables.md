@@ -3,7 +3,7 @@ title: MysqlDump et Crashed tables
 layout: post
 date: 2011-02-03
 tags: [MySQL, linux, shell]
-Category: notes
+category: notes
 ---
 
 ![MySQL](http://upload.wikimedia.org/wikipedia/fr/6/62/MySQL.svg)
