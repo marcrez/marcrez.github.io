@@ -3,7 +3,7 @@ title: Accéleromètre ADXL345 sous RaspberryPi
 layout: post
 date: 2015-05-14 13:30:00
 tags: [Raspberry, Python]
-category: Raspberry
+category: raspberryPi
 ---
 
 Le module ADXL345 est un accéléromètre à trois axes.
