@@ -7,6 +7,13 @@ tags: [raspberryPi , python, led, poussoir, pushButton]
 category: raspberryPi
 ---
 
+Première leçon sur les entrées-sorties du RaspberryPi.
+On va voir comment piloter avec un programme Python une led grâce à un
+bouton-poussoir.
+
+
+
+
 ## Les connecteurs GPIO
 
 Les ports GPIO (General Purpose Input/Output) sont des ports d'entrée/sortie

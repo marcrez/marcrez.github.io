@@ -10,7 +10,7 @@ category: raspberryPi
 Dans cet article, on va décrire comment pour piloter un affichier LED à sept
 segments via un multiplexeur 74HC595N.
 On va aussi faire fonctionner un codeur rotatif.
-Le but est de simuler le comportement un bouton de volume.
+Le but est de simuler le comportement d'un bouton de volume.
 
 Le comportement sera le suivant 
 
