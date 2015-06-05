@@ -2,11 +2,12 @@
 layout: default
 ---
 
+<h1>Les trois derniers articles</h1>
 <div class="posts">
-  {% for post in site.posts limit:5 %}
+  {% for post in site.posts limit:3 %}
   <article class="post">
 
-    <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+    <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
 
     <div class="well">
       <div class="category">
