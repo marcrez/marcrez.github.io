@@ -42,10 +42,10 @@ Dans le dossier `htdocs` servi par apache, on récupère composer puis
 on lui demande d'installer symfony version 2.3 dans un répertoire nommé
 `sf1`
 
-~~~~~~~~~~~~~~ {.email}
+```
   ~/htdocs# curl -s https://getcomposer.org/installer | php
   ~/htdocs# php composer.phar create-project symfony/framework-standard-edition sf1 "2.3.x"
-~~~~~~~~~~~~~~
+```
 
 Les lignes qui s'affichent alors sont explicites: d'abord composer
 installe symfony dans sa version 2.3.23
@@ -53,7 +53,7 @@ puis tour à tour les bibliothèques tierces.
 
 Viennent enfin quelques questions concernant la configuration.
 
-~~~~~~~~~~~~~~ {.email}
+```
   Installing symfony/framework-standard-edition (v2.3.23)
     - Installing symfony/framework-standard-edition (v2.3.23)
       Loading from cache
@@ -83,34 +83,34 @@ Viennent enfin quelques questions concernant la configuration.
   mailer_password (null): 
   locale (en): fr
   secret (ThisTokenIsNotSoSecretChangeIt): passw
-~~~~~~~~~~~~~~
+```
 
 
 > NOTE: Il peut arriver que des erreurs se produisent lors du téléchargement
 > des bibliothèques externes (vendor). Dans ce cas, on relance l'installation.
 >
->~~~~~~~~~~~~~~ {.email}
+>```
 >   ~/htdocs# cd sf1
 >   ~/htdocs/sf1# php ../composer.phar install
->~~~~~~~~~~~~~~
+>```
 
 Nous avons maintenant un projet Symfony entièrement fonctionnel :
 
-~~~~~~~~~~~~~~ {.email}
+```
   ~/htdocs/sf1# tree -L 1
   |-- composer.json, composer.lock, LICENSE, README...
   |-- app/                        /* l'essentiel de symfony */
   |-- src/                        /* le code des bundles du projet */
   |-- vendor/                     /* les bibliothèques tierces */
   !-- web/                        /* fichiers publics et contrôleurs frontaux */
-~~~~~~~~~~~~~~
+```
 
 Premier test : <http://localhost/sf1/web/config.php>. Des problèmes
 de permission sont détéctés, nous les réglons avant de recharger la page.
 
-~~~~~~~~~~~~~~ {.email}
+```
   ~/htdocs/sf1# chmod -R 777 app/cache/ app/logs/
-~~~~~~~~~~~~~~
+```
 
 # Un bundle de base
 
@@ -120,15 +120,15 @@ Le but : créer un mini blog. Avec des utilisateurs qui rédigent des posts.
 
 Première étape : créer un bundle
 
-~~~~~~~~~~~~~~ {.email}
+```
   ~/htdocs/sf1# php app/console generate:bundle --namespace=Nico/BlogBundle --format=yml
-~~~~~~~~~~~~~~
+```
 
 (on répondra no à `Do you want to generate the whole directory structure`)
 
 Nous disposons de l'arborescence pour travailler
 
-~~~~~~~~~~~~~~ {.email}
+```
     ~/htdocs/sf1# tree -L 4 src/Nico/BlogBundle/
     |-- Controller
     |   !-- DefaultController.php
@@ -146,24 +146,24 @@ Nous disposons de l'arborescence pour travailler
     !-- Tests
         !-- Controller
                 !-- DefaultControllerTest.php
-~~~~~~~~~~~~~~
+```
 
 Non seulement on a créé une arborescence mais
 
 1.  le bundle a été automatiquement enregistré
     dans le noyau avec la ligne
 
-    ~~~~~~~~~~~~~~ {.php}
+    ```php
       <?php //app/AppKernel.php
           $bundles = array(
               ...
               new Nico\BlogBundle\NicoBlogBundle(),
-    ~~~~~~~~~~~~~~
+    ```
 
 2.  le contrôleur `Default` dont l'action `index` est appelée pour la route
     `nico_blog_homepage` a bien été créé
 
-    ~~~~~~~~~~~~~~ {.php}
+    ```php
       <?php //src/Nico/BlogBundle/Controller/DefaultController.php
       namespace Nico\BlogBundle\Controller;
 
@@ -176,33 +176,33 @@ Non seulement on a créé une arborescence mais
               return $this->render('NicoBlogBundle:Default:index.html.twig', array('name' => $name));
           }
       }
-    ~~~~~~~~~~~~~~
+    ```
 
 3.  le template par défaut du bundle a été créé
 
-    ~~~~~~~~~~~~~~ {.html}
+    ```html
       <!-- src/Nico/BlogBundle/Resources/views/Default/index.html.twig -->
       Hello {{ name }}!
-    ~~~~~~~~~~~~~~
+    ```
 
 4.  le routage du bundle a été automatiquement importé
     dans le fichier de routage principal
 
-    ~~~~~~~~~~~~~~ {.yaml}
+    ```yaml
       # app/config/routing.yml
       nico_blog:
           resource: "@NicoBlogBundle/Resources/config/routing.yml"
           prefix: /
-    ~~~~~~~~~~~~~~
+    ```
 
     Avec un fichier de routes par défaut
 
-    ~~~~~~~~~~~~~~ {.yaml}
+    ```yaml
       # src/Nico/BlogBundle/Resources/config/routing.yml
       nico_blog_homepage:
           path:     /hello/{name}
           defaults: { _controller: NicoBlogBundle:Default:index }
-    ~~~~~~~~~~~~~~
+    ```
 
     On peut voir tout cela fonctionner <http://localhost/sf1/web/app_dev.php/hello/Tartempion>
 
@@ -228,16 +228,16 @@ avec le résultat attendu : le profil du membre.
 
 Le fichier de route
 
-~~~~~~~~~~~~~~ {.yaml}
+```yaml
   # src/Acme/UserBundle/Resources/config/routing.yml
   member_show:
       path:   /member/{user_name}
       defaults:  { _controller: AcmeUserBundle:Member:show }
-~~~~~~~~~~~~~~
+```
 
 Le contrôleur
 
-~~~~~~~~~~~~~~ {.php}
+```php
   <?php //src/Acme/UserBundle/Controller/MemberController.php
   namespace Acme\UserBundle\Controller;
 
@@ -255,13 +255,13 @@ Le contrôleur
           ));
       }
   }
-~~~~~~~~~~~~~~
+```
 
 ## Contrôleurs et templates
 
 En continuant sur l'exemple précédent, notre template de page ressemble à ceci
 
-~~~~~~~~~~~~~~ {.html}
+```html
   <!-- src/Acme/UserBundle/Resources/views/Member/show.html.twig -->
   {% extends 'AcmeUserBundle::layout.html.twig' %}
 
@@ -272,11 +272,11 @@ En continuant sur l'exemple précédent, notre template de page ressemble à cec
         <li> Prénom : {{ prenom }}</li>
       </ul>
   {% endblock %}
-~~~~~~~~~~~~~~
+```
 
 il étend le fichier layout du bundle `AcmeUserBundle::layout.html.twig`
 
-~~~~~~~~~~~~~~ {.html}
+```html
   <!-- src/Acme/UserBundle/Resources/views/layout.html.twig -->
   {% extends '::base.html.twig' %}
 
@@ -284,11 +284,11 @@ il étend le fichier layout du bundle `AcmeUserBundle::layout.html.twig`
       <h1>Blog Application</h1>
       {% block content %}{% endblock %}
   {% endblock %}
-~~~~~~~~~~~~~~
+```
 
 qui lui-même étend le fichier layout principal `::base.html.twig`
 
-~~~~~~~~~~~~~~ {.html}
+```html
   <!-- app/Resources/views/base.html.twig -->
   <!DOCTYPE html>
   <html>
@@ -311,7 +311,7 @@ qui lui-même étend le fichier layout principal `::base.html.twig`
           </div>
       </body>
   </html>
-~~~~~~~~~~~~~~
+```
 
 En résumé le fonctionnement est le suivant
 
@@ -335,9 +335,9 @@ Si les paramètres sont correctement renseignés dans le fichier
 `app/config/parameters.yml` Symfony peut créer la BDD puis le répertoire qui va
 recevoir les descriptions des tables
 
-~~~~~~~~~~~~~~ {.email}
+```
   ~/htdocs/sf1# php app/console doctrine:database:create
-~~~~~~~~~~~~~~
+```
 
 ## Schéma
 
@@ -360,23 +360,23 @@ Voici le schéma de notre base de données
 
 La commande est la suivante
 
-~~~~~~~~~~~~~~ {.email}
+```
   ~/htdocs/sf1# php app/console generate:doctrine:entity
-~~~~~~~~~~~~~~
+```
 
 Il est demandé de renseigner le nom de l'entité sous la forme 
 `AcmeBlogBundle:Post`.
 Ensuite, on donne le format de *mapping* qui va définir l'entité.
 
-~~~~~~~~~~~~~~ {.email}
+```
   The Entity shortcut name: NicoBlogBundle:Quark
   Configuration format (yml, xml, php, or annotation) [annotation]: annotation
-~~~~~~~~~~~~~~
+```
 
 Ensuite, on défnit les champs de l'entité (Noter : la clé
 primaire `id` est automatiquement ajoutée).
 
-~~~~~~~~~~~~~~ {.email}
+```
   Available types: array, simple_array, json_array, object, 
   boolean, integer, smallint, bigint, string, text, datetime, datetimetz, 
   date, time, decimal, float, blob, guid.
@@ -386,7 +386,7 @@ primaire `id` est automatiquement ajoutée).
 
   New field name (press <return> to stop adding fields): created
   Field type [string]: datetime
-~~~~~~~~~~~~~~
+```
 
 L'entité est créée mais on va effectuer quelques modifications
 
@@ -403,7 +403,7 @@ L'entité est créée mais on va effectuer quelques modifications
   on utilise l'extension Doctrine `Timestampable` disponible dans le bundle 
   StofDoctrineExtensionsBundle.
 
-~~~~~~~~~~~~~~ {.php}
+```php
 <?php src/Nico/BlogBundle/Entity/Quark.php
 
 namespace Nico\BlogBundle\Entity;                   namespace Nico\BlogBundle\Entity;
@@ -442,15 +442,15 @@ class Quark                                         class Quark
     private $created;                                   private $created;
 
     //Les getters et les setters                        //Les getters et les setters
-~~~~~~~~~~~~~~
+```
 
 On va maintenant créer la base de données
 puis la table décrite par notre schéma.
 
-~~~~~~~~~~~~~~ {.email}
+```
   ~/htdocs/sf1# php app/console doctrine:database:create
   ~/htdocs/sf1# php app/console doctrine:schema:create
-~~~~~~~~~~~~~~
+```
 
 > NOTE: 
 > - la commande `doctrine:schema:create` accepte l'option `--dump-sql` pour 
@@ -472,13 +472,13 @@ Un peu de documentation au sujet de la synatxe de mapping
 Nous allons créer la description de notre entité en format YAML. pour cela il
 faut créer un nouveau répertoire.
 
-~~~~~~~~~~~~~~ {.email}
+```
   ~/htdocs/sf1# mkdir src/Nico/BlogBundle/Resources/config/doctrine/
-~~~~~~~~~~~~~~
+```
 
 Commençons par l'entité `Category`
 
-~~~~~~~~~~~~~~ {.yaml}
+```yaml
   # MyBundle/Resources/config/doctrine/Category.orm.yml
   Nico\BlogBundle\Entity\Category:
     type: entity
@@ -496,11 +496,11 @@ Commençons par l'entité `Category`
         type: datetime
     lifecycleCallbacks:
       prePersist: [ doSetCreatedAtValue ]
-~~~~~~~~~~~~~~
+```
 
 Ensuite l'entité `Quark`
 
-~~~~~~~~~~~~~~ {.yaml}
+```yaml
   # MyBundle/Resources/config/doctrine/Quark.orm.yml
   Nico\BlogBundle\Entity\Quark:
     type: entity
@@ -537,14 +537,14 @@ Ensuite l'entité `Quark`
     lifecycleCallbacks:
       prePersist: [ doSetCreatedAtValue ]
       preUpdate: [ doSetUpdatedAtValue ]
-~~~~~~~~~~~~~~
+```
 
 On convertit maintenant ces blocs d'instruction YAML en classes php qui
 seront stockées dans le dossier `MyBundle/Entity`
 
-~~~~~~~~~~~~~~ {.email}
+```
    ~/htdocs/sf1# php app/console doctrine:generate:entities NicoBlogBundle
-~~~~~~~~~~~~~~
+```
 
 Les instructions `lifecycleCallbacks` vont créer des méthodes qui seront
 déclenchées juste avant le persist ou l'update de données. Ces méthodes
@@ -552,7 +552,7 @@ seront vides par défaut, il nous faut donc les compléter manuellement.
 
 documentation : <http://symfony.com/fr/doc/current/book/doctrine.html>
 
-~~~~~~~~~~~~~~ {.php}
+```php
     <?php //src/Nico/BlogBundle/Entity/Category.php
     /**
      * @ORM\PrePersist
@@ -564,11 +564,11 @@ documentation : <http://symfony.com/fr/doc/current/book/doctrine.html>
         $this->created_at = new \DateTime();
       }
     }
-~~~~~~~~~~~~~~
+```
 
 De même
 
-~~~~~~~~~~~~~~ {.php}
+```php
     <?php //src/Nico/BlogBundle/Entity/Quark.php
     /**
      * @ORM\PreUpdate
@@ -580,32 +580,32 @@ De même
         $this->updated_at = new \DateTime();
       }
     }
-~~~~~~~~~~~~~~
+```
 
 ## Données de test avec Fixtures
 
 Pour installer Fixtures ave composer, il faut l'ajouter
 au fichier de configuration
 
-~~~~~~~~~~~~~~ {.json}
+```json
   # composer.json
   {
       "require": {
           "doctrine/doctrine-fixtures-bundle": "2.2.*"
       }
   }
-~~~~~~~~~~~~~~
+```
 
 Ensuite effectuer la mise à jour des librairies
 
-~~~~~~~~~~~~~~ {.email}
+```
   $ php composer.phar update doctrine/doctrine-fixtures-bundle
-~~~~~~~~~~~~~~
+```
 
 Maintenant, on trouve `DoctrineFixturesBundle` dans `vendor/doctrine`.
 Reste à inscrire `DoctrineFixturesBundle` dans le kernel
 
-~~~~~~~~~~~~~~ {.php}
+```php
   <?php //app/kernel
   public function registerBundles()
   {
@@ -613,11 +613,11 @@ Reste à inscrire `DoctrineFixturesBundle` dans le kernel
             // ...
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
   }
-~~~~~~~~~~~~~~
+```
 
 On peut maintenant créer un fichier de fixtures pour la classe `Category`
 
-~~~~~~~~~~~~~~ {.php}
+```php
   <?php //src/Nico/BlogBundle/DataFixtures/ORM/LoadCategoryData.php
   namespace Nico\BlogBundle\DataFixtures\ORM;
 
@@ -645,13 +645,13 @@ On peut maintenant créer un fichier de fixtures pour la classe `Category`
           $manager->flush();
       }
   }
-~~~~~~~~~~~~~~
+```
 
 Le code précédent fonctionne très bien mais il est insuffisant car il ne
 permet pas de mettre en relation les quarks avec les catégories dans la
 realtion many-to-many que nous avons définie. On modifie donc ainsi
 
-~~~~~~~~~~~~~~ {.php}
+```php
   <?php //src/Nico/BlogBundle/DataFixtures/ORM/LoadCategoryData.php
   namespace Nico\BlogBundle\DataFixtures\ORM;
 
@@ -686,14 +686,14 @@ realtion many-to-many que nous avons définie. On modifie donc ainsi
         return 0; // Load before quarks
       }
   }
-~~~~~~~~~~~~~~
+```
 
 On a ainsi crée deux nouvelles références qui pourront être ajoutées au quark
 afin de le lier aux catégories. Pour cela il est nécessaire que fixture traite
 d'abord les catégories avant les quarks, c'est pour cela qu'on a ajouté la
 fonction `getOrder`.
 
-~~~~~~~~~~~~~~ {.php}
+```php
   <?php //src/Nico/BlogBundle/DataFixtures/ORM/LoadQuarkData.php
   namespace Nico\BlogBundle\DataFixtures\ORM;
 
@@ -728,18 +728,18 @@ fonction `getOrder`.
         return 1; // Load after categories
       }
   }
-~~~~~~~~~~~~~~
+```
 
 Maintenant on insère les données en base de données, on pourra ensuite
 contater que les données ont bien été entrées et dans l'ordre.
 
-~~~~~~~~~~~~~~ {.email}
+```
   $ php app/console doctrine:fixtures:load
   Careful, database will be purged. Do you want to continue Y/N ?y
   > purging database
   > loading [0] Nico\BlogBundle\DataFixtures\ORM\LoadCategoryData
   > loading [1] Nico\BlogBundle\DataFixtures\ORM\LoadQuarkData
-~~~~~~~~~~~~~~
+```
 
 
 # FOSUserBundle
@@ -750,37 +750,37 @@ Pour gérer les opérations de connexion d'utilisateurs, il exite un bundle prê
 à l'emploi : FOSUser bundle. Installer FOSUserBundle est simple avec composer.
 Il suffit d'ajouter une ligne de dépendance au fichier `composer.json`
 
-~~~~~~~~~~~~~~ {.json}
+```json
   // composer.json
   ...
   "require": {
   ...
       "friendsofsymfony/user-bundle": "dev-master"
-~~~~~~~~~~~~~~
+```
 
 puis de lancer composer qui va se charger de l'installation
 
-~~~~~~~~~~~~~~ {.email}
+```
   $ php composer.phar update
-~~~~~~~~~~~~~~
+```
 
 Nous allons avoir besoin d'un nouveau bundle qui va s'appuyer sur
 FOSUserBundle. Créons-le, il va se nommer `Nico/UserBundle`
 
-~~~~~~~~~~~~~~ {.email}
+```
   $ mkdir src/Nico/UserBundle/
-~~~~~~~~~~~~~~
+```
 
 > NOTE: On aurait pu utiliser le générateur mais il crée des
 > répertoires qui ne nous seront pas utiles
 >
->~~~~~~~~~~~~~~ {.email}
+>```
 >  $ php app/console generate:bundle --namespace=Nico/UserBundle --format=yml
->~~~~~~~~~~~~~~
+>```
 
 On crée la classe de notre bundle
 
-~~~~~~~~~~~~~~ {.php}
+```php
   <?php //src/Nico/UserBundle/NicoUserBundle.php 
   namespace Nico\UserBundle;
 
@@ -793,16 +793,16 @@ On crée la classe de notre bundle
       return 'FOSUserBundle';
     }
   }
-~~~~~~~~~~~~~~
+```
 
 Il ne manque plus que deux lignes dans le kernel pour déclarer
 `FOSUserBundle` et notre `UserBundle`
 
-~~~~~~~~~~~~~~ {.php}
+```php
   <?php //app/AppKernel.php
       new FOS\UserBundle\FOSUserBundle(),
       new Nico\UserBundle\NicoUserBundle(),
-~~~~~~~~~~~~~~
+```
 
 ## Générer l'entité User
 
@@ -810,7 +810,7 @@ Dans notre nouveau bundle, nous allons utiliser la puissance de
 `FOSUserBundle` pour générer en quelques lignes une entité `User.php` qui
 hérite de la *mapped superclass* `BaseUser` de FOSUserBundle
 
-~~~~~~~~~~~~~~ {.php}
+```php
     <?php //src/Nico/UserBundle/Entity/User.php
     namespace Nico\UserBundle\Entity;  # Doit correpondre au bundle
 
@@ -836,12 +836,12 @@ hérite de la *mapped superclass* `BaseUser` de FOSUserBundle
             // your own logic
         }
     }
-~~~~~~~~~~~~~~
+```
 
 Avant de demander la création de la table en BDD, il faut renseigner
 quelques paramètres
 
-~~~~~~~~~~~~~~ {.yaml}
+```yaml
   # app/config/config.yaml
 
   # FOSUserBundle configuration
@@ -849,20 +849,20 @@ quelques paramètres
       db_driver: orm        # Le type de Bdd
       firewall_name: main   # le firewall spécifié dans app/config/security.yml
       user_class: Nico\UserBundle\Entity\User # la classe de l'entité User
-~~~~~~~~~~~~~~
+```
 
 Vérifions que les choses vont bien se passer au moment de la mise à jour
 de la base de données
 
-~~~~~~~~~~~~~~ {.email}
+```
   $ app/console doctrine:schema:update --dump-sql
-~~~~~~~~~~~~~~
+```
 
 On peut maintenant mettre à jour la BDD
 
-~~~~~~~~~~~~~~ {.email}
+```
   $ app/console doctrine:schema:update --force
-~~~~~~~~~~~~~~
+```
 
 ## Configurer la sécurité
 
@@ -879,7 +879,7 @@ dans symfony, la sécurité se gère en deux étapes
 
 On configure tout cela, dans le fichier `security.yaml`
 
-~~~~~~~~~~~~~~ {.yaml}
+```yaml
   # app/config/security.yml
   security:
       encoders:
@@ -908,28 +908,28 @@ On configure tout cela, dans le fichier `security.yaml`
           - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
           - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
           - { path: ^/admin/, role: ROLE_ADMIN }
-~~~~~~~~~~~~~~
+```
 
 FOSUserBundle fournit des routes et des contrôleurs prêts à l'emploi
 pour toutes les opérations sur la sécurité. Profitons-en en les
 important grâce à une nouvelle ligne dans le fichier des routes
 
-~~~~~~~~~~~~~~ {.yaml}
+```yaml
     # app/config/routing.yml
     fos_user:
         resource: "@FOSUserBundle/Resources/config/routing/all.xml"
-~~~~~~~~~~~~~~
+```
 
 C'est terminé. On vérifie que les routes fonctionnent avec la commande
 suivante qui fait apparaître toutes les routes `fos_user_*`
 
-~~~~~~~~~~~~~~ {.email}
+```
   $ app/console router:debug
-~~~~~~~~~~~~~~
+```
 
 Nous allons maintenant créer un utilisateur puis lui attribuer un rôle
 
-~~~~~~~~~~~~~~ {.email}
+```
   $ app/console fos:user:create
   Please choose a username:nico
   Please choose an email:nico@nico.fr
@@ -940,7 +940,7 @@ Nous allons maintenant créer un utilisateur puis lui attribuer un rôle
   Please choose a username:nico
   Please choose a role:ROLE_ADMIN
   Role "ROLE_ADMIN" has been added to user "nico".
-~~~~~~~~~~~~~~
+```
 
 ## Améliorer le login/logout
 
@@ -949,7 +949,7 @@ FOSUserBundle définit.
 La commande `app/console router:debug` nous les rappelle mais on peut aussi
 le voir directement dans la config 
 
-~~~~~~~~~~~~~~ {.xml}
+```xml
     <!-- vendor/friendsofsymfony/user-bundle/Resources/config/routing/security.xml -->
     ...
     <route id="fos_user_security_login" pattern="/login">
@@ -960,11 +960,11 @@ le voir directement dans la config
         <default key="_controller">FOSUserBundle:Security:logout</default>
     </route>
     ...
-~~~~~~~~~~~~~~
+```
 
 Dans le template, on va donc écrire
 
-~~~~~~~~~~~~~~ {.html}
+```html
   <!-- app/Resources/views/base.html.twig -->
   {% if app.user %}
     {# user is logged in #}
@@ -973,38 +973,38 @@ Dans le template, on va donc écrire
     {# user is not logged in #}
     <a href="{{ path('fos_user_security_login') }}">Login</a>
   {% endif %}
-~~~~~~~~~~~~~~
+```
 
 Cela fonctionne mais c'est affreux \url{http://localhost/sf1/web/app_dev.php/login}
 
-~~~~~~~~~~~~~~ {.email}
+```
   layout.login
     security.login.username __________ security.login.password ___________
     [ ] security.login.remember_me                 [security.login.submit]
-~~~~~~~~~~~~~~
+```
 
 Première étape: tarduire les chaînes en décommentant le ligne `translator`
 inactive par défaut
 
-~~~~~~~~~~~~~~ {.yaml}
+```yaml
   # app/config/config.yml
   framework:
       #esi:             ~
       translator:      { fallback: %locale% } 
-~~~~~~~~~~~~~~
+```
 
 C'est mieux : \url{http://localhost/sf1/web/app_dev.php/login}
 
-~~~~~~~~~~~~~~ {.email}
+```
   Login
     Username: ____________________ Password: ____________________
     [ ] Remember me                                       [Login]
-~~~~~~~~~~~~~~
+```
 
 On souhaite personnaliser cette page de formulaire. Son template 
 est le fichier suivant qui hérite du layout par défaut de FOSUserBundle
 
-~~~~~~~~~~~~~~ {.html}
+```html
   <!-- vendor/friendsofsymfony/user-bundle/Resources/views/Security/login.html.twig -->
   {% extends "FOSUserBundle::layout.html.twig" %}
  
@@ -1027,7 +1027,7 @@ est le fichier suivant qui hérite du layout par défaut de FOSUserBundle
    <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
   </form>
   {% endblock fos_user_content %}
-~~~~~~~~~~~~~~
+```
 
 Le formulaire de login serait mieux intégré s'il héritait de notre layout
 plutôt que de celui de FOSUserBundle.
@@ -1036,19 +1036,19 @@ Pour ce faire, il faut d'abord vérifier que la classe de notre userBundle
 dispose d'une méthode `getParent` qui définit FOSUserBundle comme parent Grâce
 à elle, on va pouvoir en outrepasser certaines définitions
 
-~~~~~~~~~~~~~~ {.php}
+```php
   <?php //src/Nico/UserBundle/NicoUserBundle.php
   public function getParent()
   {
     return 'FOSUserBundle';
   }
-~~~~~~~~~~~~~~
+```
 
 Maintenant, on crée un nouveau layout qui hérite du layout du site et qui
 intègre le formulaire de login contenu dans le bloc `fos_user_content` défini
 le `login.html.twig` présenté précédemment
 
-~~~~~~~~~~~~~~ {.html}
+```html
   <!-- src/Nico/UserBundle/Resources/views/layout.html.twig -->
   {% extends "::base.html.twig" %}
   
@@ -1056,7 +1056,7 @@ le `login.html.twig` présenté précédemment
       {% block fos_user_content %}
       {% endblock fos_user_content %}
   {% endblock %}
-~~~~~~~~~~~~~~
+```
 
 
 
@@ -1076,10 +1076,10 @@ Update, Delete) permet d'effectuer les cinq opérations de base sur un modèle.
 
 On validera les réponses proposées par défaut
 
-~~~~~~~~~~~~~~ {.email}
+```
   $ php app/console doctrine:generate:crud --entity=NicoBlogBundle:Quark --route-prefix=quark 
                                                                     --with-write --format=yml
-~~~~~~~~~~~~~~
+```
 
 Cette commande va créer le contrôleur `QuarkController.php` dans le répertoire
 `Controller` du bundle et les templates `edit.html.twig`, `index.html.twig`,
@@ -1089,24 +1089,24 @@ Nous aurons besoin d'ajouter une méthode `__toString()` à notre classe
 Category pour que s'affiche le menu déroulant Catégorie du formulaire de
 modification de quark :
 
-~~~~~~~~~~~~~~ {.php}
+```php
     <?php //src/Nico/BlogBundle/Entity/Category.php
     public function __toString()
     {
       return $this->getName();
     }
-~~~~~~~~~~~~~~
+```
 
 Le routage `src/Nico/BlogBundle/Resources/config/routing/quark.yml` qui a été
 créé doit être chargé par le fichier de routage du bundle en ajoutant 
 
-~~~~~~~~~~~~~~ {.yaml}
+```yaml
     # src/Nico/BlogBundle/Resources/config/routing.yml
 
     NicoBlogBundle_quark:
       resource: "@NicoBlogBundle/Resources/config/routing/quark.yml"
       prefix:   /quark
-~~~~~~~~~~~~~~
+```
 
 L'adresse \url{http://localhost/sf1/web/app_dev.php/quark}
 doit donner un résultat intéressant
@@ -1115,7 +1115,7 @@ Il nous reste à sécuriser les pages de création, modification et suppression.
 
 Un coup d'œil au fichier de routage CRUD
 
-~~~~~~~~~~~~~~ {.yaml}
+```yaml
   # src/Nico/BlogBundle/Resources/config/routing/quark.yml
   ...
   quark_new:
@@ -1126,12 +1126,12 @@ Un coup d'œil au fichier de routage CRUD
       path:     /{id}/edit
       defaults: { _controller: "NicoBlogBundle:Quark:edit" }
   ...
-~~~~~~~~~~~~~~
+```
 
 Nous voyons que nous devons ajouter des routes dans la section `acces_control`
 du fichier de configuration de sécurité
 
-~~~~~~~~~~~~~~ {.yaml}
+```yaml
   # app/config/security.yml
   ...
   access_control:
@@ -1139,7 +1139,7 @@ du fichier de configuration de sécurité
       - { path: ^/quark/[0-9]+/edit, role: ROLE_ADMIN }
       - { path: ^/quark/[0-9]+/delete, role: ROLE_ADMIN }
   ...
-~~~~~~~~~~~~~~
+```
 
 NOTES ------------------------------------------------------------
 
