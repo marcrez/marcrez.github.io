@@ -33,7 +33,7 @@
 
   <body>
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-default ">
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -42,7 +42,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="{{ site.baseurl }}/index">Home</a>
+          <a class="navbar-brand" href="{{ site.baseurl }}/index">{{ site.name }}</a>
+          <a class="navbar-description" href="{{ site.baseurl }}/index">{{ site.description }}</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -69,11 +70,6 @@
     </nav>
 
     <div class="container">
-
-      <div class="blog-header">
-        <p class="blog-title">{{ site.name }}</p>
-        <p class="lead blog-description">{{ site.description }}</p>
-      </div>
 
       <div class="row">
 
@@ -123,6 +119,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!--  gfranko / jquery.tocify.js Greg Franco -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js"></script>
     <!-- hack for img styling and wrapping -->
     <script type="text/javascript">
