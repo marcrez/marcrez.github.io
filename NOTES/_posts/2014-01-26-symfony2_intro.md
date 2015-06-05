@@ -292,6 +292,7 @@ il étend le fichier layout du bundle `AcmeUserBundle::layout.html.twig`
 
 qui lui-même étend le fichier layout principal `::base.html.twig`
 
+{% raw  %}
 ```html
   <!-- app/Resources/views/base.html.twig -->
   <!DOCTYPE html>
@@ -316,6 +317,7 @@ qui lui-même étend le fichier layout principal `::base.html.twig`
       </body>
   </html>
 ```
+{% endraw %}
 
 En résumé le fonctionnement est le suivant
 
