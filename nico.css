@@ -1,6 +1,13 @@
 nav {
   float: none;
 }
+.navbar-fixed-top {
+  position: relative;
+}
+.navbar-brand {
+  font-family: 'Expletus Sans', cursive;
+}
+
 h1 {
 font-size: 30px;
 }
