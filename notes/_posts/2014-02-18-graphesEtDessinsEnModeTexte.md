@@ -29,9 +29,7 @@ Il exite un visualiseur en ligne pour les scripts en langage dot :
 Autre possibilité : utiliser plantuml qui sait lire le dot, mais aussi le ditaa
 et sa propre syntaxe 
 
-Pour essayer cela, rendez-vous sur 
-
-[](http://www.plantuml.com/plantuml/form)
+Pour essayer cela, rendez-vous sur http://www.plantuml.com/plantuml/form
 
 Et saisir le code dot suivant : 
  

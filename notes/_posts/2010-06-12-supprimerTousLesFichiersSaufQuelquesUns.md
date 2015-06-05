@@ -3,7 +3,7 @@ title: Supprimer tous les fichiers sauf quelques-uns.
 layout: post
 date: 2010-06-12
 tags: [bash, linux, shell]
-category: Bash
+category: notes
 ---
 
 ![Tarsh bin](http://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/User-trash-full.svg/200px-User-trash-full.svg.png)
