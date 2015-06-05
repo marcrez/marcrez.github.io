@@ -412,42 +412,42 @@ L'entité est créée mais on va effectuer quelques modifications
 ```php
 <?php src/Nico/BlogBundle/Entity/Quark.php
 
-namespace Nico\BlogBundle\Entity;                   namespace Nico\BlogBundle\Entity;
+namespace Nico\BlogBundle\Entity;                namespace Nico\BlogBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM;                    use Doctrine\ORM\Mapping as ORM;
-                                                    use Gedmo\Mapping\Annotation as Gedmo;
+use Doctrine\ORM\Mapping as ORM;                 use Doctrine\ORM\Mapping as ORM;
+                                                 use Gedmo\Mapping\Annotation as Gedmo;
 /**
  * Quark
- *                                                  /**
- * @ORM\Table()                                      * @ORM\Table(name="quark")
- * @ORM\Entity                                       * @ORM\Entity
- */                                                  */
-class Quark                                         class Quark
-{                                                   {
-    /**
-     * @var integer
-     *                                                  /**
-     * @ORM\Column(name="id", type="integer")            * @ORM\Column(name="id", type="guid")
-     * @ORM\Id                                           * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")              * @ORM\GeneratedValue(strategy="UUID")
-     */                                                  */
-    private $id;                                        private $id;
+ *                                               /**
+ * @ORM\Table()                                   * @ORM\Table(name="quark")
+ * @ORM\Entity                                    * @ORM\Entity
+ */                                               */
+class Quark                                      class Quark
+{                                                {
+  /**
+   * @var integer
+   *                                               /**
+   * @ORM\Column(name="id", type="integer")         * @ORM\Column(name="id", type="guid")
+   * @ORM\Id                                        * @ORM\Id
+   * @ORM\GeneratedValue(strategy="AUTO")           * @ORM\GeneratedValue(strategy="UUID")
+   */                                               */
+  private $id;                                     private $id;
 
-    /**
-     * @var string
-     *                                                  /**
-     * @ORM\Column(name="content", type="text")          * @ORM\Column(name="content", type="text")
-     */                                                  */
-    private $content;                                   private $content;
+  /**
+   * @var string
+   *                                               /**
+   * @ORM\Column(name="content", type="text")       * @ORM\Column(name="content", type="text")
+   */                                               */
+  private $content;                                private $content;
 
-    /**
-     * @var \DateTime                                   /**
-     *                                                   * @Gedmo\Timestampable(on="create")
-     * @ORM\Column(name="created", type="datetime")      * @ORM\Column(name="created", type="datetime")
-     */                                                  */
-    private $created;                                   private $created;
+  /**
+   * @var \DateTime                                /**
+   *                                                * @Gedmo\Timestampable(on="create")
+   * @ORM\Column(name="created",type="datetime")    * @ORM\Column(name="created",type="datetime")
+   */                                               */
+  private $created;                                private $created;
 
-    //Les getters et les setters                        //Les getters et les setters
+  //Les getters et les setters                     //Les getters et les setters
 ```
 
 On va maintenant créer la base de données
