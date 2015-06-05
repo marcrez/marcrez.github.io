@@ -6,8 +6,7 @@ tags: [ascii, texte, markdown, pandoc]
 category: notes
 ---
 
-![Graph](http://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Directed_graph_no_background.svg/220px-Directed_graph_no_background.svg.png){: .center-image }
-
+![Graph](http://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Directed_graph_no_background.svg/220px-Directed_graph_no_background.svg.png)
 
 
 GraphViz (diminutif de Graph Visualization Software) est un
