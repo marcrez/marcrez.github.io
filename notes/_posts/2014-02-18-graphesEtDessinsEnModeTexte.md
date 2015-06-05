@@ -19,17 +19,13 @@ Le langage ressemble à cela :
       Father -> Son02;
     }
 
-[](http://fr.wikipedia.org/wiki/DOT_(langage))
+http://fr.wikipedia.org/wiki/DOT_(langage)
 
 
-Il exite un visualiseur en ligne pour les scripts en langage dot :
-
-[](http://rise4fun.com/agl)
+Il exite un visualiseur en ligne pour les scripts en langage dot : http://rise4fun.com/agl
 
 Autre possibilité : utiliser plantuml qui sait lire le dot, mais aussi le ditaa
-et sa propre syntaxe 
-
-Pour essayer cela, rendez-vous sur http://www.plantuml.com/plantuml/form
+et sa propre syntaxe. Pour essayer cela, rendez-vous sur http://www.plantuml.com/plantuml/form
 
 Et saisir le code dot suivant : 
  
@@ -44,7 +40,7 @@ Et saisir le code dot suivant :
     }
     @enddot
 
-Ou encore le code ditaa (généré par [](http://www.asciiflow.com/#Draw) )
+Ou encore le code ditaa (généré par http://www.asciiflow.com/#Draw )
 
     @startditaa
     +--------+   +-------+    +-------+
