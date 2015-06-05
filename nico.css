@@ -16,7 +16,10 @@ border-left: 2px solid #396;
 }
 
 .center {text-align: center;}
+.toc ul{
+color: #396;
 
+}
 table {
 color: #333;
 font-family: Helvetica, Arial, sans-serif;
