@@ -6,6 +6,10 @@ tags: [ascii, texte, markdown, pandoc]
 category: notes
 ---
 
+![Graph](http://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Directed_graph_no_background.svg/220px-Directed_graph_no_background.svg.png){: .center-image }
+
+
+
 GraphViz (diminutif de Graph Visualization Software) est un
 ensemble d'outils open source créés par les laboratoires de recherche d'AT&T
 qui manipulent des graphes définis à l'aide de scripts suivant le langage DOT.
