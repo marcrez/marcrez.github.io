@@ -261,6 +261,7 @@ Le contrôleur
 
 En continuant sur l'exemple précédent, notre template de page ressemble à ceci
 
+{% raw  %}
 ```html
   <!-- src/Acme/UserBundle/Resources/views/Member/show.html.twig -->
   {% extends 'AcmeUserBundle::layout.html.twig' %}
@@ -273,9 +274,11 @@ En continuant sur l'exemple précédent, notre template de page ressemble à cec
       </ul>
   {% endblock %}
 ```
+{% endraw %}
 
 il étend le fichier layout du bundle `AcmeUserBundle::layout.html.twig`
 
+{% raw  %}
 ```html
   <!-- src/Acme/UserBundle/Resources/views/layout.html.twig -->
   {% extends '::base.html.twig' %}
@@ -285,6 +288,7 @@ il étend le fichier layout du bundle `AcmeUserBundle::layout.html.twig`
       {% block content %}{% endblock %}
   {% endblock %}
 ```
+{% endraw %}
 
 qui lui-même étend le fichier layout principal `::base.html.twig`
 
@@ -1004,6 +1008,7 @@ C'est mieux : \url{http://localhost/sf1/web/app_dev.php/login}
 On souhaite personnaliser cette page de formulaire. Son template 
 est le fichier suivant qui hérite du layout par défaut de FOSUserBundle
 
+{% raw  %}
 ```html
   <!-- vendor/friendsofsymfony/user-bundle/Resources/views/Security/login.html.twig -->
   {% extends "FOSUserBundle::layout.html.twig" %}
@@ -1028,6 +1033,7 @@ est le fichier suivant qui hérite du layout par défaut de FOSUserBundle
   </form>
   {% endblock fos_user_content %}
 ```
+{% endraw %}
 
 Le formulaire de login serait mieux intégré s'il héritait de notre layout
 plutôt que de celui de FOSUserBundle.
@@ -1048,6 +1054,7 @@ Maintenant, on crée un nouveau layout qui hérite du layout du site et qui
 intègre le formulaire de login contenu dans le bloc `fos_user_content` défini
 le `login.html.twig` présenté précédemment
 
+{% raw  %}
 ```html
   <!-- src/Nico/UserBundle/Resources/views/layout.html.twig -->
   {% extends "::base.html.twig" %}
@@ -1057,7 +1064,7 @@ le `login.html.twig` présenté précédemment
       {% endblock fos_user_content %}
   {% endblock %}
 ```
-
+{% endraw %}
 
 
 
