@@ -86,12 +86,15 @@
         </div><!-- /.blog-main -->
 
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-          <div id="toc" class="toc">Sommaire</div>
+          {% if page.url == "/index.html" %}
           <div class="sidebar-module sidebar-module-inset">
             <h4>Disclaimer</h4>
             <p>Ce blog est constitué de notes prises au fur et à mesure qui ne
             constituent pas un mode d'emploi.</p>
           </div>
+          {% else %}
+          <div id="toc" class="toc">Sommaire</div>
+          {% endif %}
           <!--
           <div class="sidebar-module">
             <h4>Elsewhere</h4>
