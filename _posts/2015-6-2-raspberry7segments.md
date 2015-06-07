@@ -362,4 +362,59 @@ $ sudo python rotary.py
 et observer la console lorsqu'on agit sur
 le codeur en appuyant sur le poussoir ou tournant dans un sens ou dans l'autre.
 
+## Fin
+
+```python
+from rotary_class import RotaryEncoder
+import PiShiftPy as shift
+from time import sleep
+import RPi.GPIO as GPIO
+
+# Define GPIO inputs
+SW = 13
+DT = 19
+CLK = 26
+shift.init(18,23,24)
+
+# This is the event callback routine to handle events
+def switch_event(event):
+        global i
+        global tab
+        global ON
+        if event == RotaryEncoder.CLOCKWISE:
+              i = i+1
+              shift.write(tab[i])
+              sleep(.5)
+        elif event == RotaryEncoder.ANTICLOCKWISE:
+              i = i-1
+              shift.write(tab[i])
+              sleep(.5)
+        elif event == RotaryEncoder.BUTTONDOWN:
+              if ON:
+                shift.init()
+                ON = False
+              else:
+                i = 5
+                shift.write(tab[i])
+                ON = True
+        return
+
+# Define the switch
+rswitch = RotaryEncoder(CLK,DT,SW,switch_event)
+
+try:
+  print("Le programme fonctionne pendant 60s.")
+  tab = [0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x6F]
+  i = 5
+  ON = True
+  sleep(30)
+
+except KeyboardInterrupt:
+  print("\nInterruption par clavier.")
+
+finally:
+  print("On arrete tout")
+  shift.init()
+  GPIO.cleanup()
+```
 
