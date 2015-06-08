@@ -5,7 +5,7 @@ layout: default
 <div class="page-header">
 
         {% for data_tag in site.data.tags %}
-            {% if data_tag.slug == tag %}
+            {% if data_tag.slug == page.tag %}
                 {% assign tagg = data_tag %}
             {% endif %}
         {% endfor %}
