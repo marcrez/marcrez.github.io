@@ -6,23 +6,12 @@ tags: [balisage, pandoc, formats]
 category: notes
 ---
 
-<!-- Commande pour générer le pdf
-file=compraison && java -jar ../../asciiArt/plantuml.jar $file.md && pandoc-1.9.1.2 --toc --number-sections --smart --highlight-style=pygments --template ../pandoc_template.tex -s $file.md -o $file.pdf &&  evince $file.pdf
--->
-
 ## Présentation
 
 Pour saisir et mettre en forme des textes ou des documents textuels comportant
-des insertions d'images, de figures ou de tableaux, on utilise généralement un
-traitement de texte WYSIWYG, propriétaire comme Microsoft Word ou libre comme
-OpenOffice.
-
-> Remarque : Un logiciel WYSIWYG pour *What you see is what you get* est une
-> interface utilisateur qui permet de composer visuellement le résultat voulu.
-> C'est une interface intuitive : l’utilisateur voit directement à l’écran à
-> quoi ressemblera le résultat final.
-
-Les défauts majeurs de ces logiciels sont nombreux :
+des insertions d'images, de figures ou de tableaux, on utilise souvent un
+traitement de texte, propriétaire comme Microsoft Word ou libre comme
+OpenOffice.  Mais les défauts majeurs de ces logiciels sont nombreux :
 
 1. Le rédacteur d'un document se concentre presque autant sur le fond que
    sur la forme. Outre le temps perdu, les conséquences sur le rendu sont
@@ -79,124 +68,4 @@ Le même exemple au format HTML :
 	 <li> c'est efficace.</li>
 	</ul>
 ```
-
-Comme on le voit, la syntaxe est accessible mais elle nuit à la lisibilité du
-texte et au goût de nombreux utilisateurs, il y a trop de commandes de mise en
-forme.
-C'est dommage car ces deux formats ouverts et universels ont chacun leur
-avantage :
-
-* HTML peut être lu sur n'importe quelle plateforme ou terminal du monde
-  entier car ses spécifications, gérées le [W3C](www.w3.org), sont respectées
-  par les navigateurs web.
-* le logiciel LaTeX produit des documents de qualité unanimement
-  reconnue. Il prend en charge la mise en page, l'utilisateur n'ayant qu'à se
-  concentrer sur le fond et sa structure.
-
-Il existe une alternative qui est à la fois simple, interopérable et efficace :
-les langages de balisage légers.
-
-## Les langages de balisage légers et les wikis
-
-Un langage de balisage léger est un langage utilisant une
-syntaxe simple, conçue pour qu'un fichier en ce langage soit aisé à saisir avec
-un éditeur de texte simple, et facile à lire dans sa forme non formatée.
-
-Les wikis on grandement contribué à populariser ce type de langage. Le principe
-est de saisir des balises accessibles aux non inités, un moteur se chargeant de
-la conversion en HTML avant la publication.
-
-Re-voici notre exemple, cette fois-ci au format MarkDown :
-
-```markdown
-	Le titre du paragraphe
-	======================
-
-	Voici un mot en **gras** puis une liste :
-
-	* c'est simple ;
-	* c'est efficace.
-```
-
-Avantages :
-
-* les balises sont visuelles et le texte reste lisible ;
-* le nombre de balises et de règles est très limité donc
-	* la syntaxe est facile à mémoriser ;
-	* il est relativement simple de programmer un interpréteur.
-* les balises étant constituées de cractères non alphabétiques, on peut utiliser
-  un correcteur d'orthographe.
-
-
-Il existe de nombreux langages de balisage légers : Creole, Markdown, Asciidoc,
-txt2tags, etc. Chacun a ses avantages, mais tous sont simples.
-
-## Les langages de balisage légers et la bureautique
-
-On vient de voir qu'au sein des wikis, les langages de balisage légers sont
-transformés en HTML. C'est maintenant que les choses
-deviennent intéressantes : il existe des logiciels permettant d'exporter et
-de mettre en forme vers différents formats pour différents usages : la diffusion
-web, bien sûr mais aussi l'export pour un traitement de texte, l'impression, la
-lecture sur tablette ou liseuse d'e-book ou encore la vidéo-projection.
-
-<!--
-@startditaa img/conversion01.png
-                         Logiciel de
-                         conversion
-                                       /--------------------\
-                             /------|> |     ProjectioncYEL |
-                             |         \--------------------/
-/---------------------\      |
-|                     | -----/         /---------------------\
-| Document texte brut | ------------|> |     Impression cGRE |
-| rédigé en langage   |                \---------------------/ 
-| de balisage léger{d}| ---------\
-|                     | -----\   |     /---------------------\
-\---------------------/      |   \--|> |    Diffusion WebcBLU|
-                             :         \---------------------/
-                             |
-                             \------|>   etc...
-@endditaa
--->
-
-![Principe logique]({{ site.baseurl }}/images/langageBalisageLeger/conversion01.png)		
-
-Avec le couple langage de balisage léger + logiciel de conversion, un grand pas
-est effectué en direction de l'*interopérabilité*.
-
-L'interopérabilité pour un format se définit comme la capacité à fonctionner
-avec d'autres produits ou systèmes informatiques existants ou futurs, sans
-restriction d'accès ou de mise en œuvre.
-
-Cela signifie tout d'abord que le format se doit d'être ouvert avec des
-spécifications publiques et claires afin que l'utilisateur ne soit pas tenu
-d'utiliser un logiciel particulier qu serait le seul à en connaitre le sens.
-Ensuite cela implique que l'on puisse copier-coller le contenu ou encore
-extraire tout ou partie du document.
-
-Un document rédigé dans un lanage de balisage léger répond à ces deux premières
-attentes. 
-
-Parlons maintenant du volet "restriction de mise en œuvre". 
-
-Qu'on change de logiciel de traitement de
-texte ou qu'on ait à partager ou encore à diffuser un document textuel, 
-l'important est d'abord d'afficher le contenu mais aussi
-de préserver la forme. 
-Dans cette perspective et du fait
-de la multiplicité des logiciels et des systèmes sur lesquels le document
-pourrait ête consulté, 
-le rédacteur doit veiller à
-limiter la mise en forme aux capacités communes des supports potentiels.
-
-Exemples :
-
-1.  que deviennent les couleurs si le support est une liseuse en noir et blanc ?
-1.  que devient la vidéo intégrée si le document est imprimé pour être
-    photocopié ?
-1.  que deviennent les polices de caractère exotiques sur un autre ordinateur où
-    elles ne sont pas installées ?
-1.  comment les images positionnées de façon sophistiquée vont-elles déborder ou
-se replacer en cas de lecture sur une tablette de petite taille ?
 
