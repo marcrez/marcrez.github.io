@@ -1,16 +1,16 @@
 - slug: markdown
   name: markdown
 - slug: raspberryPi
-  name: raspberryPi
+  name: Raspberry Pi
 - slug: python
-  name: python
+  name: Python
 - slug: pandoc
   name: pandoc
 - slug: bash
   name: bash
 - slug: video
-  name: video
+  name: vidéo
 - slug: linux
   name: linux
 - slug: mysql
-  name: mysql
+  name: MySQL
