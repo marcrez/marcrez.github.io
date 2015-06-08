@@ -440,8 +440,7 @@ Un autre exemple, cette fois avec un diagramme :
 
 ![img/uml01]({{ site.baseurl }}/images/langageBalisageLeger/uml01.png)		
 
-Insertion de schéma dans un document Pandoc
--------------------------------------------
+Pour inserer un schéma dans un document Pandoc on peut procéder ainsi 
 
 ```
 	Ditaa
