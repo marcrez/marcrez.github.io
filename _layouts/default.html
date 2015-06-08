@@ -93,23 +93,11 @@
           <div id="toc" class="toc">Sommaire</div>
           {% endif %}
           <div class="sidebar-module">
-            <h4>Elsewhere</h4>
+            <h4><i class="fa fa-tags"></i>Tags</h4>
             <ol class="list-unstyled">
-              <li><a href="#">GitHub</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Facebook</a></li>
-
-
- {% for tag in site.data.tags %}
- <li> 
-            <a href="/tag/{{ tag.slug }}/">{{ tag.name }}</a>
-</li>
-
-{% endfor %} 
-
-
-
-
+              {% for tag in site.data.tags %}
+              <li> <a href="/tag/{{ tag.slug }}/">{{ tag.name }}</a> </li>
+              {% endfor %} 
             </ol>
           </div>
         </div>

@@ -19,6 +19,7 @@ layout: default
 <article class="post">
   {% if site.tags[page.tag] %}
   {% for post in site.tags[page.tag] %}
+  <div class="well">
   <a href="{{ post.url }}/">{{ post.title }}</a> &nbsp;
   <small><i class="fa fa-tags"></i>
     {% for tag in post.tags %}
@@ -34,11 +35,10 @@ layout: default
 
     {% endfor %}
   </small>
-  <div class="well">
+  </div>
     <div class="category small">
       {{ post.excerpt }}
     </div>
-  </div>
   {% endfor %}
   {% else %}
   <p>There are no posts for this tag.</p>
