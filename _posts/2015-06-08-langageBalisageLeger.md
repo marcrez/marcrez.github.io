@@ -182,8 +182,8 @@ d'une action pour en générer une version html ou docx...
 ![Pandoc en action]({{ site.baseurl }}/images/langageBalisageLeger/conversion02.png)		
 
 
-| Logiciel | Import                              | Exportweb                                    | ExportBure                           | ExportTex              | Exporrt LBL                                            |
-|----------|-------------------------------------|----------------------------------------------|--------------------------------------|------------------------|--------------------------------------------------------|
+| Logiciel | Import                              | Export Web                                   | Export Bureautique                   | Export Tex             | Exporrt Balise                                        |
+|:---------|:------------------------------------|:---------------------------------------------|:-------------------------------------|:-----------------------|:-------------------------------------------------------|
 | Txt2tags | T2t                                 | HTML, XHTML, SGML,                           | DocBook, Lout, MagicPoint, PageMaker | LaTeX                  | Creole, AsciiDoc, PmWiki, MoinMoin, AsciiDoc, DokuWiki |
 | MMD      | Markdown                            | HTML                                         | OpenDocument                         | LaTeX                  |                                                        |
 | Pandoc   | Markdown, LaTeX, HTML, Textile, RST | HTML, XHTML, HTML5, EPUB, Slidy,S5, DZSlides | OpenDocument, ODT, DOCX, DocBook     | LaTeX, ConTeXt, Beamer | Markdown, RST, AsciiDoc, Textile, MediaWiki            |
@@ -191,32 +191,26 @@ d'une action pour en générer une version html ou docx...
 
 
 
+|Fonctionnalités                               |Txt2tags  |MMD     |Pandoc  |Asciidoc |
+|:---------------------------------------------|:--------:|:------:|:------:|:-------:|
+|Sections (numérotées ou non)                  |x         |x       |x       |x        |
+|Paragraphes                                   |x         |x       |x       |x        |
+|Listes à puces, numérotées et de définition   |x         |x       |x       |x        |
+|Texte en gras, italique, souligné, barré░     |x         |x       |x       |x        |
+|Couleurs et tailles de texte                  |          |        |        |x        |
+|Police à espacement constant                  |x         |x       |x       |x        |
+|Coloration syntaxique de code source          |          |        |x       |x        |
+|Gestion des liens (internet, courriel, etc.)  |x         |x       |x       |x        |
+|Références internes                           |          |x       |x       |x        |
+|Insertion d'images                            |x         |x       |x       |x        |
+|Tableaux (gestion de bordure et d'alignement) |x         |x       |x       |x        |
+|Tableaux (fusion de cellules)                 |          |x       |        |x        |
+|Légendes (images et tableaux)                 |          |x       |x       |x        |
+|Citations                                     |          |x       |x       |x        |
+|Notes de bas de page                          |          |x       |x       |x        |
+|Formules mathématiques LaTeX                  |          |x       |x       |x        |
 
-------------------------------------------------------------
-Logiciel  Import    Export   Export       Export   Export
-                    web      Bureautique  TeX      LBL[^LBL]
--------   -----     ------   ----------   -----    ---------
-Txt2tags  T2t       HTML,    DocBook,     LaTeX    Creole,
-                    XHTML,   Lout,                 AsciiDoc,
-                    SGML,    MagicPoint,           PmWiki,
-                             PageMaker             MoinMoin,
-                                                   AsciiDoc,
-                                                   DokuWiki
 
-MMD       Markdown  HTML     OpenDocument LaTeX
-
-Pandoc    Markdown, HTML,    OpenDocument,LaTeX,   Markdown,
-          LaTeX,    XHTML,   ODT, DOCX,   ConTeXt, RST,
-          HTML,     HTML5,   DocBook      Beamer   AsciiDoc,
-          Textile,  EPUB,                          Textile,
-          RST       Slidy,S5,                      MediaWiki
-                    DZSlides
-
-AsciiDoc  AsciiDoc  HTML,    Docbook      LaTeX
-                    XHTML
-------------------------------------------------------------
-
-[^LBL]:LBL pour Langages de Balisage Légers
 
 -------------------------------------------------------
 Fonctionnalités                Txt2tags MMD    Pandoc Asciidoc
@@ -239,7 +233,7 @@ Coloration syntaxique de                       x      x
 code source
 
 Gestion des liens              x        x      x      x
-(internet, courriel, etc.)
+(TeXinternet, courriel, etc.)
 
 Références internes                     x      x      x
 
