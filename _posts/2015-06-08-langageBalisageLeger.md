@@ -130,3 +130,28 @@ web, bien sûr mais aussi l'export pour un traitement de texte, l'impression, la
 lecture sur tablette ou liseuse d'e-book ou encore la vidéo-projection.
 
 ![Principe logique]({{ site.baseurl }}/images/langageBalisageLeger/conversion01.png)		
+
+<!--
+@startditaa img/conversion01.png
+                         Logiciel de
+                         conversion
+                                       /--------------------\
+                             /------|> |     ProjectioncYEL |
+                             |         \--------------------/
+/---------------------\      |
+|                     | -----/         /---------------------\
+| Document texte brut | ------------|> |     Impression cGRE |
+| rédigé en langage   |                \---------------------/ 
+| de balisage léger{d}| ---------\
+|                     | -----\   |     /---------------------\
+\---------------------/      |   \--|> |    Diffusion WebcBLU|
+                             :         \---------------------/
+                             |
+                             \------|>   etc...
+@endditaa
+-->
+
+
+Avec le couple langage de balisage léger + logiciel de conversion, un grand pas
+est effectué en direction de l'*interopérabilité*.
+
