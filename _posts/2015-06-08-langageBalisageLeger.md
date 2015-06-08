@@ -69,3 +69,54 @@ Le même exemple au format HTML :
 	</ul>
 ```
 
+Comme on le voit, la syntaxe est accessible mais elle nuit à la lisibilité du
+texte et au goût de nombreux utilisateurs, il y a trop de commandes de mise en
+forme.
+C'est dommage car ces deux formats ouverts et universels ont chacun leur
+avantage :
+
+* HTML peut être lu sur n'importe quelle plateforme ou terminal du monde
+  entier car ses spécifications, gérées le [W3C](www.w3.org), sont respectées
+  par les navigateurs web.
+* le logiciel LaTeX produit des documents de qualité unanimement
+  reconnue. Il prend en charge la mise en page, l'utilisateur n'ayant qu'à se
+  concentrer sur le fond et sa structure.
+
+Il existe une alternative qui est à la fois simple, interopérable et efficace :
+les langages de balisage légers.
+
+## Les langages de balisage légers et les wikis
+
+Un langage de balisage léger est un langage utilisant une
+syntaxe simple, conçue pour qu'un fichier en ce langage soit aisé à saisir avec
+un éditeur de texte simple, et facile à lire dans sa forme non formatée.
+
+Les wikis on grandement contribué à populariser ce type de langage. Le principe
+est de saisir des balises accessibles aux non inités, un moteur se chargeant de
+la conversion en HTML avant la publication.
+
+Re-voici notre exemple, cette fois-ci au format MarkDown :
+
+```markdown
+	Le titre du paragraphe
+	======================
+
+	Voici un mot en **gras** puis une liste :
+
+	* c'est simple ;
+	* c'est efficace.
+```
+
+Avantages :
+
+* les balises sont visuelles et le texte reste lisible ;
+* le nombre de balises et de règles est très limité donc
+	* la syntaxe est facile à mémoriser ;
+	* il est relativement simple de programmer un interpréteur.
+* les balises étant constituées de cractères non alphabétiques, on peut utiliser
+  un correcteur d'orthographe.
+
+
+Il existe de nombreux langages de balisage légers : Creole, Markdown, Asciidoc,
+txt2tags, etc. Chacun a ses avantages, mais tous sont simples.
+
