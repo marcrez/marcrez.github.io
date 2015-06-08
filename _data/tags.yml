@@ -1,17 +1,17 @@
 - slug: markdown
-  name: markdown
+  name: Markdown
 - slug: raspberryPi
-  name: <img src="{{ site.baseurl }}/images/rpi.png">Raspberry Pi
+  name: Raspberry Pi
 - slug: python
   name: Python
 - slug: pandoc
-  name: pandoc
+  name: Pandoc
 - slug: bash
-  name: bash
+  name: Bash
 - slug: video
-  name: vidéo
+  name: Vidéo
 - slug: linux
-  name: linux
+  name: Linux
 - slug: mysql
   name: MySQL
 - slug: vim 
