@@ -2,7 +2,7 @@
 title: Balisage léger et conversion de documents
 layout: post
 date: 2015-05-14 13:30:00
-tags: [balisage, pandoc, formats]
+tags: [markdown, pandoc, txt2tags]
 category: notes
 ---
 
@@ -466,7 +466,7 @@ Pour inserer un schéma dans un document Pandoc on peut procéder ainsi
 	                       +-------------+
 	@endditaa
 	-->
-	![Un joli diagramme]({{ site.baseurl }}/images/langageBalisageLeger/mon_diagramme.png)		
+	![Un joli diagramme](mon_diagramme.png)		
 ```
 
 Après enregistrement du texte ci-dessus dans un fichier `diagramme.md` on lance
@@ -475,7 +475,7 @@ Après enregistrement du texte ci-dessus dans un fichier `diagramme.md` on lance
 $ file=diagramme && java -jar plantuml.jar $file.md && pandoc $file.md -o $file.pdf
 ```
 
-![Un document produit par pandoc et plantuml](mon_diagramme.png)
+![Un document produit par pandoc et plantuml]({{ site.baseurl }}/images/langageBalisageLeger/mon_diagramme.png)
 
 
 
