@@ -48,13 +48,15 @@
         <a class="navbar-brand" href="{{ site.baseurl }}/index"> <span class="small">N</span>Poulain<span class="small">.fr</span></a>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="{{ site.baseurl }}/indexRaspberryPi">Raspberry Pi</a></li>
+            <li><a href="{{ site.baseurl }}/tag/raspberryPi">Raspberry Pi</a></li>
             <li><a href="{{ site.baseurl }}/indexNotes">Notes</a></li>
             <li><a href="{{ site.baseurl }}/about">About</a></li>
-            <!--
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
+              {% for tag in site.data.tags %}
+              <li> <a href="/tag/{{ tag.slug }}/">{{ tag.name }}</a> </li>
+              {% endfor %} 
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
                 <li><a href="#">Something else here</a></li>
@@ -64,7 +66,6 @@
                 <li><a href="#">One more separated link</a></li>
               </ul>
             </li>
-            -->
           </ul>
         </div><!--/.nav-collapse -->
       </div>
