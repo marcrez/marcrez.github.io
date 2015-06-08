@@ -1,7 +1,7 @@
 ---
 title: Compression de données
 layout: post
-tags: [algorithmique, informatique]
+tags: [algo]
 category: notes
 ---
 

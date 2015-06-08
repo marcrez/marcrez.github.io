@@ -2,7 +2,7 @@
 title: Compiler Vim avec le support python
 layout: post
 date: 2014-01-25
-tags: [shell, vim]
+tags: [bash, vim]
 category: notes
 ---
 

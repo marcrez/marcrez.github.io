@@ -2,7 +2,7 @@
 title: Tri sur un fichier excel
 layout: post
 date: 2014-03-20
-tags: [vim, tableur]
+tags: [vim]
 category: notes
 ---
 

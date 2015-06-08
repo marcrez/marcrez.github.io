@@ -2,7 +2,7 @@
 title: Répertoires utilisateur pour apache
 layout: post
 date: 2014-11-27
-tags: [Apache]
+tags: [bash, linux]
 category: notes
 ---
 

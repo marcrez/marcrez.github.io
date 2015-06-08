@@ -2,7 +2,7 @@
 title: Symfony notes en cours de rédaction
 layout: post
 date: 2014-01-26
-tags: [symfony, web, twig]
+tags: [symfony, twig]
 category: notes
 ---
 

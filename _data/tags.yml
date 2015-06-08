@@ -14,3 +14,11 @@
   name: linux
 - slug: mysql
   name: MySQL
+- slug: vim 
+  name: Vim
+- slug: twig
+  name: Twig
+- slug: symfony
+  name: Symfony
+- slug: algo
+  name: Algorithmique

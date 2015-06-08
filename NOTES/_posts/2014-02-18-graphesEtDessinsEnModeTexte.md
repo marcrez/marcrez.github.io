@@ -2,7 +2,7 @@
 title: Graphes et dessins en mode texte
 layout: post
 date: 2014-02-18
-tags: [ascii, texte, markdown, pandoc]
+tags: [markdown, pandoc]
 category: notes
 ---
 

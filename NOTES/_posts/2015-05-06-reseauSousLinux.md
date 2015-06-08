@@ -2,7 +2,7 @@
 title: Connaitre son réseau sous Linux
 layout: post
 date: 2015-05-06  00:38
-tags: [linux, bash, shell, reseau]
+tags: [linux, bash]
 category: notes
 ---
 
