@@ -40,7 +40,7 @@ collapse; border-spacing: 0;
 margin: 20px;
 }
 .xsmall{
-font-size: x-small;
+font-size: smaller;
 }
 
 .lineno {
