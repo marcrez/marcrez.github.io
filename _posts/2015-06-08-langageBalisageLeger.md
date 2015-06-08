@@ -6,23 +6,22 @@ tags: [markdown, pandoc, txt2tags]
 category: notes
 ---
 
-Pour saisir et mettre en forme des textes ou des documents textuels comportant
+Pour saisir et mettre en forme des textes comportant
 des insertions d'images, de figures ou de tableaux, on utilise souvent un
 traitement de texte, propriétaire comme Microsoft Word ou libre comme
-OpenOffice.  Mais les défauts majeurs de ces logiciels sont nombreux
+OpenOffice.  Mais les défauts de ces logiciels sont nombreux
 
-1. Le rédacteur d'un document se concentre presque autant sur le fond que
+1. Le rédacteur se concentre presque autant sur le fond que
    sur la forme. Outre le temps perdu, les conséquences sur le rendu sont
    nombreuses
 	* Les mises en forme les plus hétéroclites sont autorisées au dépens de
 	  la lisibilité ;
 	* Les règles typographiques sont rarement respectées ni par
 	  l'utilisateur ni par le logiciel ;
-	* L'insertion d'images ou de figures provoque des décalages mal
+	* L'insertion d'images ou de figures provoque des décalages mal maîtrisés ;
 	* L'utilisation des styles est souvent anarchique et les documents mal
 	  structurés, ce qui rend la production automatique de sommaire ou
 	  d'index impossible ;
-	  maîtrisés.
 1. L'inclusion d'annexes dans des documents longs donne des résultats aléatoires ;
 1. L'interopérabilité n'est pas assurée entre les logiciels, elle ne l'est pas
    même entre les différentes versions d'un même logiciel
@@ -182,6 +181,9 @@ d'une action pour en générer une version html ou docx...
 ![Pandoc en action]({{ site.baseurl }}/images/langageBalisageLeger/conversion02.png)		
 
 
+Voici un tableau récapitulatif des formats d'entrée et des possibilités d'export
+pour chacun de nos quatre logiciels.
+
 | Logiciel | Import                              | Export Web                                   | Export Bureautique                   | Export Tex             | Exporrt Balise                                        |
 |:---------|:------------------------------------|:---------------------------------------------|:-------------------------------------|:-----------------------|:-------------------------------------------------------|
 | Txt2tags | T2t                                 | HTML, XHTML, SGML,                           | DocBook, Lout, MagicPoint, PageMaker | LaTeX                  | Creole, AsciiDoc, PmWiki, MoinMoin, AsciiDoc, DokuWiki |
@@ -189,7 +191,7 @@ d'une action pour en générer une version html ou docx...
 | Pandoc   | Markdown, LaTeX, HTML, Textile, RST | HTML, XHTML, HTML5, EPUB, Slidy,S5, DZSlides | OpenDocument, ODT, DOCX, DocBook     | LaTeX, ConTeXt, Beamer | Markdown, RST, AsciiDoc, Textile, MediaWiki            |
 | AsciiDoc | AsciiDoc                            | HTML, XHTML                                  | Docbook                              | LaTeX                  |                                                        |
 
-
+Le tableau suivant montre les les possibilités de chacun de nos quatre logiciels.
 
 |Fonctionnalités                               |Txt2tags  |MMD     |Pandoc  |Asciidoc |
 |:---------------------------------------------|:--------:|:------:|:------:|:-------:|
