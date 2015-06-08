@@ -131,7 +131,6 @@ lecture sur tablette ou liseuse d'e-book ou encore la vidéo-projection.
 
 ![Principe logique]({{ site.baseurl }}/images/langageBalisageLeger/conversion01.png)		
 
-
 Avec le couple langage de balisage léger + logiciel de conversion, un grand pas
 est effectué en direction de l'*interopérabilité*.
 
