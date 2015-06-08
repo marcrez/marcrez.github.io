@@ -85,7 +85,7 @@
         </div><!-- /.blog-main -->
 
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-          {% if page.url contains "/tag/" %}
+          {% if page.url contains "/tag/" or page.url == "index.html" %}
           <div class="sidebar-module sidebar-module-inset">
             <h4>Avertissement</h4>
             <p>Ce blog est constitué de notes prises au fur et à mesure qui ne
@@ -94,6 +94,7 @@
           {% else %}
           <div id="toc" class="toc">Sommaire</div>
           {% endif %}
+          <!--
           <div class="sidebar-module">
             <h4><i class="fa fa-tags"></i>Tags</h4>
             <ol class="list-unstyled">
@@ -102,6 +103,7 @@
               {% endfor %} 
             </ol>
           </div>
+          -->
         </div>
       </div><!-- /.row -->
 
