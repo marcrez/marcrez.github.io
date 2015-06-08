@@ -260,7 +260,7 @@ Formules mathématiques                  x      x      x
 Que manque-t-il dans le tableau précédent ? A-t-on vraiment besoin de changer
 de police, appliquer des effets de couleur, etc. 
 
-![A-t-on vraiment besoin de ceci ?](comparaison_degrade.png)
+![A-t-on vraiment besoin de ceci ?]({{ site.baseurl }}/images/langageBalisageLeger/comparaison_degrade.png)
 
 ## Comment s'y prendre concrètement
 
@@ -274,7 +274,7 @@ syntaxe est entièrement décrite sur la page <http://txt2tags.org/markup.html>
 
 Voici le document à rédiger.
 
-![Un document produit par txt2tags](newton.pdf)
+![Un document produit par txt2tags]({{ site.baseurl }}/images/langageBalisageLeger/newton_portrait.pdf)
 
 ```
 	Fiche sur Isaac Newton 
