@@ -1,7 +1,7 @@
 - slug: markdown
   name: markdown
 - slug: raspberryPi
-  name: <img src="{{ site.baseurl }}/images/rpi.png>Raspberry Pi
+  name: <img src="{{ site.baseurl }}/images/rpi.png">Raspberry Pi
 - slug: python
   name: Python
 - slug: pandoc
