@@ -1,37 +1,31 @@
 ---
-title: Langages de balisage léger et logiciels de conversion de documents
+title: Balisage léger et conversion de documents
 layout: post
 date: 2015-05-14 13:30:00
 tags: [balisage, pandoc, formats]
 category: notes
 ---
 
-## Présentation
-
 Pour saisir et mettre en forme des textes ou des documents textuels comportant
 des insertions d'images, de figures ou de tableaux, on utilise souvent un
 traitement de texte, propriétaire comme Microsoft Word ou libre comme
-OpenOffice.  Mais les défauts majeurs de ces logiciels sont nombreux :
+OpenOffice.  Mais les défauts majeurs de ces logiciels sont nombreux
 
 1. Le rédacteur d'un document se concentre presque autant sur le fond que
    sur la forme. Outre le temps perdu, les conséquences sur le rendu sont
    nombreuses
 	* Les mises en forme les plus hétéroclites sont autorisées au dépens de
 	  la lisibilité ;
-	* Le résultat final est souvent discutable du point du vue de la
-	  typographie car les règles n'en sont pas respectées ni par
+	* Les règles typographiques sont rarement respectées ni par
 	  l'utilisateur ni par le logiciel ;
+	* L'insertion d'images ou de figures provoque des décalages mal
 	* L'utilisation des styles est souvent anarchique et les documents mal
 	  structurés, ce qui rend la production automatique de sommaire ou
 	  d'index impossible ;
-	* L'insertion d'images ou de figures provoque des décalages mal
 	  maîtrisés.
-1. En ce qui concerne les documents longs, l'inclusion de documents annexes au
-   sein du document maître donne des résultats aléatoires ;
+1. L'inclusion d'annexes dans des documents longs donne des résultats aléatoires ;
 1. L'interopérabilité n'est pas assurée entre les logiciels, elle ne l'est pas
-   même entre les différentes versions d'un même logiciel. La compatibilité
-   ascendante ne fonctionne pas toujours et un document écrit il y a quelques
-   années risque d'être perdu, faute du logiciel capable de le lire . 
+   même entre les différentes versions d'un même logiciel
    Nous reviendrons sur ce point plus tard.
 
 
@@ -171,7 +165,7 @@ se replacer en cas de lecture sur une tablette de petite taille ?
 
 
 
-## Choix d'un langage de balisage léger et d'un logiciel de conversion
+## Choix d'un langage de balisage léger
 
 Les logiciels de conversion sont nombreux, nous choisissons ici de parler de
 quatre d'entre eux :
@@ -181,11 +175,21 @@ quatre d'entre eux :
 * Pandoc : <http://johnmacfarlane.net/pandoc/>
 * AsciiDoc : <http://www.methods.co.nz/asciidoc/> 
 
-Le présent document, par exemple a été rédigé en syntaxe markdown puis 
-converti au format pdf par Pandoc. Il suffit d'une action pour en générer une version html ou docx...
+Le document présent, par exemple, a été rédigé en syntaxe markdown. Il suffit
+d'une action pour en générer une version html ou docx...
 
 
 ![Pandoc en action]({{ site.baseurl }}/images/langageBalisageLeger/conversion02.png)		
+
+
+| Logiciel | Import                              | Exportweb                                    | ExportBure                           | ExportTex              | Exporrt LBL                                            |
+|----------|-------------------------------------|----------------------------------------------|--------------------------------------|------------------------|--------------------------------------------------------|
+| Txt2tags | T2t                                 | HTML, XHTML, SGML,                           | DocBook, Lout, MagicPoint, PageMaker | LaTeX                  | Creole, AsciiDoc, PmWiki, MoinMoin, AsciiDoc, DokuWiki |
+| MMD      | Markdown                            | HTML                                         | OpenDocument                         | LaTeX                  |                                                        |
+| Pandoc   | Markdown, LaTeX, HTML, Textile, RST | HTML, XHTML, HTML5, EPUB, Slidy,S5, DZSlides | OpenDocument, ODT, DOCX, DocBook     | LaTeX, ConTeXt, Beamer | Markdown, RST, AsciiDoc, Textile, MediaWiki            |
+| AsciiDoc | AsciiDoc                            | HTML, XHTML                                  | Docbook                              | LaTeX                  |                                                        |
+
+
 
 
 ------------------------------------------------------------
@@ -343,9 +347,10 @@ Un document scientifique
 La syntaxe txt2tags vue plus haut est simpliste, cependant l'export
 vers le langage de balisage léger nommé Markdown est possible.
 
-> Remarque Simpliste] ?!? Statut assumé par l'auteur qui souhaite rester dans
-> la ligne de l'acronyme KISS (*Keep It Simple, Stupid*). Voir
-> <http://fr.wikipedia.org/wiki/Keep_it_Simple,_Stupid>
+> Simpliste?!? Oui, le statut est assumé par l'auteur qui souhaite rester dans
+> la ligne de l'acronyme
+> [KISS](http://fr.wikipedia.org/wiki/Keep_it_Simple,_Stupid) 
+> (*Keep It Simple, Stupid*).
 
 Le langage Markdown utilisé par logiciel Pandoc possède des
 fonctionnalités supplémentaires comme nous le montre l'exemple suivant.
