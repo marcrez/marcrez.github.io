@@ -257,8 +257,8 @@ Formules mathématiques                  x      x      x
 (LaTeX)  
 -------------------------------------------------------
 
-Que manque-t-il dans le tableau précédent ? A-t-on vraiment besoin de changer
-de police, appliquer des effets de couleur, etc. 
+Que manque-t-il dans le tableau précédent ? Pour être compris, a-t-on vraiment besoin de changer
+de police, appliquer des effets de couleur, etc. Faut-il vraiment infliger ceci au lecteur ?
 
 ![A-t-on vraiment besoin de ceci ?]({{ site.baseurl }}/images/langageBalisageLeger/comparaison_degrade.png)
 
@@ -266,15 +266,14 @@ de police, appliquer des effets de couleur, etc.
 
 Maintenant que l'environnement est décrit, étudions deux exemples.
 
-Un document essentiellement textuel
------------------------------------
+### Un document essentiellement textuel
 
 Comme le document est simple, nous utilisons ici le lociciel txt2tags dont la
 syntaxe est entièrement décrite sur la page <http://txt2tags.org/markup.html>
 
 Voici le document à rédiger.
 
-![Un document produit par txt2tags]({{ site.baseurl }}/images/langageBalisageLeger/newton_portrait.pdf)
+![Un document produit par txt2tags]({{ site.baseurl }}/images/langageBalisageLeger/newton_portrait.png)
 
 ```
 	Fiche sur Isaac Newton 
@@ -341,17 +340,17 @@ des documents courants de façon très simple.
 Un document scientifique
 ------------------------
 
-La syntaxe txt2tags vue plus haut est simpliste[^simpliste], cependant l'export
+La syntaxe txt2tags vue plus haut est simpliste, cependant l'export
 vers le langage de balisage léger nommé Markdown est possible.
 
-[^simpliste]: Statut assumé par l'auteur qui souhaite rester dans la ligne de
-l'acronyme KISS (*Keep It Simple, Stupid*). Voir
-<http://fr.wikipedia.org/wiki/Keep_it_Simple,_Stupid>
+> Remarque Simpliste] ?!? Statut assumé par l'auteur qui souhaite rester dans
+> la ligne de l'acronyme KISS (*Keep It Simple, Stupid*). Voir
+> <http://fr.wikipedia.org/wiki/Keep_it_Simple,_Stupid>
 
 Le langage Markdown utilisé par logiciel Pandoc possède des
 fonctionnalités supplémentaires comme nous le montre l'exemple suivant.
 
-![Un document produit par Pandoc](python.pdf)
+![Un document produit par Pandoc]({{ site.baseurl }}/images/langageBalisageLeger/python.png)
 
 ```
 
@@ -525,7 +524,7 @@ Après enregistrement du texte ci-dessus dans un fichier `diagramme.md` on lance
 $ file=diagramme && java -jar plantuml.jar $file.md && pandoc $file.md -o $file.pdf
 ```
 
-![Un document produit par pandoc et plantuml](diagramme.pdf)
+![Un document produit par pandoc et plantuml](diagramme.png)
 
 
 
