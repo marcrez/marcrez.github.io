@@ -212,59 +212,13 @@ d'une action pour en générer une version html ou docx...
 
 
 
--------------------------------------------------------
-Fonctionnalités                Txt2tags MMD    Pandoc Asciidoc
--------------                  ------   ------ ------ -----
-Sections (numérotées ou non)   x        x      x      x
-
-Paragraphes                    x        x      x      x
-
-Listes à puces,                x        x      x      x
-numérotées et de définition 
-
-Texte en gras, italique,       x        x      x      x
-souligné, barré 
-
-Couleurs et tailles de texte                          x
-
-Police à espacement constant   x        x      x      x
-
-Coloration syntaxique de                       x      x
-code source
-
-Gestion des liens              x        x      x      x
-(TeXinternet, courriel, etc.)
-
-Références internes                     x      x      x
-
-Insertion d'images             x        x      x      x 
-
-Tableaux                       x        x      x      x
-(gestion de bordure et 
-d’alignement)                      
-
-Tableaux (fusion de cellules)           x             x
-
-Légendes (images et tableaux)           x      x      x
-
-Citations                               x      x      x
-
-Notes de bas de page                    x      x      x
-
-Formules mathématiques                  x      x      x
-(LaTeX)  
--------------------------------------------------------
-
 Que manque-t-il dans le tableau précédent ? Pour être compris, a-t-on vraiment besoin de changer
 de police, appliquer des effets de couleur, etc. Faut-il vraiment infliger ceci au lecteur ?
 
 ![A-t-on vraiment besoin de ceci ?]({{ site.baseurl }}/images/langageBalisageLeger/comparaison_degrade.png)
 
-## Comment s'y prendre concrètement
 
-Maintenant que l'environnement est décrit, étudions deux exemples.
-
-### Un document essentiellement textuel
+## Composer un document essentiellement textuel
 
 Comme le document est simple, nous utilisons ici le lociciel txt2tags dont la
 syntaxe est entièrement décrite sur la page <http://txt2tags.org/markup.html>
@@ -335,8 +289,7 @@ $ txt2tags -t html newton.t2t
 Conclusion : le logiciel txt2tags avec sa syntaxe basique permet de produire
 des documents courants de façon très simple. 
 
-Un document scientifique
-------------------------
+## Composer un document scientifique
 
 La syntaxe txt2tags vue plus haut est simpliste, cependant l'export
 vers le langage de balisage léger nommé Markdown est possible.
@@ -523,7 +476,7 @@ Après enregistrement du texte ci-dessus dans un fichier `diagramme.md` on lance
 $ file=diagramme && java -jar plantuml.jar $file.md && pandoc $file.md -o $file.pdf
 ```
 
-![Un document produit par pandoc et plantuml](diagramme.png)
+![Un document produit par pandoc et plantuml](mon_diagramme.png)
 
 
 
