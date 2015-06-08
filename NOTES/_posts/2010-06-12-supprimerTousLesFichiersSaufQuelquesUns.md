@@ -2,7 +2,7 @@
 title: Supprimer tous les fichiers sauf quelques-uns.
 layout: post
 date: 2010-06-12
-tags: [bash, linux, shell]
+tags: [bash, linux]
 category: notes
 ---
 

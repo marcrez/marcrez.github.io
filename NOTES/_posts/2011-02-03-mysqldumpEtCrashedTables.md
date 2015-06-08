@@ -2,7 +2,7 @@
 title: MysqlDump et Crashed tables
 layout: post
 date: 2011-02-03
-tags: [MySQL, linux, shell]
+tags: [mysql, linux, bash]
 category: notes
 ---
 

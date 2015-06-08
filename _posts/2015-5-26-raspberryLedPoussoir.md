@@ -3,7 +3,7 @@ title: Un RaspberryPi, une LED, un bouton poussoir
 permalink: raspberryPi-led-poussoir
 layout: post
 date: 2015-05-26 13:30:00
-tags: [raspberryPi , python, led, poussoir, pushButton]
+tags: [raspberryPi , python]
 category: raspberryPi
 ---
 

@@ -3,7 +3,7 @@ title: Codeur rotatif et afficheur 7 segments sous RaspberryPi
 permalink: raspberryPi-codeurRotatif-afficheur7segments-led
 layout: post
 date: 2015-05-15 20:31:00
-tags: [raspberryPi, python, rotaryEncoder, led]
+tags: [raspberryPi, python]
 category: raspberryPi
 ---
 

@@ -4,3 +4,13 @@
   name: raspberryPi
 - slug: python
   name: python
+- slug: pandoc
+  name: pandoc
+- slug: bash
+  name: bash
+- slug: video
+  name: video
+- slug: linux
+  name: linux
+- slug: mysql
+  name: mysql

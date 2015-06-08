@@ -2,7 +2,7 @@
 title: Trouver un fichier avec `find`
 layout: post
 date: 2010-11-07
-tags: [bash, linux, shell]
+tags: [bash, linux]
 category: notes
 ---
 

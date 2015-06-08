@@ -2,7 +2,7 @@
 title: Accéleromètre ADXL345 sous RaspberryPi
 layout: post
 date: 2015-05-14 13:30:00
-tags: [raspberry, python]
+tags: [raspberryPi, python]
 category: raspberryPi
 ---
 
