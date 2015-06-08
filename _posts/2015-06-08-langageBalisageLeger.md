@@ -128,3 +128,78 @@ deviennent intéressantes : il existe des logiciels permettant d'exporter et
 de mettre en forme vers différents formats pour différents usages : la diffusion
 web, bien sûr mais aussi l'export pour un traitement de texte, l'impression, la
 lecture sur tablette ou liseuse d'e-book ou encore la vidéo-projection.
+
+<!--
+@startditaa img/conversion01.png
+                         Logiciel de
+                         conversion
+                                       /--------------------\
+                             /------|> |     ProjectioncYEL |
+                             |         \--------------------/
+/---------------------\      |
+|                     | -----/         /---------------------\
+| Document texte brut | ------------|> |     Impression cGRE |
+| rédigé en langage   |                \---------------------/ 
+| de balisage léger{d}| ---------\
+|                     | -----\   |     /---------------------\
+\---------------------/      |   \--|> |    Diffusion WebcBLU|
+                             :         \---------------------/
+                             |
+                             \------|>   etc...
+@endditaa
+-->
+
+![Principe logique]({{ site.baseurl }}/images/langageBalisageLeger/conversion01.png)		
+
+Avec le couple langage de balisage léger + logiciel de conversion, un grand pas
+est effectué en direction de l'*interopérabilité*.
+
+L'interopérabilité pour un format se définit comme la capacité à fonctionner
+avec d'autres produits ou systèmes informatiques existants ou futurs, sans
+restriction d'accès ou de mise en œuvre.
+
+Cela signifie tout d'abord que le format se doit d'être ouvert avec des
+spécifications publiques et claires afin que l'utilisateur ne soit pas tenu
+d'utiliser un logiciel particulier qu serait le seul à en connaitre le sens.
+Ensuite cela implique que l'on puisse copier-coller le contenu ou encore
+extraire tout ou partie du document.
+
+Un document rédigé dans un lanage de balisage léger répond à ces deux premières
+attentes. 
+
+Parlons maintenant du volet "restriction de mise en œuvre". 
+
+Qu'on change de logiciel de traitement de
+texte ou qu'on ait à partager ou encore à diffuser un document textuel, 
+l'important est d'abord d'afficher le contenu mais aussi
+de préserver la forme. 
+Dans cette perspective et du fait
+de la multiplicité des logiciels et des systèmes sur lesquels le document
+pourrait ête consulté, 
+le rédacteur doit veiller à
+limiter la mise en forme aux capacités communes des supports potentiels.
+
+Exemples :
+
+1.  que deviennent les couleurs si le support est une liseuse en noir et blanc ?
+1.  que devient la vidéo intégrée si le document est imprimé pour être
+    photocopié ?
+1.  que deviennent les polices de caractère exotiques sur un autre ordinateur où
+    elles ne sont pas installées ?
+1.  comment les images positionnées de façon sophistiquée vont-elles déborder ou
+se replacer en cas de lecture sur une tablette de petite taille ?
+
+
+
+## Choix d'un langage de balisage léger et d'un logiciel de conversion
+
+Les logiciels de conversion sont nombreux, nous choisissons ici de parler de
+quatre d'entre eux :
+
+* Txt2tags : <http://txt2tags.org/>
+* MultiMarkDown :  <http://fletcherpenney.net/multimarkdown/>
+* Pandoc : <http://johnmacfarlane.net/pandoc/>
+* AsciiDoc : <http://www.methods.co.nz/asciidoc/> 
+
+Le présent document, par exemple a été rédigé en syntaxe markdown puis 
+converti au format pdf par Pandoc. Il suffit d'une action pour en générer une version html ou docx...
