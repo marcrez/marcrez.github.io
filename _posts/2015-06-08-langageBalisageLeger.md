@@ -97,7 +97,7 @@ la conversion en HTML avant la publication.
 
 Re-voici notre exemple, cette fois-ci au format MarkDown :
 
-```markdown
+```
 	Le titre du paragraphe
 	======================
 
@@ -120,3 +120,11 @@ Avantages :
 Il existe de nombreux langages de balisage légers : Creole, Markdown, Asciidoc,
 txt2tags, etc. Chacun a ses avantages, mais tous sont simples.
 
+## Les langages de balisage légers et la bureautique
+
+On vient de voir qu'au sein des wikis, les langages de balisage légers sont
+transformés en HTML. C'est maintenant que les choses
+deviennent intéressantes : il existe des logiciels permettant d'exporter et
+de mettre en forme vers différents formats pour différents usages : la diffusion
+web, bien sûr mais aussi l'export pour un traitement de texte, l'impression, la
+lecture sur tablette ou liseuse d'e-book ou encore la vidéo-projection.
