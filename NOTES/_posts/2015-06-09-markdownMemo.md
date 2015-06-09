@@ -95,6 +95,8 @@ paragraphe de triple backticks.
     var foo = baz;
     ```
 
+qui donne
+
     var bar = 0;
 
 ```javascript
