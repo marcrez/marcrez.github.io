@@ -6,6 +6,7 @@ tags: [markdown]
 category: notes
 ---
 
+##### Titre 5 with a custom class and id                 {#my-id .my-class}
 
 ```
 # Titre 1
@@ -20,7 +21,7 @@ Some inline markup like _italics_,  **bold**, and `code()`.
  * link to [Warped](http://warpedvisions.org),
  - literal link <http://link.com/>, http://link.com/
  + [Link back to Header 5](#my-id)
- - ![picture alt](http://benweet.github.io/stackedit/img/icons.png "Title is optional")    
+ - ![picture alt](https://cdn.cine.io/images/code-logos/github-logo.png "Title is optional")    
  - **Markdown** syntax [here][2],
  - **Prettify** syntax highlighting [here][prettify],
 
