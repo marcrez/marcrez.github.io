@@ -70,7 +70,8 @@ Des balises pour du texte _italique_,  **gras**, et même du `code()`.
 
 ## Tableaux
 
-```| Header   | L      | R      | C
+```
+| Header   | L      | R      | C
 | ---      | :---   | ---:   | :---:
 | Cellule  | LLLLL  | RRRRR  | CCCCC
 | Cell     | L      | R      | C
@@ -91,12 +92,12 @@ paragraphe de triple backticks.
 ```
     var bar = 0;
 
-```javascript
+\`\`\`javascript
 var foo = baz;
-```
+\`\`\`
 ```
 
-var bar = 0;
+    var bar = 0;
 
 ```javascript
 var foo = baz;
