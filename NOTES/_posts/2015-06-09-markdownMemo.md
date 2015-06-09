@@ -70,24 +70,40 @@ Des balises pour du texte _italique_,  **gras**, et même du `code()`.
 
 ## Tableaux
 
+```| Header   | L      | R      | C
+| ---      | :---   | ---:   | :---:
+| Cellule  | LLLLL  | RRRRR  | CCCCC
+| Cell     | L      | R      | C
+```
+
 | Header   | L      | R      | C
 | ---      | :---   | ---:   | :---:
 | Cellule  | LLLLL  | RRRRR  | CCCCC
 | Cell     | L      | R      | C
 
 
-### Fenced code blocks
-
-**GitHub**'s fenced code blocks are also supported with **Prettify** syntax highlighting:
+## Blocs de code
 
 
+Pour écrire du code, on peut décaler de plus de 4 espaces ou entourer le
+paragraphe de triple backticks.
+
+```
     var bar = 0;
+
+```javascript
+var foo = baz;
+```
+```
+
+var bar = 0;
 
 ```javascript
 var foo = baz;
 ```
 
 
+<!--
 ### MathJax
  
 You can include **LaTex** expressions to render the *Gamma function* satisfying $\Gamma(n) = (n-1)!\quad\forall
@@ -97,7 +113,4 @@ $$
 \Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
 $$
 
-### Un jeu d'icônes
-
-![img](http://benweet.github.io/stackedit/img/glyphicons-halflings.png)
-
+-->
