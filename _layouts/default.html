@@ -94,7 +94,7 @@
           {% else %}
           <div id="toc" class="toc">Sommaire</div>
           {% endif %}
-          <!--
+
           <div class="sidebar-module">
             <h4><i class="fa fa-tags"></i>Tags</h4>
             <ol class="list-unstyled">
@@ -103,7 +103,21 @@
               {% endfor %} 
             </ol>
           </div>
-          -->
+
+          <div class="sidebar-module">
+            {% capture tags %}
+              {% for tag in site.tags %}
+                  {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
+                    {% endfor %}
+                    {% endcapture %}
+                    {% assign sortedtags = tags | split:' ' | sort %}
+                    {% for tag in sortedtags reversed %}
+                        {% assign tagitems = tag | split: '#' %}
+                            <li><a href="/tags/#{{ tagitems[1] }}">{{ tagitems[1] }} ({{ tagitems[2] }})</a></li>
+                            {% endfor %}
+          </div>
+
+
         </div>
       </div><!-- /.row -->
 
