@@ -92,9 +92,10 @@ paragraphe de triple backticks.
 ```
     var bar = 0;
 
-\`\`\`javascript
+```javascript
 var foo = baz;
-\`\`\`
+```
+
 ```
 
     var bar = 0;
