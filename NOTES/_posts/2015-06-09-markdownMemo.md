@@ -6,6 +6,16 @@ tags: [markdown]
 category: notes
 ---
 
+Markdown est un langage de balisage léger créé par John Gruber et
+Aaron Swartz en 2004. Son but est d'offrir une syntaxe facile à
+lire et à écrire. 
+
+Un document formaté selon Markdown devrait
+pouvoir être publié comme tel, en texte, sans donner l’impression
+qu’il a été marqué par des balises ou des instructions de
+formatage.
+
+
 ## Des titres et des sous-titres pour structurer
 
 ```
