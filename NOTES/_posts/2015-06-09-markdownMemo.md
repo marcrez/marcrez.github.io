@@ -89,13 +89,13 @@ Des balises pour du texte _italique_,  **gras**, et même du `code()`.
 Pour écrire du code, on peut décaler de plus de 4 espaces ou entourer le
 paragraphe de triple backticks.
 
-````
+{% highlight %}
     var bar = 0;
 
 ```javascript
 var foo = baz;
 ```
-````
+{% endhighlight %}
 
     var bar = 0;
 
