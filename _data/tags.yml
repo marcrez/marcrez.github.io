@@ -22,3 +22,5 @@
   name: Symfony
 - slug: algo
   name: Algorithmique
+- slug: scribe
+  name: Scribe
