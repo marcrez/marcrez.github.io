@@ -6,7 +6,11 @@ tags: [linux, bash]
 category: notes
 ---
 
-# Connaitre son réseau sous Linux
+![reseau](http://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Pkuczynski_RJ-45_patchcord.jpg/320px-Pkuczynski_RJ-45_patchcord.jpg)
+
+
+Comment utiliser la ligne de commande pour afficher toutes les
+infos utiles sur le réseau.
 
 Pour connaître l'IP, le broadcast, le masque et l'adresse MAC
 
