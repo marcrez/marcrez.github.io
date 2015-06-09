@@ -105,16 +105,23 @@
           </div>
 
           <div class="sidebar-module">
-            {% capture tags %}
-              {% for tag in site.tags %}
-                  {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
-                    {% endfor %}
-                    {% endcapture %}
-                    {% assign sortedtags = tags | split:' ' | sort %}
-                    {% for tag in sortedtags reversed %}
-                        {% assign tagitems = tag | split: '#' %}
-                            <li><a href="/tags/#{{ tagitems[1] }}">{{ tagitems[1] }} ({{ tagitems[2] }})</a></li>
-                            {% endfor %}
+{% capture tags %}
+  {% for tag in site.tags %}
+    {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
+  {% endfor %}
+{% endcapture %}
+{% assign sortedtags = tags | split:' ' | sort %}
+{% for tag in sortedtags reversed %}
+    {% assign tagitems = tag | split: '#' %}
+       {% for data_tag in site.data.tags %}
+        {% if data_tag.slug == tagitems[1] %}
+         {% assign tagg = data_tag %}
+        {% endif %}
+       {% endfor %}
+       {% if tagg %}
+        <a href="/tag/{{ tagg.slug }}/">{{ tagg.name }}({{ tagitems[2] }})</a>{% if forloop.last == false %}, {% endif %}
+       {% endif %}
+{% endfor %}
           </div>
 
 
