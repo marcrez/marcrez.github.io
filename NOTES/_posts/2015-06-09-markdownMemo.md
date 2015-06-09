@@ -18,10 +18,10 @@ category: notes
 ## Composer et mettre en forme du texte
 
 ```
-Des balises pour du texte _italique_,  **gras**, and `code()`.
+Des balises pour du texte _italique_,  **gras**, et même du `code()`.
 ```
 
-Des balises pour du texte _italique_,  **gras**, and `code()`.
+Des balises pour du texte _italique_,  **gras**, et même du `code()`.
 
 ```
 - Une liste
@@ -37,7 +37,7 @@ Des balises pour du texte _italique_,  **gras**, and `code()`.
 1. Une liste
 2. avec des numéros
 
-## des images et des liens
+## Des images et des liens
 
 ```
 ![picture alt](https://cdn.cine.io/images/code-logos/github-logo.png "Title is optional")    
@@ -46,58 +46,34 @@ Des balises pour du texte _italique_,  **gras**, and `code()`.
 ![picture alt](https://cdn.cine.io/images/code-logos/github-logo.png "Title is optional")    
 
 ```
-- Les liens sont automatiquement traduits : http://w3.org
-- On peut nommer les liens : [Google](http://google.com),
-- On peur enfin référencer les liens : [wikipedia][WP],
+- Les adresses sont traduites en lien cliquable : http://w3.org
+- On peut nommer les liens : [Google](http://google.com)
+- On peut référencer les liens : [wikipedia][WP]
 
   [WP]: https://fr.wikipedia.org/ "En français"
 ```
 
-- Les liens sont automatiquement traduits : http://w3.org
-- On peut nommer les liens : [Google](http://google.com),
-- On peur enfin référencer les liens : [wikipedia][WP],
+- Les adresses sont traduites en lien cliquable : http://w3.org
+- On peut nommer les liens : [Google](http://google.com)
+- On peut référencer les liens : [wikipedia][WP]
 
   [WP]: https://fr.wikipedia.org/ "En français"
 
-----------
-
- 1. A numbered list
- 2. Which is numbered
- 3. With periods and a space 
-
-### Markdown plus definition lists
-
- 
-Definition lists
-: Multiple definitions and terms are possible
-: Definitions can include multiple paragraphs too
- 
-Term 1
-Term 2
-
-:   Definition C
-
-:   Definition D
-
-	> part of definition D
-
- 
+```
 > **NOTE :** Blockquotes are like quoted text in email replies
 >> And, they can be nested
- 
---------------------------
+```
 
-### Tables
+> **NOTE :** Blockquotes are like quoted text in email replies
+>> And, they can be nested
 
-| Header    | R      |    C
-| ---       | ---:   |  :---:
-|  Cellule  |  2100  |    1
-|  Cell     |     2  |  112234
- 
 
-* Outer pipes on tables are optional
-* Colon used for alignment (right versus left)
-* You can specify column alignment with one or two colons:
+## Tableaux
+
+| Header   | L      | R      | C
+| ---      | :---   | ---:   | :---:
+| Cellule  | LLLLL  | RRRRR  | CCCCC
+| Cell     | L      | R      | C
 
 
 ### Fenced code blocks
@@ -107,7 +83,7 @@ Term 2
 
     var bar = 0;
 
-```
+```javascript
 var foo = baz;
 ```
 
