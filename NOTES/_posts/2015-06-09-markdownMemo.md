@@ -75,7 +75,7 @@ Term 2
 
     var bar = 0;
 
-``` {#optionnal-id .optional-class}
+```
 var foo = baz;
 ```
 
