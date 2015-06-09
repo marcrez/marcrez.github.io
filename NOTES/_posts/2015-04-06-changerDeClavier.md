@@ -15,10 +15,10 @@ Pour passer d'un clavier azerty à qwerty, il suffit d'une ligne de commande.
 Notes sur les raccourcis pour obtenir les caractères spéciaux :
 
 - é : `AltGr+e`
-- è : `AltGr+\`` e
-- ë : `AltGr+r` ou AltGr+" e
-- à : `AltGr+`` a
-- ç : `AltGr+,` ou AltGr+' c
+- è : ``AltGr+` e``
+- ë : `AltGr+r` ou `AltGr+" e`
+- à : ``AltGr+` a``
+- ç : `AltGr+,` ou `AltGr+' c`
 - « : `AltGr+[`
 - » : `AltGr+]`
 - œ : `AltGr+x` ou `AltGr+k`
