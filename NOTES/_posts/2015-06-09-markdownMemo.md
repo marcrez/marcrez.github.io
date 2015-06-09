@@ -6,34 +6,58 @@ tags: [markdown]
 category: notes
 ---
 
-#### Titre 5 with a custom class and id                 {#my-id .my-class}
-
-
-#### Titre 5 with a custom class and id
-
-
-### Titre 5 with a custom class and id                 {#my-id .my-class}
+## Des titres et des sous-titres pour structurer
 
 ```
 # Titre 1
 ## Titre 2
 ### Titre 3 
 #### Titre 4
-##### Titre 5 with a custom class and id                 {#my-id .my-class}
 ```
 
-Some inline markup like _italics_,  **bold**, and `code()`.
+## Composer et mettre en forme du texte
+
+```
+Des balises pour du texte _italique_,  **gras**, and `code()`.
+```
+
+Des balises pour du texte _italique_,  **gras**, and `code()`.
+
+```
+- Une liste
+- avec des puces
+
+1. Une liste
+2. avec des numéros
+```
+
+- Une liste
+- avec des puces
+
+1. Une liste
+2. avec des numéros
+
+## des images et des liens
+
+```
+![picture alt](https://cdn.cine.io/images/code-logos/github-logo.png "Title is optional")    
+```
 
 ![picture alt](https://cdn.cine.io/images/code-logos/github-logo.png "Title is optional")    
 
- * link to [Warped](http://warpedvisions.org),
- - literal link <http://link.com/>, http://link.com/
- + [Link back to Header 5](#my-id)
- - **Markdown** syntax [here][2],
- - **Prettify** syntax highlighting [here][prettify],
+```
+- Les liens sont automatiquement traduits : http://w3.org
+- On peut nommer les liens : [Google](http://google.com),
+- On peur enfin référencer les liens : [wikipedia][WP],
 
-  [2]: http://daringfireball.net/projects/markdown/syntax "Markdown"
-  [prettify]: https://code.google.com/p/google-code-prettify/ "prettify"
+  [WP]: https://fr.wikipedia.org/ "En français"
+```
+
+- Les liens sont automatiquement traduits : http://w3.org
+- On peut nommer les liens : [Google](http://google.com),
+- On peur enfin référencer les liens : [wikipedia][WP],
+
+  [WP]: https://fr.wikipedia.org/ "En français"
 
 ----------
 
