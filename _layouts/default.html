@@ -62,6 +62,7 @@
                 <li><a href="#">Separated link</a></li>
                 <li><a href="#">One more separated link</a></li>
                 -->
+                <!-- http://stackoverflow.com/questions/24700749/how-do-you-sort-site-tags-by-post-count-in-jekyll -->
                 {% capture tags %}
                   {% for tag in site.tags %}
                     {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
