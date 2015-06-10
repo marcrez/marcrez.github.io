@@ -32,8 +32,7 @@ la forme d’une machine virtuelle (fig. \ref{m152e569c}). En configurant
 correctement l'interface réseau, nous disposerons du point de vue du réseau
 d’une machine à part entière qui pourra rendre tous les services souhaités.
 
-![Un serveur OCS virtuel dans un réseau
-pédagogique\label{m152e569c}](figs/scribe_html_m152e569c.png)
+![Un serveur OCS virtuel dans un réseau pédagogique\label{m152e569c}]({{ site.baseurl }}/images/gestionReseau/scribe_html_m152e569c.png)
 
 Avantage de la virtualisation : La simplicité, en effet sur le site web de OCS,
 on trouve des images de machines virtuelles Linux pretes à l'emploi avec
@@ -50,9 +49,9 @@ OCS-serveur déjà installé et entièrement configuré.
     pour une nouvelle machine virtuelle linux que nous allons créer dans
     VirtualBox.
 
-    ![](figs/scribe_html_4ef60c5.jpg)
+    ![]({{ site.baseurl }}/images/gestionReseau/scribe_html_4ef60c5.jpg)
 
-    ![](figs/scribe_html_460d6a35.jpg)
+    ![]({{ site.baseurl }}/images/gestionReseau/scribe_html_460d6a35.jpg)
 
     N’oubliez pas de cocher la case «Activer PAE/NX» dans l’onglet «Processeur»
     de la section «Système» de votre machine virtuelle.
@@ -137,7 +136,7 @@ OCS-serveur déjà installé et entièrement configuré.
     <http://ip_du_serveur_ocs/ocsreports>. Pour se connecter, user:admin et
     password:admin. (fig. \ref{af37b4})
 
-    ![Accueil OCS-NG\label{af37b4}](figs/scribe_html_af37b4.jpg)
+    ![Accueil OCS-NG\label{af37b4}]({{ site.baseurl }}/images/gestionReseau/scribe_html_af37b4.jpg)
 
 ## Installation de l’agent OCS sur les clients
 
@@ -155,7 +154,7 @@ Lors du choix des composants, veillez à bien laisser cochée la case «Network
 inventory» car nous voulons que l’inventaire soit envoyé au serveur (fig.
 \ref{m3ee6b3fb}).
 
-![Installation client OCS\label{m3ee6b3fb}](figs/scribe_html_m3ee6b3fb.jpg)
+![Installation client OCS\label{m3ee6b3fb}]({{ site.baseurl }}/images/gestionReseau/scribe_html_m3ee6b3fb.jpg)
 
 L’étape suivante permet de régler la connexion au serveur dont le nom d’hôte a
 été fixé plus haut à «ocsinventory-ng». Il n’y a donc rien à modifier à la
@@ -164,14 +163,14 @@ pointant vers le fichier partagé sur le serveur OCS (fig. \ref{m79f4548d}) :
 
 `\\ocsinventory-ng\ocs$\cacert.pem`.
 
-![Validation du certificat \label{m79f4548d}](figs/scribe_html_m79f4548d.jpg)
+![Validation du certificat \label{m79f4548d}]({{ site.baseurl }}/images/gestionReseau/scribe_html_m79f4548d.jpg)
 
 Dernière étape : demander qu’une remontée de l’inventaire soit effectuée lors de
 l’installation (fig. \ref{2cef7e65}). Sans cela, il faudra attendre jusqu’à 48h
 pour voir apparaître la machine dans l’interface de gestion centralisée.
 
 ![Demande de remontée de immédiate de
-l’inventaire\label{2cef7e65}](figs/scribe_html_2cef7e65.jpg)
+l’inventaire\label{2cef7e65}]({{ site.baseurl }}/images/gestionReseau/scribe_html_2cef7e65.jpg)
 
 Rendez-vous à l’adresse <http://ocsinventory-ng/ocsreports> ou
 [http://ip\_du\\serveur\_ocs/ocsreports](http://ip_du\serveur_ocs/ocsreports)
@@ -198,15 +197,14 @@ sur chaque poste.
     de pouvoir le déployer. Il suffit pour cela d’un clic-droit -\> Envoyer vers
     -\> Dossier compressé.
 
-![SumatraPDF](figs/scribe_html_m2a4069ed.jpg)
+![SumatraPDF]({{ site.baseurl }}/images/gestionReseau/scribe_html_m2a4069ed.jpg)
 
 2.  Maintenant, dans l’interface web ocsinventory, nous allons construire le
     paquet (figs \ref{cd6a1d0} et \ref{6297240c}).
 
-![Construction du paquet. Étape 1\label{cd6a1d0}](figs/scribe_html_cd6a1d0.jpg)
+![Construction du paquet. Étape 1\label{cd6a1d0}]({{ site.baseurl }}/images/gestionReseau/scribe_html_cd6a1d0.jpg)
 
-![Construction du paquet. Étape
-2\label{6297240c}](figs/scribe_html_6297240c.jpg)
+![Construction du paquet. Étape 2\label{6297240c}]({{ site.baseurl }}/images/gestionReseau/scribe_html_6297240c.jpg)
 
 Le fichier à déployer est l’archive .zip que nous avons créée. L’action est
 «Execute» puisque on souhaite exécuter le fichier SumatraPDF-1.9-Install.exe et
@@ -218,30 +216,30 @@ par défaut.
     d’activation et cliquer sur l’icône comme sur la figure \ref{m5d43378b}
     ci-dessous :
 
-![Activation de paquet \label{m5d43378b}](figs/scribe_html_m5d43378b.jpg)
+![Activation de paquet \label{m5d43378b}]({{ site.baseurl }}/images/gestionReseau/scribe_html_m5d43378b.jpg)
 
 Choisir alors l’activation manuelle puis valider (fig. \ref{669af7cb})
 
-![Activation manuelle\label{669af7cb}](figs/scribe_html_669af7cb.jpg)
+![Activation manuelle\label{669af7cb}]({{ site.baseurl }}/images/gestionReseau/scribe_html_669af7cb.jpg)
 
 4.  À présent le paquet est prêt, il reste à choisir les postes sur lesquels on
     souhaite déployer. Pour cela, cliquez sur l’icône de recherche puis «Search
     with various criteria». Dans l’exemple ci-dessous, le paramètre choisi est
     «Computers : Operating systems». (fig. \ref{m49c3e1e4})
 
-![Recherche\label{m49c3e1e4}](figs/scribe_html_m49c3e1e4.jpg)
+![Recherche\label{m49c3e1e4}]({{ site.baseurl }}/images/gestionReseau/scribe_html_m49c3e1e4.jpg)
 
 5.  On peut alors choisir en les cochant les postes sur lesquels on va déployer
     le paquet (fig. \ref{bcefe4})
 
 ![Sélectionner les postes pour le
-déploiement\label{bcefe4}](figs/scribe_html_bcefe4.jpg)
+déploiement\label{bcefe4}]({{ site.baseurl }}/images/gestionReseau/scribe_html_bcefe4.jpg)
 
 6.  Après avoir cliqué sur l’icône de déploiement, préciser que l’affectation se
     fera pour la sélection puis cliquer sur le bouton «SELECT» correspondant au
     paquet à déployer.
 
-![m711b1407](figs/scribe_html_m711b1407.jpg)
+![m711b1407]({{ site.baseurl }}/images/gestionReseau/scribe_html_m711b1407.jpg)
 
 C’est terminé. À partir de maintenant, lorsque l’agent du poste client va
 contacter le serveur, celui-ci va enregistrer une notification et sera alors
@@ -249,9 +247,9 @@ prêt à déployer le paquet au bout d’un temps aléatoire pouvant aller jusqu
 24h. On peut suivre l’avancement des déploiements en cliquant sur
 Deployment-\>Activate
 
-![26ef5677](figs/scribe_html_26ef5677.jpg)
+![26ef5677]({{ site.baseurl }}/images/gestionReseau/scribe_html_26ef5677.jpg)
 
-![m147fbe26](figs/scribe_html_m147fbe26.jpg)
+![m147fbe26]({{ site.baseurl }}/images/gestionReseau/scribe_html_m147fbe26.jpg)
 
 Pour aller (beaucoup) plus loin, la documentation est très complète :
 
@@ -326,13 +324,13 @@ On va maintenant cliquer sur les onglets successifs
     du registre Windows remontées par les agents OCS\
      Nombre d'éléments à synchroniser via le cron : Mettez la valeur à *Aucun*
 
-![Options d'importation](figs/glpi_11.png)
+![Options d'importation]({{ site.baseurl }}/images/gestionReseau/glpi_11.png)
 
 **Informations générales**
 
 Choisissez ce que vous souhaitez voir remonter.
 
-![Informations générales](figs/glpi_12.png)
+![Informations générales]({{ site.baseurl }}/images/gestionReseau/glpi_12.png)
 
 **Liaison automatique de machines**
 
@@ -344,4 +342,4 @@ avec une machine remontant d'OCS.
 Pour plus d'informations sur ces réglages,
 <http://www.glpi-project.org/wiki/doku.php?id=fr:config:ocsng>
 
-![Liaison automatique de machines](figs/glpi_13.png)
+![Liaison automatique de machines]({{ site.baseurl }}/images/gestionReseau/glpi_13.png)
