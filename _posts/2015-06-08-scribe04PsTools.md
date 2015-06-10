@@ -152,7 +152,7 @@ La figure \ref{fepstools} montre une copie d'écran de FePsTools prêt à
 lancer l'installation silencieuse de notepad++ sur une machine distante
 à partir du fichier d'installation présent sur la machine pilote.
 
-![FePsTools en action\label{fepstools}](figs/fepstools.png)
+![FePsTools en action\label{fepstools}]({{ site.baseurl }}/images/gestionReseau/fepstools.png)
 
 En fait, plutôt que déployer sur une seule machine dont on spécifie l'IP, 
 il est possible d'effectuer le déploiement sur une liste de 
