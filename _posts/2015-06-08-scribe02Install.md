@@ -28,13 +28,13 @@ Une fois ces opérations terminées,
     comme sur l'image ci-dessous puis naviguez dans l'arborescence pour indiquer
     le fichier .iso. comme on le voit sur la figure suivante
 
-![Insérer un CDROM dans le lecteur virtuel.](figs/scribe_html_m69a9bc5b.png)
+![Insérer un CDROM dans le lecteur virtuel.]({{ site.baseurl }}/images/gestionReseau/scribe_html_m69a9bc5b.png)
 
 -   On peut alors mettre en marche la machine virtuelle.
 
 ## Installation
 
-![Menu de démarrage Scribe](figs/scribe_html_m1451a7db.png)
+![Menu de démarrage Scribe]({{ site.baseurl }}/images/gestionReseau/scribe_html_m1451a7db.png)
 
 Après avoir vérifié au niveau du BIOS que la machine démarre prioritairement sur
 le CD, le menu de démarrage apparaît.
@@ -45,12 +45,12 @@ d'éviter de perdre du temps avec une installation qui échouerait sans doute.
 Une fois ceci fait, lançons l'installation de Scribe. La procédure est
 automatique et vous n'avez qu'à observer les étapes
 
-![En cours d'installation](figs/scribe_html_4b5e166b.png)
+![En cours d'installation]({{ site.baseurl }}/images/gestionReseau/scribe_html_4b5e166b.png)
 
 Après redémarrage, le gestionnaire de démarrage GRUB vous propose plusiers
 entrées. Nous choisissons celle par défaut
 
-![Menu Grub](figs/scribe_html_m6522c87a.png)
+![Menu Grub]({{ site.baseurl }}/images/gestionReseau/scribe_html_m6522c87a.png)
 
 Vous pouvez maintenant vous identifier avec le login `root` et le mot de passe
 `$eole&123457$`. (dans le cas scribe2.3)
@@ -89,7 +89,7 @@ Saisissez la commande `gen_config` qui va lancer le générateur de configuratio
 
 La série d'écrans est à renseigner en étant très attentif.
 
-![Scribe 2.3 - Général](figs/23_01.png)
+![Scribe 2.3 - Général]({{ site.baseurl }}/images/gestionReseau/23_01.png)
 
 
 Onglet «Général»
@@ -114,7 +114,7 @@ Onglet «Général»
   l'intégration  d'une station au domaine.
 
 
-![Scribe 2.3 - Messagerie](figs/23_03.png) 
+![Scribe 2.3 - Messagerie]({{ site.baseurl }}/images/gestionReseau/23_03.png) 
 
 Onglet «Messagerie»
 
@@ -127,7 +127,7 @@ Onglet «Messagerie»
 - Passerelle SMTP, permet de saisir l'adresse IP ou le nom DNS de la passerelle
   SMTP à utiliser.
 
-![Scribe 2.3 - Interface-0](figs/23_04.png)
+![Scribe 2.3 - Interface-0]({{ site.baseurl }}/images/gestionReseau/23_04.png)
 
 Onglet «Interface-0»
 
@@ -139,26 +139,26 @@ Onglet «Interface-0»
   interface déterminée du module.
 
 
-![Scribe 2.3 - Mots de passe](figs/23_05.png)
+![Scribe 2.3 - Mots de passe]({{ site.baseurl }}/images/gestionReseau/23_05.png)
 
 Onglet «Mots de passe»
 
 - Pour faciliter le travail durant le stage on va régler les paramètres au
   minimum.
 
-![Scribe 2.3 - Bacula](figs/23_07.png)
+![Scribe 2.3 - Bacula]({{ site.baseurl }}/images/gestionReseau/23_07.png)
 
 Onglet «Bacula»
 
 - L'usage sur l'académie de Paris est un réglage à 10 pour les rétentions.
 
-![Scribe 2.3 - ESU](figs/23_08.png)
+![Scribe 2.3 - ESU]({{ site.baseurl }}/images/gestionReseau/23_08.png)
 
 Onglet «ESU»
 
 - Le réglage du proxy est essentiel.
 
-![Scribe 2.3 Système*](figs/23_13.png)
+![Scribe 2.3 Système*]({{ site.baseurl }}/images/gestionReseau/23_13.png)
 
 Onglet «Système»
 

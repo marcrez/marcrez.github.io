@@ -28,7 +28,7 @@ Un poste virtuel est un ordinateur dont tous les composants matériels sont
 simulés mais sur lequel a été installé un système d'exploitation comme sur une
 machine réelle. Vue depus le réseau, c'est une machine comme une autre.
 
-Sur la figure \ref{reseau_stage_schema}, on simule un serveur Scribe et deux
+Sur la figure  précédente, on simule un serveur Scribe et deux
 machines clientes, une sous Windows XP et l'autre sous Windows 7 sur un
 ordinateur (réel celui-là) appelée machine hôte.
 
