@@ -33,11 +33,11 @@ disque.
 
 Cliquer sur l'icône *Clonezilla live* 
 
-![DRBL-01](figs/DRBL-01.png)
+![DRBL-01]({{ site.baseurl }}/images/gestionReseau/DRBL-01.png)
 
 Le mode que nous allons choisir est ici le premier : device-image 
 
-![DRBL-02](figs/DRBL-02.png)
+![DRBL-02]({{ site.baseurl }}/images/gestionReseau/DRBL-02.png)
 
 Le montage du répertoire des images va être le répertoire personnel de
 l'administrateur sur le serveur Scribe pour cela, on choisit le mode
@@ -58,7 +58,7 @@ demandé de choisir un nom pour la sauvegarde avant de vérifier que le disque
 Il ne reste plus qu'à appuyer sur entrée pour valiser les choix par défaut des
 questions suivantes pour lancer la sauvegarde 
 
-![DRBL-03](figs/DRBL-03.png)
+![DRBL-03]({{ site.baseurl }}/images/gestionReseau/DRBL-03.png)
 
 Cela va permettre de choisir l'image à restaurer puis après avoir accepté toutes
 les options par défaut, le travail va commencer.
@@ -80,7 +80,7 @@ puis renseigner les informations sur le serveur scribe et l'administrateur.
 Après avoir saisi le mot de passe, nous allons choisir de restaurer avec le mode
 `restoredisk` 
 
-![DRBL-04](figs/DRBL-04.png)
+![DRBL-04]({{ site.baseurl }}/images/gestionReseau/DRBL-04.png)
 
 ## Clonage multicast
 
@@ -96,7 +96,7 @@ On prépare la salle en mettant tout le monde en attente est quand le
 derneirposte est prêt, on appuie sur une touche pour lancer le clonage de tous
 les postes ensemble.
 
-![UDPCast_schema](figs/UDPCast_schema.png)
+![UDPCast_schema]({{ site.baseurl }}/images/gestionReseau/UDPCast_schema.png)
 
 Nous utiliserons ici SystemRescueCD et la suite udpcast qui est constitué de
 deux logiciels (udp-sender et udp-receiver) capables se communiquer des données
@@ -108,7 +108,7 @@ Lancer SystemRescueCD avec l'option 2) **docache**  afin
 de charger complètement le système en mémoire vive pour éjécter le CD à la fin
 du chargement. Nous en aurons besoin pour les autres machines de la salle...
 
-![Sysresccd-2](figs/Sysresccd-2.png)
+![Sysresccd-2]({{ site.baseurl }}/images/gestionReseau/Sysresccd-2.png)
 
 La commande suivante va demander à udpcast de diffuser le contenu intégral (bit
 à bit) du disque dur (`--file /dev/sda`) mais compressé à la volée
