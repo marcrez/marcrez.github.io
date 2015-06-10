@@ -61,7 +61,7 @@ Dans l’exemple suivant, on voit que le script
 `netlogon\adminWinXp` ajoute un lecteur réseau et affiche un message
 de bienvenue à la connexion de l'administrateur sur une station WindowsXP.
 
-![Un script de netlogon](figs/scribe_html_m2d0d8a5c.png)
+![Un script de netlogon]({{ site.baseurl }}/images/gestionReseau/scribe_html_m2d0d8a5c.png)
 
 Remarque : Le programme `logon.exe` est lancé dans l'environnement utilisateur,
 il hérite donc des droits de l'utilisateur. Cela signifie que les commandes
@@ -83,7 +83,7 @@ Sur <http://www.battoexeconverter.com/> on trouve un tel logiciel de conversion.
 Une fois *batToExeConverter* lancé, on lui indique le chemin du fichier batch
 à convertir. L'important est de bien cocher la case *Add administrator manifest*.
 
-![Bat to exe Converter\](figs/battoexe.png)
+![Bat to exe Converter\]({{ site.baseurl }}/images/gestionReseau/battoexe.png)
 
 En cliquant sur le bouton *Compile*, on va générer le fichier .exe qu'il restera
 à placer dans un dossier dans lequel les utilisateurs sans droits ont accès.
