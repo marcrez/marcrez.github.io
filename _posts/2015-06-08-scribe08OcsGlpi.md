@@ -26,7 +26,7 @@ On suppose que le logiciel VirtualBox (<https://www.virtualbox.org/>) est
 installé.
 
 Nous allons ici détailler la mise en place de OCS dans un parc informatique sous
-la forme d’une machine virtuelle (fig. \ref{m152e569c}). En configurant
+la forme d’une machine virtuelle. En configurant
 correctement l'interface réseau, nous disposerons du point de vue du réseau
 d’une machine à part entière qui pourra rendre tous les services souhaités.
 
@@ -132,7 +132,7 @@ OCS-serveur déjà installé et entièrement configuré.
     Pour tester le fonctionnement on peut ouvrir, sur un client windows, un
     navigateur à l’adresse <http://ocsinventory-ng/ocsreports> ou
     <http://ip_du_serveur_ocs/ocsreports>. Pour se connecter, user:admin et
-    password:admin. (fig. \ref{af37b4})
+    password:admin. 
 
     ![Accueil OCS-NG\label{af37b4}]({{ site.baseurl }}/images/gestionReseau/scribe_html_af37b4.jpg)
 
@@ -149,22 +149,21 @@ vous obtenez un dossier dans lequel vous exécutez le programme
 `OCS-NG-Windows-Agent-Setup.exe`
 
 Lors du choix des composants, veillez à bien laisser cochée la case «Network
-inventory» car nous voulons que l’inventaire soit envoyé au serveur (fig.
-\ref{m3ee6b3fb}).
+inventory» car nous voulons que l’inventaire soit envoyé au serveur.
 
 ![Installation client OCS\label{m3ee6b3fb}]({{ site.baseurl }}/images/gestionReseau/scribe_html_m3ee6b3fb.jpg)
 
 L’étape suivante permet de régler la connexion au serveur dont le nom d’hôte a
 été fixé plus haut à «ocsinventory-ng». Il n’y a donc rien à modifier à la
 valeur par défaut de l’URL du serveur. La validation du certificat se fera en
-pointant vers le fichier partagé sur le serveur OCS (fig. \ref{m79f4548d}) :
+pointant vers le fichier partagé sur le serveur OCS :
 
 `\\ocsinventory-ng\ocs$\cacert.pem`.
 
 ![Validation du certificat \label{m79f4548d}]({{ site.baseurl }}/images/gestionReseau/scribe_html_m79f4548d.jpg)
 
 Dernière étape : demander qu’une remontée de l’inventaire soit effectuée lors de
-l’installation (fig. \ref{2cef7e65}). Sans cela, il faudra attendre jusqu’à 48h
+l’installation. Sans cela, il faudra attendre jusqu’à 48h
 pour voir apparaître la machine dans l’interface de gestion centralisée.
 
 ![Demande de remontée de immédiate de
@@ -198,7 +197,7 @@ sur chaque poste.
 ![SumatraPDF]({{ site.baseurl }}/images/gestionReseau/scribe_html_m2a4069ed.jpg)
 
 2.  Maintenant, dans l’interface web ocsinventory, nous allons construire le
-    paquet (figs \ref{cd6a1d0} et \ref{6297240c}).
+    paquet.
 
 ![Construction du paquet. Étape 1\label{cd6a1d0}]({{ site.baseurl }}/images/gestionReseau/scribe_html_cd6a1d0.jpg)
 
@@ -211,24 +210,24 @@ client, on ajoute l’option /S pour une installation silencieuse avec les optio
 par défaut.
 
 3.  Il nous faut maintenant activer le paquet. Pour cela, afficher la page
-    d’activation et cliquer sur l’icône comme sur la figure \ref{m5d43378b}
+    d’activation et cliquer sur l’icône comme sur la figure
     ci-dessous :
 
 ![Activation de paquet \label{m5d43378b}]({{ site.baseurl }}/images/gestionReseau/scribe_html_m5d43378b.jpg)
 
-Choisir alors l’activation manuelle puis valider (fig. \ref{669af7cb})
+Choisir alors l’activation manuelle puis valider 
 
 ![Activation manuelle\label{669af7cb}]({{ site.baseurl }}/images/gestionReseau/scribe_html_669af7cb.jpg)
 
 4.  À présent le paquet est prêt, il reste à choisir les postes sur lesquels on
     souhaite déployer. Pour cela, cliquez sur l’icône de recherche puis «Search
     with various criteria». Dans l’exemple ci-dessous, le paramètre choisi est
-    «Computers : Operating systems». (fig. \ref{m49c3e1e4})
+    «Computers : Operating systems». 
 
 ![Recherche\label{m49c3e1e4}]({{ site.baseurl }}/images/gestionReseau/scribe_html_m49c3e1e4.jpg)
 
 5.  On peut alors choisir en les cochant les postes sur lesquels on va déployer
-    le paquet (fig. \ref{bcefe4})
+    le paquet 
 
 ![Sélectionner les postes pour le
 déploiement\label{bcefe4}]({{ site.baseurl }}/images/gestionReseau/scribe_html_bcefe4.jpg)
@@ -338,6 +337,6 @@ La liaison automatique permet de lier automatiquement une machine crée dans GLP
 avec une machine remontant d'OCS.
 
 Pour plus d'informations sur ces réglages,
-<http://www.glpi-project.org/wiki/doku.php?id=fr:config:ocsng>
+http://www.glpi-project.org/wiki/doku.php?id=fr:config:ocsng
 
 ![Liaison automatique de machines]({{ site.baseurl }}/images/gestionReseau/glpi_13.png)
