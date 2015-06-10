@@ -16,7 +16,7 @@ possible d'intégrer des machines au domaine.
     d'écran suivante montre l'utilisateur admin faisant
     entrer dans le domaine une machine sous WindowsXP.
 
-![intégration au domaine](figs/scribe_html_78aacfe6.png)
+![intégration au domaine]({{ site.baseurl }}/images/gestionReseau/scribe_html_78aacfe6.png)
 
 La procédure est tout à fait identique sous Windows 7 à ceci-près qu'un message
 d'erreur apparaît dont on ne tiendra pas compte. Profitons de cette parenthèse
@@ -25,7 +25,7 @@ configuration puis cliquez successivement sur «Comptes et protection
 utilisateurs» puis «Comptes d’utilisateurs» et «Modifier les paramètres de
 contrôle du compte d'utilisateur» descendez alors le cuseur au plus bas.
 
-![UAC](figs/windows-seven-uac-1.jpg)
+![UAC]({{ site.baseurl }}/images/gestionReseau/windows-seven-uac-1.jpg)
 
 2.  Deuxième étape : installer le client scribe.
 
@@ -33,7 +33,7 @@ Après redémarrage et connexion en tant qu'admin sur le domaine, rendons-nous
 dans le poste de travail puis dans le répertoire personnel nommé `U:` Nous
 allons exécuter le programme `Install_Client_Scribe`.
 
-![Installation du client scribe](figs/scribe_html_m4358be12.png)
+![Installation du client scribe]({{ site.baseurl }}/images/gestionReseau/scribe_html_m4358be12.png)
 
 Cette opération va configurer de nouveaux lecteurs réseau, installer VNC et
 d'autres outils.
@@ -67,7 +67,7 @@ Pour télecharger le script, cliquer sur le bouton `Raw`
 puis clic-droit et Enregistrer la page à la racine du répertoire personnel de
 l'utilisateur courant.
 
-![danelyon](figs/danelyon.png)
+![danelyon]({{ site.baseurl }}/images/gestionReseau/danelyon.png)
 
 Il reste à rendre le script executable puis à le lancer. Pour cela, dans un
 terminal, saisir les commande suivantes (à adapter au nom du script téléchargé)
