@@ -1,22 +1,20 @@
 ---
-title: Installation de Scribe
+title: Gestion de parc avec OCS Inventory NG
 layout: post
 date: 2015-06-8 13:30:00
 tags: [scribe]
 category: scribe
 ---
 
-
-
-# Gestion de parc avec OCS Inventory NG
+*OCS Inventory NG soit Open Computer and Software Inventory est une application
+permettant de réaliser un inventaire automatisé sur la configuration matérielle
+des machines du réseau et sur les logiciels qui y sont installés.
 
 La documentation officielle en français
 (<http://wiki.ocsinventory-ng.org/index.php/Documentation:Main/fr>) décrit en
 ces mots l’application :
 
-*OCS Inventory NG soit Open Computer and Software Inventory est une application
-permettant de réaliser un inventaire automatisé sur la configuration matérielle
-des machines du réseau et sur les logiciels qui y sont installés. OCS permet de
+OCS permet de
 visualiser cet inventaire grâce à une interface web. Il comporte également la
 possibilité de télé-déployer des applicationssur un ensemble de machines selon
 des critères de recherche. Une fonction des agents nommée IpDiscover, couplée à
