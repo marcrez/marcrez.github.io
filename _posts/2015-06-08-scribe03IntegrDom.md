@@ -1,7 +1,7 @@
 ---
 title: Intégrer des clients Windows ou Linux au domaine
 layout: post
-date: 2015-06-8 13:30:00
+date: 2015-06-8 18:30:00
 tags: [scribe]
 category: scribe
 ---

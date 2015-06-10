@@ -1,7 +1,7 @@
 ---
 title: Installation de Scribe
 layout: post
-date: 2015-06-8 13:30:00
+date: 2015-06-8 19:30:00
 tags: [scribe]
 category: scribe
 ---
