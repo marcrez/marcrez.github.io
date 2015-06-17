@@ -99,11 +99,12 @@ Voici un exmple de mise en situation.
 
 ## Table des matières automatique
 
-Lorsqu'un document est bien structuré, la table des matières doit pouvoir
-être construite automatiquement. Un plugin jquery nommé `tableofcontents` sait
-faire cela. Il va analyser le code html à la recherche des balises `h1`, `h2`
-etc... et va remplir la balise `<div id="toc">` qu'on aura placée là où on veut
-faire aparaître la table des matières.
+Lorsqu'un document est bien structuré, la table des matières doit pouvoir être
+construite automatiquement. Un plugin [jquery](https://jquery.com/) nommé
+[tableofcontents](http://fuelyourcoding.com/scripts/toc/examples/example1.html)
+sait faire cela. Il va analyser le code html à la recherche des balises `h1`,
+`h2` etc... et va remplir la balise `<div id="toc">` qu'on aura placée là où on
+veut faire aparaître la table des matières.
 
 ```html
 <!DOCTYPE html>
