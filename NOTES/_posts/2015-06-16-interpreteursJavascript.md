@@ -74,12 +74,11 @@ Voici un exmple de mise en situation.
 ```html
 <!DOCTYPE html>
 <html>
+
 <body>
+ Une formule dans la ligne : $ ax^2+bx+c $
 
-Une formule dans la ligne : $ ax^2+bx+c $
-
-\[ \sum_{n=1}^{+\infty} \frac{1}{n} = \frac{\pi^2}{6} \]
-
+ \[ \sum_{n=1}^{+\infty} \frac{1}{n} = \frac{\pi^2}{6} \]
 </body>
 
 <script type="text/x-mathjax-config">
@@ -108,25 +107,27 @@ faire aparaître la table des matières.
 
 ```html
 <!DOCTYPE html>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/stylesheets/jquery.tocify.css">
 <html>
-<body>
-
-<h1>Titre A</h1>
-  <h2>Titre 1</h2>
-  <h2>Titre 2</h2>
-<h1>Titre B</h1>
-  <h2>Titre 1</h2>
-
-</body>
-
-<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js"></script>
-<script type="text/javascript" charset="utf-8">
-	$(function(){ $("#toc").tocify(); })
-</script>
-
+ <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/stylesheets/jquery.tocify.css">
+ </head>
+ <body>
+ 
+  <h1>Titre A</h1>
+    <h2>Titre 1</h2>
+    <h2>Titre 2</h2>
+  <h1>Titre B</h1>
+    <h2>Titre 1</h2>
+ 
+ </body>
+ 
+ <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+ <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js"></script>
+ <script type="text/javascript" charset="utf-8">
+ 	$(function(){ $("#toc").tocify(); })
+ </script>
+ 
 </html>
 ```
 
