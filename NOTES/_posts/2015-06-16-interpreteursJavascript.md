@@ -6,7 +6,7 @@ tags: [markdown, javascript]
 category: notes
 ---
 
-![markdown](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/200px-Markdown-mark.svg.png)
+![markdown](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/120px-Markdown-mark.svg.png)
 On a déjà vu l'intérêt des formats texte brut pour rédiger des documents.
 Dans cet article, nous allons voir comment utiliser JavaScript pour mettre
 en forme un document markdown contenant un en-tête YAML et des formules LaTeX.
