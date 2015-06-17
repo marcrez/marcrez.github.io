@@ -6,6 +6,7 @@ tags: [scribe]
 category: scribe
 ---
 
+![eole](http://eole.orion.education.fr/templates/eole/images/mw_joomla_logo.png)
 Sur l'académie de Paris, les réseaux d'établissement sont généralement organisés
 par la DSI, service informatique du Rectorat qui assure en plus l'administration
 et la maintenance des serveurs Amon, Scribe et Horus.
