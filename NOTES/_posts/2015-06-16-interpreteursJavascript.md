@@ -2,7 +2,7 @@
 title: Interpréteurs JavaScript
 layout: post
 date: 2015-06-16
-tags: [markdown]
+tags: [markdown, javascript]
 category: notes
 ---
 
