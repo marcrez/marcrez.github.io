@@ -10,7 +10,7 @@ On a déjà vu l'intérêt des formats texte brut pour rédiger des documents.
 Dans cet article, nous allons voir comment utiliser JavaScript pour mettre
 en forme un document markdown contenant un en-tête YAML et des formules LaTeX.
 
-## Le document de base au format texte
+## Markdown to Html
 
 Partons d'un document simple dont la mise en forme est spartiate puisque
 puisque c'est du texte brut
@@ -30,21 +30,17 @@ puisque c'est du texte brut
 Le but est de transformer ce contenu en un document html bien présenté
 et qui pourra être lu dans un navigateur.
 
-## Markdown to Html
 
 Afin que la magie opère, on place le contenu markdown dans un fichier
-`monFichier.html` et on ajoute la ligne suivante à la fin du fichier.
-
-```
-<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
-```
-
-Maintenant, on entoure le contenu markdown de balises qui vont indiquer à 
-`strapdown.js` le contenu à traiter ainsi que le thème à lui appliquer.
+`monFichier.html`, on l'entoure de balises qui vont indiquer à l'interpréteur 
+javascript le contenu à traiter ainsi que le thème à lui appliquer.
+Il ne reste plus qu'à ajouter le chargement de `strapdown.js` à la fin du 
+fichier, le tour est joué.
 
 ```
 <!DOCTYPE html>
 <html>
+
 <xmp theme="united" style="display:none;">
 
 # Titre du document
@@ -57,12 +53,15 @@ Maintenant, on entoure le contenu markdown de balises qui vont indiquer à
 | Cell A | Cell B | Cell C |
 
 </xmp>
+
 <script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+
+</html>
 ```
 
 ## LaTeX to Html
 
-On peut inclure des formules LaTeX de la façon classique `$ ax^2+bx+c $` ou 
+On peut inclure des formules LaTeX de façon classique `$ ax^2+bx+c $` ou 
 `\[ ax^2+bx+c \]` pour des formules dans le paragraphe  ou bien 
 ` $$ax^2+bx+c $$` ou `\[ ax^2+bx+c \]` pour des formules dans un paragraphe
 dédié.
@@ -73,16 +72,14 @@ library JavaScript.
 ```
 <!DOCTYPE html>
 <html>
-<xmp theme="united" style="display:none;">
+<body>
 
-# Titre du document
-
-- de la mise en forme : *italique* ou **gras**
-- une formule dans la ligne : $ ax^2+bx+c $
+Une formule dans la ligne : $ ax^2+bx+c $
 
 \[ \sum_{n=1}^{+\infty} \frac{1}{n} = \frac{\pi^2}{6} \]
 
-</xmp>
+</body>
+
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -96,7 +93,7 @@ library JavaScript.
   });
 </script>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
-<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+</html>
 ```
 
 ## Yaml to Html
@@ -105,5 +102,59 @@ L'en-tête Yaml est un petit paragraphe en début de document, entouré de
 qutre tirets et qui donne des informations sur le document.
 
 Pour interpréter les informations du bloc Yaml, on ajoute une nouvelle library
+
+```
+<!DOCTYPE html>
+<html>
+
+<xmp theme="united" style="display:none;">
+
+<div id="yaml">
+title: Le Titre du document
+author: Nico
+tags: [markdown, html, javascript]
+</div>
+
+# Titre du document
+
+Du texte blablabla
+blablabla
+
+</xmp>
+
+<script type="text/javascript" src="js/yaml.js"></script>
+
+<script type="text/javascript">
+yamlObj = YAML.parse(document.getElementById('yaml').innerHTML);
+document.getElementById('yaml').innerHTML = "";
+
+document.title =  yamlObj.title;
+var auth = document.createElement( 'div' ); auth.className = "authorClass";
+var s = document.createTextNode("L'auteur : " + yamlObj.author);
+auth.appendChild(s);
+document.getElementById('yaml').appendChild(auth);
+
+var tags = document.createElement( 'div' ); tags.id = "tags"; tags.className = "tagsClass";
+var s = document.createTextNode("Les tags : ");
+tags.appendChild(s);
+document.getElementById('yaml').appendChild(tags);
+yamlObj.tags.forEach(appendTag);
+
+// Define the callback function.
+function appendTag(value, index, ar) {
+  var tag = document.createElement( 'span' ); tag.className = "tagClass";
+  if (index == ar.length - 1) {
+    var s = document.createTextNode(value);
+  } else {
+    var s = document.createTextNode(value + ", ");
+  }
+  tag.appendChild(s);
+  document.getElementById('tags').appendChild(tag);
+}
+</script>
+
+</html>
+```
+
 
 
