@@ -15,7 +15,7 @@ en forme un document markdown contenant un en-tête YAML et des formules LaTeX.
 Partons d'un document simple dont la mise en forme est spartiate puisque
 puisque c'est du texte brut
 
-```
+```markdown
 # Titre du document
 
 - de la mise en forme : *italique* ou **gras**
@@ -37,7 +37,7 @@ javascript le contenu à traiter ainsi que le thème à lui appliquer.
 Il ne reste plus qu'à ajouter le chargement de `strapdown.js` à la fin du 
 fichier, le tour est joué.
 
-```
+```html
 <!DOCTYPE html>
 <html>
 
@@ -69,7 +69,7 @@ dédié.
 Pour que les formules soient interprétées, on va ajouter une nouvelle
 library JavaScript.
 
-```
+```html
 <!DOCTYPE html>
 <html>
 <body>
@@ -103,7 +103,7 @@ qutre tirets et qui donne des informations sur le document.
 
 Pour interpréter les informations du bloc Yaml, on ajoute une nouvelle library
 
-```
+```html
 <!DOCTYPE html>
 <html>
 
