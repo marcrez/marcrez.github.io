@@ -15,7 +15,7 @@ en forme un document markdown contenant un en-tête YAML et des formules LaTeX.
 Partons d'un document simple dont la mise en forme est spartiate puisque
 puisque c'est du texte brut
 
-```markdown
+```
 # Titre du document
 
 - de la mise en forme : *italique* ou **gras**
