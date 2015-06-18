@@ -39,10 +39,22 @@ $U_1+U_2=U$.  Il vient alors d'une part $U_2=R_2.I$ et d'autre part
 $U=(R_1+R_2)U$.  On en déduit que $\frac{U_2}{R_2} = \frac{U}{R_1+R_2}$ et donc
 $U_2 = U \frac{R_2}{R_1+R_2}$
 
+![branchement]({{ site.baseurl }}/images/HC-SR04/branchement.png)
+
+Sur le schéma de [circuitLab](https://www.circuitlab.com/circuit/4znzk9/raspberry-pi-ultrasonic-module/)
+on propose 330 et 470 Ohm. On peut évidemment modifier ces valeurs.
+
 En choisissant $R_1 = 220\Omega$ (rouge-rouge-marron ou rouge-rouge-noir-noir)
 et $R_2 = 330\Omega$ (organge-orange-marron) la tension $U=5V$ sera divisée et
 on aura $U_2=3V$
 ce qui sera suffisant.
+
+![Montage]({{ site.baseurl }}/images/HC-SR04/montage.png)
+
+## Programme Python
+
+
+
 
 ## Tests
 
@@ -128,14 +140,5 @@ y = [0, 2.98, 2.93, 3.48, 3.23, 5.06, 4.39, 4.99, 4.8, 7.85, 7.27, 7.87, 7.25, 9
 
 ![echantillon]({{ site.baseurl }}/images/HC-SR04/echantillon.png)
 
-
-
-
-   HC-SR04 | Raspberry Pi
-----------:|:------------
-      VCC  | 3.3V
-      Trig | GPIO 20
-      Echo | GPIO 21
-      Gnd  | GND
 
 
