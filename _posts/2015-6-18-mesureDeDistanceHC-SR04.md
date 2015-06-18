@@ -53,10 +53,96 @@ ce qui sera suffisant.
 
 ## Programme Python
 
+On va utiliser le programme de 
+[Matt Hawkins](http://www.raspberrypi-spy.co.uk/2012/12/ultrasonic-distance-measurement-using-python-part-1/)
+pour faire fonctionner le module. La seule chose à faire sera d'adapter les numéros des groches GPIO au
+montage qu'on aura cablé.
+
+```python
+#!/usr/bin/python
+#+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+#|R|a|s|p|b|e|r|r|y|P|i|-|S|p|y|.|c|o|.|u|k|
+#+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+#
+# ultrasonic_1.py
+# Measure distance using an ultrasonic module
+#
+# Author : Matt Hawkins
+# Date   : 09/01/2013
+# -----------------------
+
+# Import required Python libraries
+import time
+import RPi.GPIO as GPIO
+
+# Use BCM GPIO references
+# instead of physical pin numbers
+GPIO.setmode(GPIO.BCM)
+
+# Define GPIO to use on Pi
+GPIO_TRIGGER = 23
+GPIO_ECHO    = 24
+
+print "Ultrasonic Measurement"
+
+# Set pins as output and input
+GPIO.setup(GPIO_TRIGGER,GPIO.OUT)  # Trigger
+GPIO.setup(GPIO_ECHO,GPIO.IN)      # Echo
+
+# Set trigger to False (Low)
+GPIO.output(GPIO_TRIGGER, False)
+
+# Allow module to settle
+time.sleep(0.5)
+
+# Send 10us pulse to trigger
+GPIO.output(GPIO_TRIGGER, True)
+time.sleep(0.00001)
+GPIO.output(GPIO_TRIGGER, False)
+start = time.time()
+
+while GPIO.input(GPIO_ECHO)==0:
+  start = time.time()
+
+while GPIO.input(GPIO_ECHO)==1:
+  stop = time.time()
+
+# Calculate pulse length
+elapsed = stop-start
+
+# Distance pulse travelled in that time is time
+# multiplied by the speed of sound (cm/s)
+distance = elapsed * 34300
+
+# That was the distance there and back so halve the value
+distance = distance / 2
+
+print "Distance : %.1f" % distance
+
+# Reset GPIO settings
+GPIO.cleanup()
+```
+
 
 
 
 ## Tests
+
+
+Pour vérifier la fiabilité des mesures, on va effectuer deux séries de deux mesures 
+avec deux HC-SR04 côte à côte.
+
+![Tests]({{ site.baseurl }}/images/HC-SR04/tests.png)
+
+Voici les résultats obtenus.
+
+![echantillon]({{ site.baseurl }}/images/HC-SR04/echantillon.png)
+
+Mis à part un bug sur la mesure à 15cm, on constate aue les quatre mesures 
+en bleu sont proches de la mesure théorique en vert.
+Il faudrait refaire une série de mseusre pour confirmer ce graphique.
+
+Ci-dessous le programme utilisé pour générer ces statistiques.
 
 
 ```python
@@ -138,7 +224,6 @@ x = [0, 3, 3, 3, 3, 5, 5, 5, 5, 8, 8, 8, 8, 10, 10, 10, 10, 15, 15, 15, 15, 20, 
 y = [0, 2.98, 2.93, 3.48, 3.23, 5.06, 4.39, 4.99, 4.8, 7.85, 7.27, 7.87, 7.25, 9.88, 9.65, 9.79, 9.23, 17.18, 17.46, 18.38, 17.2, 21.23, 20.27, 21.3, 21.49, 13.38, 13.63, 13.38, 13.72, 23.34, 23.24, 23.34, 23.25, 25.01, 25.33, 25.0, 25.19, 27.82, 27.69, 27.8, 27.63, 29.71, 30.11, 29.75, 29.38, 34.75, 34.4, 34.82, 34.75, 39.75, 39.34, 39.7, 38.6, 50.32, 49.46, 49.89, 49.55]
 
 
-![echantillon]({{ site.baseurl }}/images/HC-SR04/echantillon.png)
 
 
 
