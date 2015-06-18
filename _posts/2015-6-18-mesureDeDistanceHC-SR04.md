@@ -1,5 +1,5 @@
 ---
-title: HC-SR04 Mesure de distance par ultrasons
+title: HC-SR04 Mesure de distance par ultrasons (en cours d'écriture)
 layout: post
 date: 2015-06-18 13:30:00
 tags: [raspberryPi, python]
