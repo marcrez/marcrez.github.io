@@ -44,7 +44,89 @@ et $R_2 = 330\Omega$ (organge-orange-marron) la tension $U=5V$ sera divisée et
 on aura $U_2=3V$
 ce qui sera suffisant.
 
-## 
+## Tests
+
+
+```python
+import RPi.GPIO as GPIO                    #Import GPIO library
+import time                                #Import time library
+import matplotlib.pyplot as plt
+GPIO.setmode(GPIO.BCM)                     #Set GPIO pin numbering 
+
+TRIG1 = 19
+ECHO1 = 20
+TRIG2 = 26
+ECHO2 = 21 
+
+GPIO.setup(TRIG1,GPIO.OUT)                  #Set pin as GPIO out
+GPIO.setup(TRIG2,GPIO.OUT)                  #Set pin as GPIO out
+GPIO.setup(ECHO1,GPIO.IN)                   #Set pin as GPIO in
+GPIO.setup(ECHO2,GPIO.IN)                   #Set pin as GPIO in
+
+d=0
+x = [0]
+y = [0]
+
+while d!= -1:
+
+  d = input("dist : ")
+  
+  GPIO.output(TRIG1, False)                 #Set TRIG as LOW
+  #print "Waitng For Sensor To Settle"
+  time.sleep(2)                            #Delay of 2 seconds
+
+  GPIO.output(TRIG1, True)                  #Set TRIG as HIGH
+  time.sleep(0.00001)                      #Delay of 0.00001 seconds
+  GPIO.output(TRIG1, False)                 #Set TRIG as LOW
+
+  while GPIO.input(ECHO1)==0:               #Check whether the ECHO is LOW
+    pulse_start = time.time()              #Saves the last known time of LOW pulse
+
+  while GPIO.input(ECHO1)==1:               #Check whether the ECHO is HIGH
+    pulse_end = time.time()                #Saves the last known time of HIGH pulse 
+
+  pulse_duration = pulse_end - pulse_start #Get pulse duration to a variable
+
+  distance = pulse_duration * 17150        #Multiply pulse duration by 17150 to get distance
+  distance = round(distance, 2)            #Round to two decimal points
+  print "Distance:",distance  #Print distance with 0.5 cm calibration
+  x.append(d)
+  y.append(distance)
+
+  GPIO.output(TRIG2, False)                 #Set TRIG as LOW
+  #print "Waitng For Sensor To Settle"
+
+  GPIO.output(TRIG2, True)                  #Set TRIG as HIGH
+  time.sleep(0.00001)                      #Delay of 0.00001 seconds
+  GPIO.output(TRIG2, False)                 #Set TRIG as LOW
+
+  while GPIO.input(ECHO2)==0:               #Check whether the ECHO is LOW
+    pulse_start = time.time()              #Saves the last known time of LOW pulse
+
+  while GPIO.input(ECHO2)==1:               #Check whether the ECHO is HIGH
+    pulse_end = time.time()                #Saves the last known time of HIGH pulse 
+
+  pulse_duration = pulse_end - pulse_start #Get pulse duration to a variable
+
+  distance = pulse_duration * 17150        #Multiply pulse duration by 17150 to get distance
+  distance = round(distance, 2)            #Round to two decimal points
+  print "Distance:",distance  #Print distance with 0.5 cm calibration
+  x.append(d)
+  y.append(distance)
+
+print(x)
+print(y)
+plt.plot(x,y,'o')
+plt.plot(x,x,'o')
+plt.show()
+```
+
+
+x = [0, 3, 3, 3, 3, 5, 5, 5, 5, 8, 8, 8, 8, 10, 10, 10, 10, 15, 15, 15, 15, 20, 20, 20, 20, 13, 13, 13, 13, 23, 23, 23, 23, 25, 25, 25, 25, 28, 28, 28, 28, 30, 30, 30, 30, 35, 35, 35, 35, 40, 40, 40, 40, 50, 50, 50, 50]
+y = [0, 2.98, 2.93, 3.48, 3.23, 5.06, 4.39, 4.99, 4.8, 7.85, 7.27, 7.87, 7.25, 9.88, 9.65, 9.79, 9.23, 17.18, 17.46, 18.38, 17.2, 21.23, 20.27, 21.3, 21.49, 13.38, 13.63, 13.38, 13.72, 23.34, 23.24, 23.34, 23.25, 25.01, 25.33, 25.0, 25.19, 27.82, 27.69, 27.8, 27.63, 29.71, 30.11, 29.75, 29.38, 34.75, 34.4, 34.82, 34.75, 39.75, 39.34, 39.7, 38.6, 50.32, 49.46, 49.89, 49.55]
+
+
+![echantillon]({{ site.baseurl }}/images/HC-SR04/echantillon.png)
 
 
 
