@@ -6,13 +6,12 @@ tags: [raspberryPi, python]
 category: raspberryPi
 ---
 
+![echolocation](https://upload.wikimedia.org/wikipedia/commons/8/82/Delfinekko.gif)
 Le module HC-SR04 est un module à moins de 2€ constitué d'un emetteur et d'un
-récepteur d'ultrasons. Comme le font les chauve-souris, ou les sonars des
-bateaux, il va mesurer le temps qui sépare l'emission de la reception de l'echo
+récepteur d'ultrasons. Comme le font les chauve-souris, ou les cétacés, 
+il va mesurer le temps qui sépare l'emission de la reception de l'echo
 lorsque le son rebondit contre la surface qui fait face au module.
 La vitesse du son étant (relativement) constante, on en déduit la distance.
-
-![ADXL345]({{ site.baseurl }}/images/accelerometreADXL345/ADXL345.png)
 
 ## Le diviseur de tension
 
