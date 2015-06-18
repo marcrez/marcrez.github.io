@@ -29,5 +29,6 @@ Notes sur les raccourcis pour obtenir les caractères spéciaux :
 - ¹ : `AltGr+1`
 - ² : `AltGr+2`
 - ³ : `AltGr+3`
+- € : `AltGr+5`
 - × : `AltGr+=`
 - ÷ : `AltGr++`
