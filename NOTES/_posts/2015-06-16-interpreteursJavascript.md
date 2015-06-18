@@ -37,7 +37,7 @@ javascript le contenu à traiter ainsi que le thème (ici `united`) à lui
 appliquer.  Il ne reste plus qu'à ajouter le chargement de `strapdown.js` à la
 fin du fichier, le tour est joué.
 
-[Voir l'exemple]({{ site.baseurl }}/NOTES/_posts/2015-06-16-interpreteursJavascript-markdown2html.html)
+[Voir l'exemple]({{ site.baseurl }}/files/2015-06-16-interpreteursJavascript-markdown2html.html)
 
 ```html
 <!DOCTYPE html>
@@ -76,7 +76,7 @@ library JavaScript capable d'afficher du code LaTeX :
 [mathjax](https://www.mathjax.org/).
 Voici un exmple de mise en situation.
 
-[Voir l'exemple]({{ site.baseurl }}/NOTES/_posts/2015-06-16-interpreteursJavascript-latex2html.html)
+[Voir l'exemple]({{ site.baseurl }}/files/2015-06-16-interpreteursJavascript-latex2html.html)
 
 ```html
 <!DOCTYPE html>
@@ -114,7 +114,7 @@ sait faire cela. Il va analyser le code html à la recherche des balises `h1`,
 `h2` etc... et va remplir la balise `<div id="toc">` qu'on aura placée là où on
 veut faire aparaître la table des matières.
 
-[Voir l'exemple]({{ site.baseurl }}/NOTES/_posts/2015-06-16-interpreteursJavascript-tableofcontents.html)
+[Voir l'exemple]({{ site.baseurl }}/files/2015-06-16-interpreteursJavascript-tableofcontents.html)
 
 ```html
 <!DOCTYPE html>
@@ -164,7 +164,7 @@ coller dans une div dont l'id est `yaml`. Les quelques lignes de code javascript
 ci-dessous vont mettre ces informations en forme dans des balises html auxquelles
 on pourra donner un style css.
 
-[Voir l'exemple]({{ site.baseurl }}/NOTES/_posts/2015-06-16-interpreteursJavascript-yaml2html.html)
+[Voir l'exemple]({{ site.baseurl }}/files/2015-06-16-interpreteursJavascript-yaml2html.html)
 
 
 ```html
