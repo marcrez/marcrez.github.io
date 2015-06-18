@@ -13,6 +13,17 @@ il va mesurer le temps qui sépare l'emission de la reception de l'echo
 lorsque le son rebondit contre la surface qui fait face au module.
 La vitesse du son étant (relativement) constante, on en déduit la distance.
 
+![Module]({{ site.baseurl }}/images/HC-SR04/module.png)
+
+Lorsque la broche `Trig` reçoit un signal haut de plus de 10 microsecondes, le cylindre
+marqué `T` (*Transmitter* qui est un petit haut-parleur) va
+va envoyer une salve de 8 signaux ultrasons de 40kHz. Aussitôt, le cylindre marqué `R`
+(*Reciever* qui est un petit micro) attend le retour de l'echo.
+Si un retour a été entendu, le module va envoyer envoyer un signal haut sur la broche `Echo`
+d'une durée proportionelle à la distance.
+
+![Fonctionnement du HC-SR04]({{ site.baseurl }}/images/HC-SR04/timing.png)
+
 ## Le diviseur de tension
 
 La [fiche technique](http://www.mpja.com/download/hc-sr04_ultrasonic_module_user_guidejohn.pdf)
@@ -28,10 +39,13 @@ $U_1+U_2=U$.  Il vient alors d'une part $U_2=R_2.I$ et d'autre part
 $U=(R_1+R_2)U$.  On en déduit que $\frac{U_2}{R_2} = \frac{U}{R_1+R_2}$ et donc
 $U_2 = U \frac{R_2}{R_1+R_2}$
 
-En choisissant $R_1 = 220\Omega$ (Rouge-Rouge-marron ou rouge-rouge-noir-noir)
-et $R_2 = 330\Omega$ (Organge-Orange-marron) la tension $U=5V$ sera divisée et
+En choisissant $R_1 = 220\Omega$ (rouge-rouge-marron ou rouge-rouge-noir-noir)
+et $R_2 = 330\Omega$ (organge-orange-marron) la tension $U=5V$ sera divisée et
 on aura $U_2=3V$
 ce qui sera suffisant.
+
+## 
+
 
 
 
