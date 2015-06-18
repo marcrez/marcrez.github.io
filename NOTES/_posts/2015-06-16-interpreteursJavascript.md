@@ -37,16 +37,21 @@ javascript le contenu à traiter ainsi que le thème (ici `united`) à lui
 appliquer.  Il ne reste plus qu'à ajouter le chargement de `strapdown.js` à la
 fin du fichier, le tour est joué.
 
+[Voir l'exemple]({{ site.baseurl }}/NOTES/_posts/2015-06-16-interpreteursJavascript-markdown2html.html)
+
 ```html
 <!DOCTYPE html>
 <html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+</head>
 
 <xmp theme="united" style="display:none;">
 
 # Titre de niveau 1
 
 - De la mise en forme : *italique* ou **gras**
-- mais aussi du `code` ou des caractères spéciaux : &#8212;
+- mais aussi du `code` ou des caractères spéciaux : &#9786; &#9787;
 
 | A      | B      |
 | ------ | ------ |
@@ -71,6 +76,7 @@ library JavaScript capable d'afficher du code LaTeX :
 [mathjax](https://www.mathjax.org/).
 Voici un exmple de mise en situation.
 
+[Voir l'exemple]({{ site.baseurl }}/NOTES/_posts/2015-06-16-interpreteursJavascript-latex2html.html)
 
 ```html
 <!DOCTYPE html>
@@ -98,6 +104,7 @@ Voici un exmple de mise en situation.
 </html>
 ```
 
+
 ## Table des matières automatique
 
 Lorsqu'un document est bien structuré, la table des matières doit pouvoir être
@@ -107,19 +114,27 @@ sait faire cela. Il va analyser le code html à la recherche des balises `h1`,
 `h2` etc... et va remplir la balise `<div id="toc">` qu'on aura placée là où on
 veut faire aparaître la table des matières.
 
+[Voir l'exemple]({{ site.baseurl }}/NOTES/_posts/2015-06-16-interpreteursJavascript-tableofcontents.html)
+
 ```html
 <!DOCTYPE html>
 <html>
  <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/stylesheets/jquery.tocify.css">
+  <style> #content { margin-left: 25%; } </style>
  </head>
  <body>
- 
+ <div id="toc"></div>
+ <div id="content">
   <h1>Titre A</h1>
     <h2>Titre 1</h2>
+    <p> Lorem ipsum... </p>
     <h2>Titre 2</h2>
+    <p> Lorem ipsum... </p>
   <h1>Titre B</h1>
     <h2>Titre 1</h2>
+    <p> Lorem ipsum... </p>
+ </div>
  
  </body>
  
@@ -131,6 +146,7 @@ veut faire aparaître la table des matières.
  </script>
  
 </html>
+
 ```
 
 
@@ -148,12 +164,16 @@ coller dans une div dont l'id est `yaml`. Les quelques lignes de code javascript
 ci-dessous vont mettre ces informations en forme dans des balises html auxquelles
 on pourra donner un style css.
 
+[Voir l'exemple]({{ site.baseurl }}/NOTES/_posts/2015-06-16-interpreteursJavascript-yaml2html.html)
+
 
 ```html
 <!DOCTYPE html>
 <html>
-
-<xmp theme="united" style="display:none;">
+<head>
+  <style> .tagClass { border:1px solid; margin:2px; background: lightblue;} </style>
+</head>
+<body>
 
 <div id="yaml">
 title: Le Titre du document
@@ -161,22 +181,24 @@ author: Nicolas Poulain
 tags: [markdown, html, javascript]
 </div>
 
-# Titre du document
+<h1 id="title"></h1>
 
+<h2> Introduction </h2>
 Du texte blablabla
 blablabla
 
-</xmp>
+</body>
 
 <!-- http://adilapapaya.com/docs/js-yaml/ -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.3.1/js-yaml.min.js"></script>
 
 <script type="text/javascript">
-yamlObj = YAML.parse(document.getElementById('yaml').innerHTML);
+yamlObj = jsyaml.load(document.getElementById('yaml').innerHTML);
 document.getElementById('yaml').innerHTML = "";
 
 // Titre du document
 document.title =  yamlObj.title;
+document.getElementById('title').innerHTML = yamlObj.title;
 
 // Auteur
 var auth = document.createElement( 'div' ); auth.className = "authorClass";
@@ -195,17 +217,14 @@ yamlObj.tags.forEach(appendTag);
 // Callback function pour afficher les tags du tableau
 function appendTag(value, index, ar) {
   var tag = document.createElement( 'span' ); tag.className = "tagClass";
-  if (index == ar.length - 1) {
-    var s = document.createTextNode(value);
-  } else {
-    var s = document.createTextNode(value + ", ");
-  }
+  var s = document.createTextNode(value);
   tag.appendChild(s);
   document.getElementById('tags').appendChild(tag);
 }
 </script>
 
 </html>
+
 ```
 
 

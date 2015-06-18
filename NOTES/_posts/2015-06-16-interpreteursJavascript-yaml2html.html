@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style> .tagClass { border:1px solid; margin:2px; background: lightblue;} </style>
+</head>
+<body>
+
+<div id="yaml">
+title: Le Titre du document
+author: Nicolas Poulain
+tags: [markdown, html, javascript]
+</div>
+
+<h1 id="title"></h1>
+
+<h2> Introduction </h2>
+Du texte blablabla
+blablabla
+
+</body>
+
+<!-- http://adilapapaya.com/docs/js-yaml/ -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.3.1/js-yaml.min.js"></script>
+
+<script type="text/javascript">
+yamlObj = jsyaml.load(document.getElementById('yaml').innerHTML);
+document.getElementById('yaml').innerHTML = "";
+
+// Titre du document
+document.title =  yamlObj.title;
+document.getElementById('title').innerHTML = yamlObj.title;
+
+// Auteur
+var auth = document.createElement( 'div' ); auth.className = "authorClass";
+var s = document.createTextNode("L'auteur : " + yamlObj.author);
+auth.appendChild(s);
+document.getElementById('yaml').appendChild(auth);
+
+// Tags
+var tags = document.createElement( 'div' ); tags.className = "tagsClass";
+tags.id = "tags";
+var s = document.createTextNode("Les tags : ");
+tags.appendChild(s);
+document.getElementById('yaml').appendChild(tags);
+yamlObj.tags.forEach(appendTag);
+
+// Callback function pour afficher les tags du tableau
+function appendTag(value, index, ar) {
+  var tag = document.createElement( 'span' ); tag.className = "tagClass";
+  var s = document.createTextNode(value);
+  tag.appendChild(s);
+  document.getElementById('tags').appendChild(tag);
+}
+</script>
+
+</html>
+
