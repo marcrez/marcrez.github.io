@@ -10,7 +10,7 @@ category: raspberryPi
 ![Canon XP3000]({{ site.baseurl }}/images/canon/xp3000.png)
 Dans cet article, on va voir comment fonctionne le positionnement
 si précis des élements mobiles d'une imprimante, en particulier 
-la Canon Pixma XP3000.
+la Canon Pixma IP3000.
 
 
 ## Démontage de l'imprimante
@@ -56,6 +56,14 @@ dizaines de segments et ses deux détecteurs.
 
 
 Le plus difficile, est de reconstituer le schéma en l'absence de documentation.
+
+D'abord repérer les bornes de la diode : la position des deux soudures juste en
+face du bloc de 4 sous le bloc noir de détection faisait supposer qu'elles étaient candidates.
+
+Un test avec le multimetre et c'est confirmé.
+
+![Canon XP3000]({{ site.baseurl }}/images/canon/multimetre.png)
+
 
 Bientôt la méthode utilisée...
 
