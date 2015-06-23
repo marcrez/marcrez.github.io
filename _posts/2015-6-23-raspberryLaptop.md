@@ -15,14 +15,14 @@ d'un télephone Android en guise de clavier.
 ## Un rPi et un téléphone Android
 
 
-Commençons par un cas simple : en rPi est connceté en USB à un téléphone rooté.
+Commençons par un cas simple : un rPi est connceté en USB à un téléphone rooté.
 
-D'abord, partager la connexion du télephone. Pour cela dans les paramètres,
+D'abord, partager la connexion du télephone : pour cela dans les paramètres,
 choisir **Plus...** puis **Partage de connexion** et cocher la case **Via USB**.
 
 Maintenant, le rPi a une adresse IP fournie par le serveur DHCP du télephone.
 Pour la connaître, on lance le *Terminal Emulator* puis les commandes suivantes 
-pour obtenir les droits de root et afficher la table 
+pour obtenir les droits de root puis afficher la table 
 [ARP](https://fr.wikipedia.org/wiki/Address_Resolution_Protocol)
 
 ```
@@ -33,11 +33,14 @@ IP address       HW type   Flags   HW address         Mask   Device
 192.168.42.254   0x1       0x2     00:23:a1:b2:cc:15  *      wlan0
 ```
 
-L'adress deu rPi est 192.168.42.51. On va s'y connecter.
+L'adresse du rPi est 192.168.42.51. On va s'y connecter.
 
 ```
 $ ssh pi@192.168.42.51
 ```
+
+![Canon XP3000]({{ site.baseurl }}/images/rPiLaptop/Screen01.png)
+
 
 ## Un rPi, un téléphone Android et un clavier
 
