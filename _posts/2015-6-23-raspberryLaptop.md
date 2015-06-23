@@ -12,6 +12,38 @@ Le but est ici de trouver une solution pour disposer d'un ordinateur portable
 complet constitué d'un raspberryPi pour unitécentrale, d'une liseuse d'eBook pour écran et
 d'un télephone Android en guise de clavier.
 
+## Un rPi et un téléphone Android
+
+
+Commençons par un cas simple : en rPi est connceté en USB à un téléphone rooté.
+
+D'abord, partager la connexion du télephone. Pour cela dans les paramètres,
+choisir *Plus...* puis *Partage de connexion* et cocher la case *Via USB*.
+
+Maintenant, le rPi a une adresse IP fournie par le serveur DHCP du télephone.
+Pour la connaître, on lance *Terminal Emulator* puis les commandes suivantes 
+pour obtenir les droits de root et afficher la table [ARP](https://fr.wikipedia.org/wiki/Address_Resolution_Protocol)
+
+```
+$ su
+# cat /proc/net/arp
+IP address       HW type   Flags   HW address         Mask   Device
+192.168.42.51    0x1       0x2     8e:e1:c2:a3:5d:eb  *      rndis0
+192.168.42.254   0x1       0x2     00:23:a1:b2:cc:15  *      wlan0
+```
+
+L'adress deu rPi est 192.168.42.51. On va s'y connecter.
+
+```
+$ ssh pi@192.168.42.51
+```
+
+## Un rPi, un téléphone Android et un clavier
+
+Bientôt...
+
+
+
 ## Les articles en rapport
 
 
