@@ -18,11 +18,12 @@ d'un télephone Android en guise de clavier.
 Commençons par un cas simple : en rPi est connceté en USB à un téléphone rooté.
 
 D'abord, partager la connexion du télephone. Pour cela dans les paramètres,
-choisir *Plus...* puis *Partage de connexion* et cocher la case *Via USB*.
+choisir **Plus...** puis **Partage de connexion** et cocher la case **Via USB**.
 
 Maintenant, le rPi a une adresse IP fournie par le serveur DHCP du télephone.
-Pour la connaître, on lance *Terminal Emulator* puis les commandes suivantes 
-pour obtenir les droits de root et afficher la table [ARP](https://fr.wikipedia.org/wiki/Address_Resolution_Protocol)
+Pour la connaître, on lance le *Terminal Emulator* puis les commandes suivantes 
+pour obtenir les droits de root et afficher la table 
+[ARP](https://fr.wikipedia.org/wiki/Address_Resolution_Protocol)
 
 ```
 $ su
@@ -46,6 +47,7 @@ Bientôt...
 
 ## Les articles en rapport
 
+http://www.mobileread.com/forums/showthread.php?t=216501
 
 Le clavier
 
