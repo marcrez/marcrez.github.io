@@ -9,11 +9,8 @@ category: raspberryPi
 
 ![Canon XP3000]({{ site.baseurl }}/images/rPiLaptop/install.png)
 Le but est ici de trouver une solution pour disposer d'un ordinateur portable
-complet
-
-- l'unité centrale est un raspberryPi
-- l'écran est une liseuse d'eBooks
-- le clavier est un télephone android
+complet constitué d'un raspberryPi pour unitécentrale, d'une liseuse d'eBook pour écran et
+d'un télephone Android en guise de clavier.
 
 ## Les articles en rapport
 
