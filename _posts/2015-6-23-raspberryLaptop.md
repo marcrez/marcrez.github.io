@@ -7,7 +7,7 @@ tags: [raspberryPi, linux, reseau]
 category: raspberryPi
 ---
 
-![Canon XP3000]({{ site.baseurl }}/images/RaspberryPiLaptop/install.png)
+![Canon XP3000]({{ site.baseurl }}/images/rPiLaptop/install.png)
 Le but est ici de trouver une solution pour disposer d'un ordinateur portable
 complet en utilisant un RaspberryPi, 
 un télephone Android et
@@ -15,10 +15,10 @@ une liseuse d'eBook Sony PRS-T1.
 
 ## Étape 1 : Un RaspberryPi et un téléphone Android
 
-Commençons par un cas simple : un RaspberryPi est connecté en USB à un téléphone rooté.
+Commençons par un cas simple : un RaspberryPi est connceté en USB à un téléphone rooté.
 Ici, le téléphone sert d'écran et de clavier pour l'unité centrale RaspberryPi.
 
-![Canon XP3000]({{ site.baseurl }}/images/RaspberryPiLaptop/topo01.png)
+![Canon XP3000]({{ site.baseurl }}/images/rPiLaptop/topo01.png)
 
 D'abord, partager la connexion du télephone : pour cela dans les paramètres,
 choisir **Plus...** puis **Partage de connexion** et cocher la case **Via USB**.
@@ -43,14 +43,14 @@ droits de root avec la commande `exit`
 $ ssh pi@192.168.42.51
 ```
 
-![Canon XP3000]({{ site.baseurl }}/images/RaspberryPiLaptop/Screen01.png)
+![Canon XP3000]({{ site.baseurl }}/images/rPiLaptop/Screen01.png)
 
 ## Étape 2 : Un téléphone Android et une liseuse Sony PRS-T1 
 
 Dans ce paragraphe, la liseuse devient un écran annexe pour une session de
 travail en console sur un téléphone Android.
 
-![Canon XP3000]({{ site.baseurl }}/images/RaspberryPiLaptop/topo01bis.png)
+![Canon XP3000]({{ site.baseurl }}/images/rPiLaptop/topo01bis.png)
 
 ### Rooter la liseuse
 
@@ -86,7 +86,7 @@ Une fois F-Droid installé, on peut lancer l'installation de **ConnectBot**.
 Par défaut, le téléphone n'accepte pas les connexionx entrantes. On va donc 
 installer un serveur ssh pour que la liseuse puisse se conncter au téléphone.
 
-![Canon XP3000]({{ site.baseurl }}/images/RaspberryPiLaptop/sshserver.png)
+![Canon XP3000]({{ site.baseurl }}/images/rPiLaptop/sshserver.png)
 
 ### Connecter la liseuse au téléphone
 
@@ -116,7 +116,7 @@ Résumé des étapes précédentes :
 L'objectif : le télephone sert de clavier et la liseuse sert d'écran pour
 l'unité centrale RaspberryPi.
 
-![Canon XP3000]({{ site.baseurl }}/images/RaspberryPiLaptop/topo02.png)
+![Canon XP3000]({{ site.baseurl }}/images/rPiLaptop/topo02.png)
 
 Il ne reste plus que deux opérations à effectuer :
 
