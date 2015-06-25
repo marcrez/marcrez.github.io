@@ -100,55 +100,33 @@ Les étapes sont alors faciles à suivre : on va définir un nom pour le réseau
 un mot de passe d'accès.  Sur la liseuse, on peut alors facilement se connecter
 au réseau servi par le téléphone.
 
+Le bouton **Info** de l'application **SSH Server** du téléphone permet de 
+connaitre l'adresse ip wifi du téléphone.
 
+On peut lancer ConnectBot sur la liseuse pour se conncter au téléphone.
 
 
 ## Étape 3 : Un rPi, un téléphone Android et une liseuse Sony PRS-T1
 
-Dernière étape : un rPi est connecté en USB à un téléphone Android rooté, la
-liseuse se connecte en wifi au télephone et accède au RaspberryPi
-au travers du télehone.
-Ici, le télephone sert de clavier et la liseuse sert d'écran pour l'unité
-centrale RaspberryPi.
+Résumé des étapes précédentes :
+
+1. Le téléphone est connecté, par le cable USB, sur le serveur ssh du rPi.
+2. La liseuse est connctée, par le wifi, sur le serveur ssh du téléphone.
+
+L'objectif : le télephone sert de clavier et la liseuse sert d'écran pour
+l'unité centrale RaspberryPi.
 
 ![Canon XP3000]({{ site.baseurl }}/images/rPiLaptop/topo02.png)
 
+Il ne reste plus que deux opérations à effectuer :
 
-## Un téléphone Android et une liseuse Sony PRS-T1
+1. Depuis le téléphone, dans le terminal connecté au rPi, créer un session de
+   screen nommée `foo`
+2. Depuis la liseuse, dans ConnectBot connecté au téléphone, se connecter au rPi
+   et rejoindre la session screen nommée `foo`.
 
+   
+## Un article sur le même sujet avec une liseuse Kindle
 
-
-Télecharger le serveur
-http://www.remotedroid.net/
-Télecharger le client pour android
-http://remotedroid.en.softonic.com/android/download
-
-
-## Les articles en rapport
-
-http://www.mobileread.com/forums/showthread.php?t=216501
-
-Le clavier
-
-- http://stackoverflow.com/questions/8483246/can-a-phone-pretend-to-be-a-bluetooth-keyboard
-- http://forum.xda-developers.com/showthread.php?t=940511
-- https://play.google.com/store/apps/details?id=com.skygears.airkeyboardandroid
-- https://play.google.com/store/apps/details?id=com.steppschuh.remoteinput
-- https://play.google.com/store/apps/details?id=pc.remote
-- https://play.google.com/store/apps/details?id=com.hungrybolo.remotemouseandroid
-- https://play.google.com/store/apps/details?id=com.necta.wifimousefree
-
-L'écran
-
-- http://www.ponnuki.net/2012/09/kindleberry-pi/
-- http://maxogden.com/kindleberry-wireless.html
-- http://www.theregister.co.uk/2012/09/11/kindleberry_pi/
-- http://guilev-concept.net/pinkhttps://pihw.wordpress.com/guides/guide-to-using-the-nook-simple-touch-as-a-remote-eink-raspberry-pi-screen/
-- https://projectdp.wordpress.com/2012/09/24/pi-k3w-kindle-3-display-for-raspberry-pi/
-
-
-Autres liens
-
-- http://mohammedlakkadshaw.com/blog/Android_as_display.html#.VYkGDORnor6
-- http://www.linux-magazine.com/Online/Blogs/Productivity-Sauce/Use-an-Android-Device-as-Screen-and-Input-for-Raspberry-Pi
+http://www.ponnuki.net/2012/09/kindleberry-pi/
 
