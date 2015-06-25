@@ -9,13 +9,14 @@ category: raspberryPi
 
 ![Canon XP3000]({{ site.baseurl }}/images/rPiLaptop/install.png)
 Le but est ici de trouver une solution pour disposer d'un ordinateur portable
-complet en utilisant un raspberryPi, une liseuse d'eBook et
-d'un télephone Android.
+complet en utilisant un RaspberryPi, 
+un télephone Android et
+une liseuse d'eBook Sony PRS-T1.
 
 ## Étape 1 : Un rPi et un téléphone Android
 
 Commençons par un cas simple : un rPi est connceté en USB à un téléphone rooté.
-Ici, le téléphone sert de clavier et d'écran pour l'unité centrale RaspberryPi.
+Ici, le téléphone sert d'écran et de clavier pour l'unité centrale RaspberryPi.
 
 ![Canon XP3000]({{ site.baseurl }}/images/rPiLaptop/topo01.png)
 
@@ -35,7 +36,8 @@ IP address       HW type   Flags   HW address         Mask   Device
 192.168.42.254   0x1       0x2     00:23:a1:b2:cc:15  *      wlan0
 ```
 
-L'adresse du rPi est 192.168.42.51. On va s'y connecter.
+L'adresse du rPi est 192.168.42.51. On va s'y connecter après avoir rendu les
+droits de root avec la commande `exit`
 
 ```
 $ ssh pi@192.168.42.51
@@ -45,15 +47,14 @@ $ ssh pi@192.168.42.51
 
 ## Étape 2 : un téléphone Android et une liseuse Sony PRS-T1 
 
-Dans ce paragraphe, la liseuse devient un écran annexe pour session de
+Dans ce paragraphe, la liseuse devient un écran annexe pour une session de
 travail en console sur un téléphone Android.
 
 ![Canon XP3000]({{ site.baseurl }}/images/rPiLaptop/topo01bis.png)
 
 ### Rooter la liseuse
 
-La procédure est assez simple : télécharger le 
-minimal-root.zip sur le 
+La procédure est assez simple : télécharger `minimal-root.zip` sur le 
 [dossier de Porkupan](http://projects.mobileread.com/reader/users/porkupan/PRST1/flash_packages/)
 
 Déziper et déposer les fichiers à la racine de SDCARD.
@@ -72,25 +73,33 @@ C'est fini. Pour plus d'informations ou en cas de problème
 
 ### Installer le client ssh ConnectBot sur la liseuse
 
-Par défaut, il n'y a pas de magasin d'applications et le GooglePlay store n'est
-pas installé On va donc installer le magasin d'applications libres F-Droid sur
-la liseuse.
+Par défaut, GooglePlay Store n'est pas présent. On va donc installer le magasin d'applications libres F-Droid sur
+la liseuse afin de pouvoir installer facilement des applications.
 
 D'abord, activer le wifi, puis avec le navigateur de la liseuse, aller sur
 https://f-droid.org/ et télécharger l'installeur.
 
-Lancer maintenant l'installation de **ConnectBot**.
+Une fois F-Droid installé, on peut lancer l'installation de **ConnectBot**.
 
 ### Installer SSH Server sur le téléphone
 
 Par défaut, le téléphone n'accepte pas les connexionx entrantes. On va donc 
 installer un serveur ssh pour que la liseuse puisse se conncter au téléphone.
 
-....
+![Canon XP3000]({{ site.baseurl }}/images/rPiLaptop/sshserver.png)
 
 ### Connecter la liseuse au téléphone
 
-Il faut configurer le téléphone en point d'accès wifi....
+Pour cela, il faut configurer le téléphone en point d'accès wifi.
+
+D'abord, partager la connexion du télephone : pour cela dans les paramètres,
+choisir **Plus...** puis **Partage de connexion** et
+**Point d'accès Wi-Fi mobile**.
+
+Les étapes sont alors faciles à suivre : on va définir un nom pour le réseau et
+un mot de passe d'accès.  Sur la liseuse, on peut alors facilement se connecter
+au réseau servi par le téléphone.
+
 
 
 
