@@ -13,7 +13,9 @@ complet en utilisant un RaspberryPi,
 un télephone Android et
 une liseuse d'eBook Sony PRS-T1.
 
+<div class="center">
 <iframe width="420" height="315" src="https://www.youtube.com/embed/DQpX2RTCLxo" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ## Étape 1 : Un RaspberryPi et un téléphone Android
 
