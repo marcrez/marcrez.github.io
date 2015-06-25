@@ -14,8 +14,10 @@ d'un télephone Android.
 
 ## Un rPi et un téléphone Android
 
-
 Commençons par un cas simple : un rPi est connceté en USB à un téléphone rooté.
+Ici, le téléphone sert de clavier et d'écran pour l'unité centrale RaspberryPi.
+
+![Canon XP3000]({{ site.baseurl }}/images/rPiLaptop/topo01.png)
 
 D'abord, partager la connexion du télephone : pour cela dans les paramètres,
 choisir **Plus...** puis **Partage de connexion** et cocher la case **Via USB**.
@@ -42,10 +44,35 @@ $ ssh pi@192.168.42.51
 ![Canon XP3000]({{ site.baseurl }}/images/rPiLaptop/Screen01.png)
 
 
-## Un rPi, un téléphone Android et un clavier
+## Un rPi, un téléphone Android et une liseuse Sony PRS-T1
 
-Bientôt...
+Plus complexe : un rPi est connecté en USB à un téléphone Android rooté, la
+liseuse se connecte en wifi au télephone et accède au RaspberryPi
+au travers du télehone.
+Ici, le télephone sert de clavier et la liseuse sert d'écran pour l'unité
+centrale RaspberryPi.
 
+![Canon XP3000]({{ site.baseurl }}/images/rPiLaptop/topo02.png)
+
+### Rooter la liseuse
+
+### Installer le magasin d'applications libres F-Droid sur la liseuse
+
+### Installer le client ssh ConnectBot sur la liseuse
+
+### Installer SSH Server sur le téléphone
+
+### Connecter la liseuse au rPi via le téléphone
+
+
+## Un téléphone Android et une liseuse Sony PRS-T1
+
+
+
+Télecharger le serveur
+http://www.remotedroid.net/
+Télecharger le client pour android
+http://remotedroid.en.softonic.com/android/download
 
 
 ## Les articles en rapport
