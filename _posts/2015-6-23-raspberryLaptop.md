@@ -12,7 +12,7 @@ Le but est ici de trouver une solution pour disposer d'un ordinateur portable
 complet en utilisant un raspberryPi, une liseuse d'eBook et
 d'un télephone Android.
 
-## Un rPi et un téléphone Android
+## Étape 1 : Un rPi et un téléphone Android
 
 Commençons par un cas simple : un rPi est connceté en USB à un téléphone rooté.
 Ici, le téléphone sert de clavier et d'écran pour l'unité centrale RaspberryPi.
@@ -43,26 +43,66 @@ $ ssh pi@192.168.42.51
 
 ![Canon XP3000]({{ site.baseurl }}/images/rPiLaptop/Screen01.png)
 
+## Étape 2 : un téléphone Android et une liseuse Sony PRS-T1 
 
-## Un rPi, un téléphone Android et une liseuse Sony PRS-T1
+Dans ce paragraphe, la liseuse devient un écran annexe pour session de
+travail en console sur un téléphone Android.
 
-Plus complexe : un rPi est connecté en USB à un téléphone Android rooté, la
+![Canon XP3000]({{ site.baseurl }}/images/rPiLaptop/topo01bis.png)
+
+### Rooter la liseuse
+
+La procédure est assez simple : télécharger le 
+minimal-root.zip sur le 
+[dossier de Porkupan](http://projects.mobileread.com/reader/users/porkupan/PRST1/flash_packages/)
+
+Déziper et déposer les fichiers à la racine de SDCARD.
+
+La racine de SDCARD doit contenir le fichier `PRS-T1 Updater.package` et 
+les dossiers `tmp` et `updates`.
+
+Éteindre la liseuse puis redémarrer en maintenant les boutons **Home** et **Menu**
+jusqu'à l'apparition de l'écran *Opening book*.
+
+C'est fini. Pour plus d'informations ou en cas de problème 
+
+- [PRST1 Rooting and Tweaks](http://wiki.mobileread.com/wiki/PRST1_Rooting_and_Tweaks)
+- [Sony PRS-T1 step-by-step rooting and tweaking guide](http://www.mobileread.com/forums/showthread.php?t=184646)
+
+
+### Installer le client ssh ConnectBot sur la liseuse
+
+Par défaut, il n'y a pas de magasin d'applications et le GooglePlay store n'est
+pas installé On va donc installer le magasin d'applications libres F-Droid sur
+la liseuse.
+
+D'abord, activer le wifi, puis avec le navigateur de la liseuse, aller sur
+https://f-droid.org/ et télécharger l'installeur.
+
+Lancer maintenant l'installation de **ConnectBot**.
+
+### Installer SSH Server sur le téléphone
+
+Par défaut, le téléphone n'accepte pas les connexionx entrantes. On va donc 
+installer un serveur ssh pour que la liseuse puisse se conncter au téléphone.
+
+....
+
+### Connecter la liseuse au téléphone
+
+Il faut configurer le téléphone en point d'accès wifi....
+
+
+
+## Étape 3 : Un rPi, un téléphone Android et une liseuse Sony PRS-T1
+
+Dernière étape : un rPi est connecté en USB à un téléphone Android rooté, la
 liseuse se connecte en wifi au télephone et accède au RaspberryPi
 au travers du télehone.
 Ici, le télephone sert de clavier et la liseuse sert d'écran pour l'unité
 centrale RaspberryPi.
 
 ![Canon XP3000]({{ site.baseurl }}/images/rPiLaptop/topo02.png)
-
-### Rooter la liseuse
-
-### Installer le magasin d'applications libres F-Droid sur la liseuse
-
-### Installer le client ssh ConnectBot sur la liseuse
-
-### Installer SSH Server sur le téléphone
-
-### Connecter la liseuse au rPi via le téléphone
 
 
 ## Un téléphone Android et une liseuse Sony PRS-T1
