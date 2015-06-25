@@ -1,5 +1,5 @@
 ---
-title: Un ordinateur portable avec du matériel recyclé (en cours d'écriture...)
+title: Un ordinateur portable avec du matériel recyclé
 permalink: raspberry-android-ebook-reader-laptop
 layout: post
 date: 2015-06-23 20:31:00
