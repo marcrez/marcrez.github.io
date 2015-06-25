@@ -83,6 +83,15 @@ https://f-droid.org/ et télécharger l'installeur.
 
 Une fois F-Droid installé, on peut lancer l'installation de **ConnectBot**.
 
+Pour plus de confort, il est utile de passer en mode paysage. La liseuse ne 
+disposant du capteur permettant la rotation automatique, on va installer une
+application qui permet de choisir manuellement l'orientation.
+
+F-Droid ne poposant pas une telle application, on va télécharger puis installer 
+l'archive apk de
+[SetOrientation](http://apk-dl.com/download/android/com.googlecode.eyesfree.setorientation/set-orientation-1-1-4)
+qui est compatible avec la version 2.2 d'android installé sur la liseuse.
+
 ### Installer SSH Server sur le téléphone
 
 Par défaut, le téléphone n'accepte pas les connexionx entrantes. On va donc 
@@ -102,11 +111,27 @@ Les étapes sont alors faciles à suivre : on va définir un nom pour le réseau
 un mot de passe d'accès.  Sur la liseuse, on peut alors facilement se connecter
 au réseau servi par le téléphone.
 
+Sur la liseuse, on peut connaître l'adresse IP offerte par le téléphone avec la
+commande suivante dans le Terminal Emulator
+
+```
+$ netcfg
+lo     UP 127.0.0.1      255.0.0.0      0x00000049
+wlan0  UP 192.168.43.57  255.255.255.0  0x00001043
+```
+
+l'adresse IP et le masque permettent de connaitre l'adresse du réseau servi par
+le télephone : 192.168.43.1
+
+
 Le bouton **Info** de l'application **SSH Server** du téléphone permet de 
-connaitre l'adresse ip wifi du téléphone.
+retrouver l'adresse ip wifi du téléphone. On crée un serveur avec un nom quelconque
+et un port choisi au hasard : p.ex 46304. Puis retour en arrière.
 
-On peut lancer ConnectBot sur la liseuse pour se conncter au téléphone.
+On démarre le serveur en cliquant sur son nom.
 
+On peut lancer ConnectBot sur la liseuse pour se conncter au téléphone en demandant
+la connexion ssh sur `foo@192.168.43.1:46304`.
 
 ## Étape 3 : Un RaspberryPi, un téléphone Android et une liseuse Sony PRS-T1
 
