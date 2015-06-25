@@ -7,11 +7,13 @@ tags: [raspberryPi, linux, reseau]
 category: raspberryPi
 ---
 
-![Canon XP3000]({{ site.baseurl }}/images/rPiLaptop/install.png)
+![Canon XP3000]({{ site.baseurl }}/images/rPiLaptop/install2.png)
 Le but est ici de trouver une solution pour disposer d'un ordinateur portable
 complet en utilisant un RaspberryPi, 
 un télephone Android et
 une liseuse d'eBook Sony PRS-T1.
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/DQpX2RTCLxo" frameborder="0" allowfullscreen></iframe>
 
 ## Étape 1 : Un RaspberryPi et un téléphone Android
 
