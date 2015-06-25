@@ -45,7 +45,7 @@ $ ssh pi@192.168.42.51
 
 ![Canon XP3000]({{ site.baseurl }}/images/rPiLaptop/Screen01.png)
 
-## Étape 2 : un téléphone Android et une liseuse Sony PRS-T1 
+## Étape 2 : Un téléphone Android et une liseuse Sony PRS-T1 
 
 Dans ce paragraphe, la liseuse devient un écran annexe pour une session de
 travail en console sur un téléphone Android.
