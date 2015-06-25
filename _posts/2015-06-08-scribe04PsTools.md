@@ -2,7 +2,7 @@
 title: Gérer un parc de PC Windows à distance
 layout: post
 date: 2015-06-8 17:30:00
-tags: [scribe]
+tags: [reseau]
 category: scribe
 ---
 

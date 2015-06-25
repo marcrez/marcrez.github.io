@@ -2,7 +2,7 @@
 title: Fonctionnement d'un réseau pédagogique
 layout: post
 date: 2015-06-8 20:30:00
-tags: [scribe]
+tags: [reseau]
 category: scribe
 ---
 

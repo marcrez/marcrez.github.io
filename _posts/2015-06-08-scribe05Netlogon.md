@@ -2,7 +2,7 @@
 title: Utiliser les scripts de netlogon
 layout: post
 date: 2015-06-8 16:30:00
-tags: [scribe]
+tags: [scribe, reseau]
 category: scribe
 ---
 

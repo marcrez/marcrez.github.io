@@ -2,7 +2,7 @@
 title: Clonage de postes
 layout: post
 date: 2015-06-8 14:30:00
-tags: [scribe]
+tags: [linux]
 category: scribe
 ---
 

@@ -2,7 +2,7 @@
 title: Intégrer des clients Windows ou Linux au domaine
 layout: post
 date: 2015-06-8 18:30:00
-tags: [scribe]
+tags: [scribe, reseau]
 category: scribe
 ---
 

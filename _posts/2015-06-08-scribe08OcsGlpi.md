@@ -2,7 +2,7 @@
 title: Gestion de parc avec OCS Inventory NG
 layout: post
 date: 2015-06-8 13:30:00
-tags: [scribe]
+tags: [reseau]
 category: scribe
 ---
 

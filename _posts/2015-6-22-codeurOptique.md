@@ -3,7 +3,7 @@ title: Codeur optique d'une imprimante Canon Pixma IP3000
 permalink: codeur-optique-ip3000
 layout: post
 date: 2015-06-22 20:31:00
-tags: [raspberryPi]
+tags: [electronique]
 category: raspberryPi
 ---
 
