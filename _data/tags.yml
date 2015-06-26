@@ -30,3 +30,5 @@
   name: Electronique
 - slug: reseau
   name: Réseau
+- slug: arduino
+  name: Arduino
