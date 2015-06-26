@@ -49,6 +49,8 @@ Voici un schéma
 
 ![img]({{ site.baseurl }}/images/arduiDrone01/l293.png)
 
+La suite bientôt.....
+
 ## Un montage *quick and dirty*
 
 
