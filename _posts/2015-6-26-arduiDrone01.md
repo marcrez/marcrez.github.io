@@ -39,8 +39,8 @@ Hors de question d'alimenter les moteurs directement avec les pins de l'arduino 
 
 1. D'abord parcequ'un moteur consomme beaucoup et que l'intensité délivrée par
    les broches de l'arduino est faible
-2. Ensuite parcequ'un moteur produit des parasites et parfois des retours de courant
-   de forte tension qui pourraient endommager la carte Arduino
+2. Ensuite parcequ'un moteur produit des parasites et parfois des retours de
+   courant de forte tension qui pourraient endommager la carte Arduino
 
 On va utiliser le circuit L293D  dont le rôle est de commander la mise en route
 des moteurs sur commande de l'arduino.
@@ -48,6 +48,17 @@ des moteurs sur commande de l'arduino.
 Voici un schéma
 
 ![img]({{ site.baseurl }}/images/arduiDrone01/l293.png)
+
+On le comprend, pour faire tourner le moteur 1 il va falloir envoyer un signal
+haut sur la broche `Enable 1`. Ensuite
+
+- signal haut sur `Input 1A` et signal bas sur `Input 1B` pour tourner dans un
+  sens
+- signal bas sur `Input 1A` et signal haut sur `Input 1B` pour tourner dans
+  l'autre sens
+
+Même chose pour le moteur 2, évidemment. On devrait pouvoir avancer, reculer,
+tourner vers la gauche ou la droite.
 
 La suite bientôt.....
 
