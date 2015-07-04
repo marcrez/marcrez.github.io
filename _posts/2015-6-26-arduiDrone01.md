@@ -1,5 +1,5 @@
 ---
-title: Un drone piloté par Arduino - Étape 1 (En cours d'écriture)
+title: Un drone piloté par Arduino - Étape 1
 permalink: arduino-drone-01
 layout: post
 date: 2015-06-26 20:31:00
