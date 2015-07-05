@@ -12,7 +12,6 @@ Seconde étape dans le projet de drone terrestre :
 le rendre capable de se déplacer en évitant les obstacles.
 On va utiliser pour cela un capteur de distance à ultrasons
 comme on la vu dans l'[article sur le HC-SR04](http://npoulain.fr/mesureDeDistanceHC-SR04/)
-comme on la vu dans l'[article sur le HC-SR04]({% post_url 2015-6-18-mesureDeDistanceHC-SR04.md %})
 
 
 
