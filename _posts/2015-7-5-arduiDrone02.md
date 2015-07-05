@@ -6,11 +6,14 @@ date: 2015-07-05 20:31:00
 tags: [arduino, electronique]
 category: arduino
 ---
-
 ![img]({{ site.baseurl }}/images/arduiDrone02/realisation-small.png)
+
 Seconde étape dans le projet de drone terrestre :
 le rendre capable de se déplacer en évitant les obstacles.
-On va utiliser pour cela un capteur de distance à ultrasons.
+On va utiliser pour cela un capteur de distance à ultrasons
+comme on la vu dans l'[article sur le HC-SR04](http://npoulain.fr/mesureDeDistanceHC-SR04/)
+comme on la vu dans l'[article sur le HC-SR04]({% post_url 2015-6-18-mesureDeDistanceHC-SR04.md %})
+
 
 
 ## Un chassis pour embarquer le projet
@@ -20,7 +23,7 @@ Cette fois, c'est en medium de 3mm qu'on va construire.
 
 > Remarque : le medium 3mm, c'est le matériau utilisé pour le fond des
 > armoires ou placards du commerce, on le trouve très facilement et il est
-> faciel à découper et à coller.
+> facile à découper et à coller.
 
 Voici le plan 
 
