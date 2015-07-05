@@ -7,7 +7,7 @@ tags: [arduino, electronique]
 category: arduino
 ---
 
-![img]({{ site.baseurl }}/images/arduiDrone02/realisation.jpg)
+![img]({{ site.baseurl }}/images/arduiDrone02/realisation_small.png)
 Seconde étape dans le projet de drone terrestre :
 le rendre capable de se déplacer en évitant les obstacles.
 On va utiliser pour cela un capteur de distance à ultrasons.
@@ -35,6 +35,7 @@ fixer l'Arduino, et la plaque d'essai ainsi
 que d'autres éléments qui ne manqueront
 pas de venir...
 
+![img]({{ site.baseurl }}/images/arduiDrone02/realisation.jpg)
 
 
 
