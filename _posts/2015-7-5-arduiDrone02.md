@@ -13,7 +13,7 @@ le rendre capable de se déplacer en évitant les obstacles.
 On va utiliser pour cela un capteur de distance à ultrasons
 comme on la vu dans l'[article sur le HC-SR04](http://npoulain.fr/mesureDeDistanceHC-SR04/)
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=rV5qc04O71w" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rV5qc04O71w" frameborder="0" allowfullscreen></iframe>
 
 
 ## Un chassis pour embarquer le projet
@@ -131,6 +131,8 @@ void SetMotor2(int speed, boolean reverse)
   digitalWrite(input2B_pin, reverse);
 }
 ```
+
+http://picaxe.hobbizine.com/srf05.html
 
 
 
