@@ -125,10 +125,12 @@ void loop()
   // marche avant pendant 5 secondes 
   SetMotor1(255, true);
   SetMotor2(255, true);
+  delay(5000);
 
   // rotation pendant 2.4s : demi-tour
   SetMotor1(175, true);
   SetMotor2(175, false);
+  delay(2400);
 }
  
 //Fonction qui set le moteur1
