@@ -2,7 +2,7 @@
 title: Introduction Ardublock
 layout: post
 date: 2015-07-07
-tags: [arduino, algorithmique]
+tags: [arduino, algo]
 category: notes
 ---
 
