@@ -51,7 +51,13 @@ Dans cette partie, on va construire un detecteur de distance qui alerte
 le conducteur d'une voiture s'il s'approche trop près d'un obstacle lorsqu'il
 recule.
 
-Avant tout, verifions le fponctionnement du détecteur de distance
+Le câblage est simple : il suffit s'alimenter le module HC-SR04 entre VCC et GND
+puis raccorder aux broches de l'arduino les pattes Trig et Echo qui vont respectivement
+envoyer et recevoir le signal ultrasonique.
+
+![gif]({{ site.baseurl }}/images/ardublock/sonar01-fritz.png)
+
+Avant tout, verifions le fonctionnement du détecteur de distance
 
 ![gif]({{ site.baseurl }}/images/ardublock/sonar01.png)
 
@@ -64,5 +70,3 @@ bien capable de détecter les obstacles.
 
 ![gif]({{ site.baseurl }}/images/ardublock/moniteurSerie2.png)
 
-
-500ms
