@@ -57,9 +57,12 @@ envoyer et recevoir le signal ultrasonique.
 
 ![gif]({{ site.baseurl }}/images/ardublock/sonar01-fritz.png)
 
-Avant tout, verifions le fonctionnement du détecteur de distance
+Avant tout, verifions le fonctionnement du détecteur de distance en construisant
+le programme suivant dans Ardublock.
 
 ![gif]({{ site.baseurl }}/images/ardublock/sonar01.png)
+
+On branche le cable USB sur Arduino puis «Transférer».
 
 Pour verifier que les choses fonctionnent, on ouvre le moniteur série
 
