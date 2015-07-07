@@ -47,9 +47,22 @@ Après avoir cliqué sur «Transférer», le résultat est là
 
 ## Second programme : Aide au stationnement
 
+Dans cette partie, on va construire un detecteur de distance qui alerte
+le conducteur d'une voiture s'il s'approche trop près d'un obstacle lorsqu'il
+recule.
+
+Avant tout, verifions le fponctionnement du détecteur de distance
+
 ![gif]({{ site.baseurl }}/images/ardublock/sonar01.png)
+
+Pour verifier que les choses fonctionnent, on ouvre le moniteur série
+
 ![gif]({{ site.baseurl }}/images/ardublock/moniteurSerie.png)
-![gif]({{ site.baseurl }}/images/ardublock/teurSerie2.png)
+
+En approchant et en éloignant la main devant le détecteur, on verifie qu'il est
+bien capable de détecter les obstacles.
+
+![gif]({{ site.baseurl }}/images/ardublock/moniteurSerie2.png)
 
 
 500ms
