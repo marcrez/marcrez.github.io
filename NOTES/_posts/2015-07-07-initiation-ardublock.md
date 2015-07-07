@@ -1,7 +1,7 @@
 ---
 title: Introduction Ardublock
 layout: post
-date: 2015-06-16
+date: 2015-07-07
 tags: [arduino, algorithmique]
 category: notes
 ---
@@ -30,3 +30,22 @@ Une fois cela fait, un nouvel outil apparaît.
 
 ![pres]({{ site.baseurl }}/images/ardublock/launch.png)
 
+
+## Premier programme : blink
+
+Le principe de programmation Ardublock est le même aue celui de Scratch :
+le code se construit par assemblage de briques de couleur.
+
+Commençons par écrire un premier programme qui va faire clignoter la LED qui se
+trouve à côté de la broche 13
+
+![gif]({{ site.baseurl }}/images/ardublock/led13.png)
+
+Après avoir cliqué sur «Transférer», le résultat est là
+
+![gif]({{ site.baseurl }}/images/ardublock/led13.gif)
+
+
+
+
+500ms
