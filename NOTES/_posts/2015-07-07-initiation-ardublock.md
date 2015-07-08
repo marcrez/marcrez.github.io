@@ -8,7 +8,7 @@ category: notes
 
 ![pres]({{ site.baseurl }}/images/ardublock/pres.png)
 Ardublock est un plugin pour l'interface de programmation d'Arduino.
-Grâce à ardublock, on peut programmer Arduino sous forme graphique, le
+Grâce à Ardublock, on peut programmer Arduino sous forme graphique, le
 plugin se charge de générer le code correpondant.
 
 
@@ -38,6 +38,17 @@ le code se construit par assemblage de briques de couleur.
 
 Commençons par écrire un premier programme qui va faire clignoter la LED qui se
 trouve à côté de la broche 13
+
+l'algorithme est le suivant :
+
+1. Allumer la LED
+2. patienter 500 millisecondes
+3. Éteindre la LED
+4. patienter 500 millisecondes
+5. Reprendre à l'étape 1
+
+Voici la traduction sous formne de blocs Ardublock
+
 
 ![gif]({{ site.baseurl }}/images/ardublock/led13.png)
 
