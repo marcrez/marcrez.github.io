@@ -63,8 +63,10 @@ le conducteur d'une voiture s'il s'approche trop près d'un obstacle lorsqu'il
 recule.
 
 Le câblage est simple : il suffit s'alimenter le module HC-SR04 entre VCC et GND
-puis raccorder aux broches de l'arduino les pattes Trig et Echo qui vont respectivement
-envoyer et recevoir le signal ultrasonique.
+puis raccorder aux broches de l'arduino les pattes Trig et Echo qui vont
+respectivement envoyer et recevoir le signal ultrasonique.
+Voir l'[article sur HC-SR04](http://npoulain.fr/mesureDeDistanceHC-SR04/) pour
+des détails techniques.
 
 ![gif]({{ site.baseurl }}/images/ardublock/sonar01-fritz.png)
 
@@ -83,4 +85,17 @@ En approchant et en éloignant la main devant le détecteur, on verifie qu'il es
 bien capable de détecter les obstacles.
 
 ![gif]({{ site.baseurl }}/images/ardublock/moniteurSerie2.png)
+
+On peut maintenant améliorer l'algorithme comme suit
+
+1. On recupère la mseure de la distance avec l'obstacle
+2. Si la distance n'est pas inférieure à 40cm, on ne fait rien
+3. Si la distance est inférieure à 40cm, alors on fait clignoter une diode ou
+   sonner un buzzer avec un fréquence d'autant plus élevée que l'obstacle est 
+   proche
+4. on patiente un dixième de seconde et on recommence à l'étape 1
+
+
+
+
 
