@@ -7,16 +7,19 @@ tags: [symfony]
 category: symfony
 ---
 
-Dans cet article, on va construire un module nommé ```basic```.
+Dans cet article, on va construire un module nommé **basic**.
+Pour cela, dans le dossier ```modules``` il va falloir au minimum trois fichiers
+dans des sous-dossiers qu'il faudra éventuellement créer :
 
-Pour cela, dans le dossier ```modules```, on crée un dossier ```basic```.
-Dans ce nouveau dossier il faut au minimum trois fichiers :
+- ```modules/custom/basic/basic.info.yml```
+- ```modules/custom/basic/basic.routing.yml```
+- ```modules/custom/basic/src/BasicController.php```
 
-- ```modules/basic/basic.info.yml```
-- ```modules/basic/basic.routing.yml```
-- ```modules/basic/src/BasicController.php```
+Le fichier ```basic.info.yml``` contient la déclaration du module. Notons que le
+type est obligatiore (ce pourrait être un thème par exemple) et que le package
+désigne le groupe auquel ce module appartient (le fait qu'on se soit placé dans 
+```modules/custom``` permet d'être cohérent même si ce n'est pas obligatoire).
 
-Le fichier ```basic.info.yml``` contient la déclaration du module
 
 ```yaml
 name: Basic
@@ -27,7 +30,11 @@ core: 8.x
 ```
 
 Le fichier ```basic.routing.yml```  va donner les correspondances entre les url
-et les contrôleurs qui entrent en action lors de la visite des pages
+et les contrôleurs qui entrent en action lors de la visite des pages.
+Ici, on définit une route nommée ```basic.helloworld```. Elle donne à Drupal 
+l'iformation suivante : déclencher la méthode ```hello``` de la classe 
+```SimpleController``` lors de la visite de la page 
+http://monSiteDrupal.fr/helloWorld
 
 ```yaml
 basic.helloworld:
@@ -38,8 +45,8 @@ basic.helloworld:
     _access: 'TRUE'
 ```
 
-Le fichier ```SimpleController``` placé dans le sous-dossier ```src``` de ```basic```
-contient 
+Le fichier ```SimpleController.``` contient la classe et la méthode qui vont 
+afficher le message classique.
 
 
 ```php
