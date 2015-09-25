@@ -12,9 +12,9 @@ Dans cet article, on va construire un module nommé ```basic```.
 Pour cela, dans le dossier ```modules```, on crée un dossier ```basic```.
 Dans ce nouveau dossier il faut au minimum trois fichiers :
 
-- basic.info.yml
-- basic.routing.yml
-- src/BasicController.php
+- ```modules/basic/basic.info.yml```
+- ```modules/basic/basic.routing.yml```
+- ```modules/basic/src/BasicController.php```
 
 Le fichier ```basic.info.yml``` contient la déclaration du module
 
@@ -60,7 +60,7 @@ use Drupal\Core\Controller\ControllerBase;
 class simpleController extends ControllerBase {
 
   /**
-   * Render a list of entries in the database.
+   * Render a famous sentence.
    */
   public function hello() {
     return array(
