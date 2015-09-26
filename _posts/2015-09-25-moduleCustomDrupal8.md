@@ -13,7 +13,7 @@ dans des sous-dossiers qu'il faudra éventuellement créer :
 
 - ```modules/custom/basic/basic.info.yml```
 - ```modules/custom/basic/basic.routing.yml```
-- ```modules/custom/basic/src/BasicController.php```
+- ```modules/custom/basic/src/SimpleController.php```
 
 Le fichier ```basic.info.yml``` contient la déclaration du module. Notons que le
 type est obligatiore (ce pourrait être un thème par exemple) et que le package
@@ -45,9 +45,8 @@ basic.helloworld:
     _access: 'TRUE'
 ```
 
-Le fichier ```SimpleController.``` contient la classe et la méthode qui vont 
+Le fichier ```SimpleController.php``` contient la classe et la méthode qui vont 
 afficher le message classique.
-
 
 ```php
 <?php
@@ -64,7 +63,7 @@ use Drupal\Core\Controller\ControllerBase;
 /**
  * Controller for simple action.
  */
-class simpleController extends ControllerBase {
+class SimpleController extends ControllerBase {
 
   /**
    * Render a famous sentence.
