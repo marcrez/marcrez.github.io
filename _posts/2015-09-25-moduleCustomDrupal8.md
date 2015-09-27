@@ -87,6 +87,7 @@ class SimpleController extends ControllerBase {
 Afin de fournir une aide au module, on va ajouter le `hook_help()` 
 dans le fichier `modules/custom/basic/basic.module.php`
 
+```php
 <?php
 use Drupal\Core\Routing\RouteMatchInterface;
 
@@ -103,6 +104,7 @@ function basic_help($route_name, RouteMatchInterface $route_match) {
       ');
   }
 }
+```
 
 ## De nouveaux droits associés au module
 
@@ -128,4 +130,7 @@ basic.helloworld:
     #_access: 'TRUE' ## remplacé par la ligne suivante
     _permission: 'access basic pages'
 ```
+
+## Un formulaire simple
+
 
