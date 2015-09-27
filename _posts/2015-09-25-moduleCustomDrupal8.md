@@ -82,5 +82,50 @@ class SimpleController extends ControllerBase {
 }
 ```
 
-## un module 
-...
+## Un module avec une aide
+
+Afin de fournir une aide au module, on va ajouter le `hook_help()` 
+dans le fichier `modules/custom/basic/basic.module.php`
+
+<?php
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function basic_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.basic':
+      return t('
+        <h2>Module Basique pour Drupal8.</h2>
+        <h3>Instructions</h3>
+        <p>Visitez la page helloWorld pour vérifier que tout fonctionne</p>
+      ');
+  }
+}
+
+## De nouveaux droits associés au module
+
+Pour créer de nouveaux droits, c'est simple, il suffit de les déclarer
+dans le fichier `modules/custom/basic/basic.permissions.yml`
+
+```yaml
+access basic pages:
+  title: 'Accès aux pages du module basic'
+admin basic module:
+  title: 'Administrer le module basic (dangereux)'
+```
+
+On pourra alors limiter l'accès à la page affichant le *Hello, World !*
+en modifiant le fichier `modules/custom/basic/basic.routing.yml`
+
+```yaml
+basic.helloworld:
+  path: '/helloWorld'
+  defaults:
+    _controller: '\Drupal\basic\SimpleController::hello'
+  requirements:
+    #_access: 'TRUE' ## remplacé par la ligne suivante
+    _permission: 'access basic pages'
+```
+
