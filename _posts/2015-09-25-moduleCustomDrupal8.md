@@ -8,17 +8,22 @@ category: symfony
 ---
 
 Dans cet article, on va construire un module nommé **basic**.
-Pour cela, dans le dossier ```modules``` il va falloir au minimum trois fichiers
+Cela se fera en plusieurs étapes du plus simple au plus complet.
+
+## Un module qui affiche le Hello, World !
+
+
+Pour cela, dans le dossier `modules` il va falloir au minimum trois fichiers
 dans des sous-dossiers qu'il faudra éventuellement créer :
 
-- ```modules/custom/basic/basic.info.yml```
-- ```modules/custom/basic/basic.routing.yml```
-- ```modules/custom/basic/src/SimpleController.php```
+- `modules/custom/basic/basic.info.yml`
+- `modules/custom/basic/basic.routing.yml`
+- `modules/custom/basic/src/SimpleController.php`
 
-Le fichier ```basic.info.yml``` contient la déclaration du module. Notons que le
+Le fichier `basic.info.yml` contient la déclaration du module. Notons que le
 type est obligatiore (ce pourrait être un thème par exemple) et que le package
 désigne le groupe auquel ce module appartient (le fait qu'on se soit placé dans 
-```modules/custom``` permet d'être cohérent même si ce n'est pas obligatoire).
+`modules/custom` permet d'être cohérent même si ce n'est pas obligatoire).
 
 
 ```yaml
@@ -77,5 +82,5 @@ class SimpleController extends ControllerBase {
 }
 ```
 
-
+## un module 
 ...
