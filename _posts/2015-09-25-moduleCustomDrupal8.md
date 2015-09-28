@@ -34,11 +34,11 @@ package: Custom
 core: 8.x
 ```
 
-Le fichier ```basic.routing.yml```  va donner les correspondances entre les url
+Le fichier `basic.routing.yml`  va donner les correspondances entre les url
 et les contrôleurs qui entrent en action lors de la visite des pages.
-Ici, on définit une route nommée ```basic.helloworld```. Elle donne à Drupal 
-l'iformation suivante : déclencher la méthode ```hello``` de la classe 
-```SimpleController``` lors de la visite de la page 
+Ici, on définit une route nommée `basic.helloworld`. Elle donne à Drupal 
+l'iformation suivante : déclencher la méthode `hello` de la classe 
+`SimpleController` lors de la visite de la page 
 http://monSiteDrupal.fr/helloWorld
 
 ```yaml
@@ -50,7 +50,7 @@ basic.helloworld:
     _access: 'TRUE'
 ```
 
-Le fichier ```SimpleController.php``` contient la classe et la méthode qui vont 
+Le fichier `SimpleController.php` contient la classe et la méthode qui vont 
 afficher le message classique.
 
 ```php
@@ -85,7 +85,7 @@ class SimpleController extends ControllerBase {
 ## Un module avec une aide
 
 Afin de fournir une aide au module, on va ajouter le `hook_help()` 
-dans le fichier `modules/custom/basic/basic.module.php`
+dans le fichier `modules/custom/basic/basic.module`
 
 ```php
 <?php
@@ -132,5 +132,69 @@ basic.helloworld:
 ```
 
 ## Un formulaire simple
+
+Commençons par un formulaire inutile mais qui fonctionne : il se contente
+d'afficher le contenu posté dans un bloc.
+
+On a besoin d'un fichier `modules/custom/basic/src/MyForm.php`
+
+```php
+<?php
+
+/**
+ * @file
+ * Contains \Drupal\basic\MyForm.
+ */
+
+namespace Drupal\basic;
+
+use Drupal\Core\Form\FormBase;
+use Drupal\Core\Form\FormStateInterface;
+
+class MyForm extends FormBase {
+  
+  /**
+   * {@inheritdoc}.
+   */
+  public function getFormId() {
+    return 'my_form';
+  }
+  
+ /**
+   * {@inheritdoc}.
+   */
+  public function buildForm(array $form, FormStateInterface $form_state) {
+    
+    // Form constructor
+    $form['email'] = array(
+      '#type' => 'email',
+      '#title' => $this->t('Your .com email address.')
+    );
+    $form['show'] = array(
+      '#type' => 'submit',
+      '#value' => $this->t('Submit'),
+    );
+    
+    return $form;
+  }
+  
+  /**
+   * {@inheritdoc}
+   */
+  public function validateForm(array &$form, FormStateInterface $form_state) {
+  }
+  
+ /**
+   * {@inheritdoc}
+   */
+  public function submitForm(array &$form, FormStateInterface $form_state) {
+    
+    drupal_set_message($this->t('Your email address is @email', array('@email' => $form_state->getValue('email'))));
+  }
+}
+```
+
+Afin que le formulaire sois accessible, il faut ajouter une route
+dans le fichier `basic.routing.yml`
 
 
