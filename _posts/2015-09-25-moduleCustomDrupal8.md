@@ -166,9 +166,13 @@ class MyForm extends FormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
     
     // Form constructor
+    $form['name'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Name'),
+    );
     $form['email'] = array(
       '#type' => 'email',
-      '#title' => $this->t('Your .com email address.')
+      '#title' => $this->t('Email address.')
     );
     $form['show'] = array(
       '#type' => 'submit',
@@ -197,4 +201,103 @@ class MyForm extends FormBase {
 Afin que le formulaire sois accessible, il faut ajouter une route
 dans le fichier `basic.routing.yml`
 
+```yaml
+basic.myform:
+  path: '/myform'
+  defaults:
+    _form: '\Drupal\basic\MyForm'
+    _title: 'Mon Formulaire'
+  requirements:
+    _permission: 'access basic pages'
+```
+
+
+
+## Une nouvelle table
+
+Pour stocker des donnés personnalisées, par exemple les nom et
+email envoyés par le formulaire précédent, nous allons créer une
+nouvelle table. Pour cela, on implément le `hook_schema()`
+dans le fichier `modules/custom/basic/basic.install`
+
+```php
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the basic module.
+ */
+
+/**
+ * Implements hook_schema().
+ *
+ * Defines the database tables used by this module.
+ *
+ */
+function basic_schema() {
+  $schema['basic'] = array(
+    'description' => 'Stores example person entries for demonstration purposes.',
+    'fields' => array(
+      'pid' => array(
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => 'Primary Key: Unique person ID.',
+      ),
+      'name' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Name of the person.',
+      ),
+      'email' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Email of the person.',
+      ),
+    ),
+    'primary key' => array('pid'),
+    'indexes' => array(
+      'name' => array('name'),
+      'email' => array('email'),
+    ),
+  );
+
+  return $schema;
+}
+```
+
+On peut ajouter au fichier `basic.install` quelques valeurs
+pour pré-peupler la table avec le `hook_install()`
+
+
+```php
+<?php
+
+/**
+ * Implements hook_install().
+ *
+ * Creates some default entries on this module custom table.
+ */
+function basic_install() {
+  // Add a default entry.
+  $fields = array(
+    'name' => 'Bill',
+    'email' => 'bill@yahoo.com',
+  );
+  db_insert('basic')
+      ->fields($fields)
+      ->execute();
+
+  // Add another entry.
+  $fields = array(
+    'name' => 'John',
+    'email' => 'john@gmail.com',
+  );
+  db_insert('basic')
+      ->fields($fields)
+      ->execute();
+}
+```
 
