@@ -310,8 +310,8 @@ Les méthodes définies seront utilisées dans un autre contrôleur qui se charg
 de préparer les données pour l'affichage :
 `modules/custom/src/BasicDBController.php`
 
-Afin de bien comprendre comment cela fonctione , limitons-nous à la lecture
-(le R de CRUD)
+Afin de bien comprendre comment cela fonctione , limitons-nous à l'opération de
+lecture (le R de CRUD)
 
 Voici `CrudController.php`
 
@@ -349,6 +349,7 @@ class CrudController {
     // Return the result in object format.
     return $select->execute()->fetchAll();
   }
+}
 ```
 
 Voici `BasicDBController.php`
@@ -399,6 +400,21 @@ class BasicDBController extends ControllerBase {
 
     return $content;
   }
+}
+```
+
+Pour afficher la page, il faudra bien sûr ajouter une route dans le fichier
+`basic.routing.yml`
+
+```yaml
+basic.list: 
+  path: '/list'
+  defaults:
+    _title: 'List'
+    _controller: '\Drupal\basic\BasicDBController::entryList'
+  requirements:
+    _access: 'TRUE'
+```
 
 
 
