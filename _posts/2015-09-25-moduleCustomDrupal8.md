@@ -301,3 +301,115 @@ function basic_install() {
 }
 ```
 
+## Travailler avec les données de la nouvelle table
+
+Pour accéder aux données de la table, nous créons maintenant
+un contrôleur CRUD (Create, Read, Update, Delete) générique. 
+Les méthodes définies seront utilisées dans un autre contrôleur qui se chargera
+de préparer les données pour l'affichage.
+
+```php
+<?php
+
+/**
+ * @file
+ * Contains \Drupal\basic\BasicCRUD
+ */
+
+namespace Drupal\basic;
+
+class BasicCRUD {
+
+  /**
+   * CREATE a new entry in the database.
+   *
+   * @param array $entry
+   *   An array containing all the fields of the database record.
+   *
+   * @return int
+   *   The number of updated rows.
+   *
+   * @throws \Exception
+   *   When the database insert fails.
+   */
+  public static function insert($entry) {
+    $return_value = NULL;
+    try {
+      $return_value = db_insert('basic')
+          ->fields($entry)
+          ->execute();
+    }
+    catch (\Exception $e) {
+      drupal_set_message(t('db_insert failed. Message = %message, query= %query', array(
+            '%message' => $e->getMessage(),
+            '%query' => $e->query_string,
+          )), 'error');
+    }
+    return $return_value;
+  }
+
+  /**
+   * READ from the database using a filter array.
+   *
+   * @param array $entry
+   *   An array containing all the fields used to search the entries in the
+   *   table.
+   *
+   * @return object
+   *   An object containing the loaded entries if found.
+   */
+  public static function load($entry = array()) {
+    // the following is for "SELECT * FROM basic AS b"
+    $select = db_select('basic', 'b');
+    $select->fields('b');
+
+    // Add each field and value as a condition to this query.
+    foreach ($entry as $field => $value) {
+      $select->condition($field, $value);
+    }
+    // Return the result in object format.
+    return $select->execute()->fetchAll();
+  }
+
+  /**
+   * UPDATE an entry in the database.
+   *
+   * @param array $entry
+   *   An array containing all the fields of the item to be updated.
+   *
+   * @return int
+   *   The number of updated rows.
+   */
+  public static function update($entry) {
+    try {
+      // db_update()...->execute() returns the number of rows updated.
+      $count = db_update('basic')
+          ->fields($entry)
+          ->condition('pid', $entry['pid'])
+          ->execute();
+    }
+    catch (\Exception $e) {
+      drupal_set_message(t('db_update failed. Message = %message, query= %query', array(
+            '%message' => $e->getMessage(),
+            '%query' => $e->query_string,
+          )), 'error');
+    }
+    return $count;
+  }
+
+  /**
+   * DELETE an entry from the database.
+   *
+   * @param array $entry
+   *   An array containing at least the person identifier 'pid' element of the
+   *   entry to delete.
+   */
+  public static function delete($entry) {
+    db_delete('basic')
+        ->condition('pid', $entry['pid'])
+        ->execute();
+  }
+}
+
+
+
