@@ -304,9 +304,106 @@ function basic_install() {
 ## Travailler avec les données de la nouvelle table
 
 Pour accéder aux données de la table, nous créons maintenant
-un contrôleur CRUD (Create, Read, Update, Delete) générique. 
+un contrôleur CRUD (Create, Read, Update, Delete) générique :
+`modules/custom/basic/src/CrudController.php`
 Les méthodes définies seront utilisées dans un autre contrôleur qui se chargera
-de préparer les données pour l'affichage.
+de préparer les données pour l'affichage :
+`modules/custom/src/BasicDBController.php`
+
+Afin de bien comprendre comment cela fonctione , limitons-nous à la lecture
+(le R de CRUD)
+
+Voici `CrudController.php`
+
+```php
+<?php
+
+/**
+ * @file
+ * Contains \Drupal\basic\CrudController
+ */
+
+namespace Drupal\basic;
+
+class CrudController {
+
+  /**
+   * READ from the database using a filter array.
+   *
+   * @param array $entry
+   *   An array containing all the fields used to search the entries in the
+   *   table.
+   *
+   * @return object
+   *   An object containing the loaded entries if found.
+   */
+  public static function load($entry = array()) {
+    // the following is for "SELECT * FROM basic AS b"
+    $select = db_select('basic', 'b');
+    $select->fields('b');
+
+    // Add each field and value as a condition to this query.
+    foreach ($entry as $field => $value) {
+      $select->condition($field, $value);
+    }
+    // Return the result in object format.
+    return $select->execute()->fetchAll();
+  }
+```
+
+Voici `BasicDBController.php`
+
+```php
+<?php
+
+/**
+ * @file
+ * Contains \Drupal\basic\BasicDBController
+ */
+
+namespace Drupal\basic;
+
+use Drupal\Core\Controller\ControllerBase;
+
+/**
+ * Controller for basic table operations
+ */
+class BasicDBController extends ControllerBase {
+
+  /**
+   * Render a list of entries in the database.
+   */
+  public function entryList() {
+    $content = array();
+
+    $content['message'] = array(
+      '#markup' => $this->t('Generate a list of all entries in the database. There is no filter in the query.'),
+    );
+
+    $rows = array();
+    $headers = array(t('Id'), t('Name'), t('Email'));
+
+    foreach ($entries = CrudController::load() as $entry) {
+      // Sanitize each entry.
+      $rows[] = array_map('Drupal\Component\Utility\SafeMarkup::checkPlain', (array) $entry);
+    }
+
+    $content['table'] = array(
+      '#type' => 'table',
+      '#header' => $headers,
+      '#rows' => $rows,
+      '#empty' => t('No entries available.'),
+    );
+    // Don't cache this page.
+    $content['#cache']['max-age'] = 0;
+
+    return $content;
+  }
+
+
+
+
+
 
 ```php
 <?php
