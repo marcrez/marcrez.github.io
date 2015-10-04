@@ -9,6 +9,7 @@ category: symfony
 
 Dans cet article, on va construire un module nommé **basic**.
 Cela se fera en plusieurs étapes du plus simple au plus complet.
+![img]({{ site.baseurl }}/images/customModuleD8/d8.png)
 
 ## Un module qui affiche le Hello, World !
 
