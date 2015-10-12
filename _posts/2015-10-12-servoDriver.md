@@ -7,14 +7,11 @@ tags: [arduino, electronique]
 category: arduino
 ---
 
-![img](https://learn.adafruit.com/system/assets/assets/000/002/290/medium640/adafruit_products_2012_10_15_IMG_0702-1024.jpg?1396781379)
-
-
 Pour fabriquer un robot quadrupède, il faut un paquet de moteurs.
 Trois par patte, c'est bien mais cela fait 12 ...
-
 Pour ne pas utiliser toutes les sorties, de l'arduino Uno, on peut utiliser
 un servoDriver du type PCA9685.
+![img](https://learn.adafruit.com/system/assets/assets/000/002/290/medium640/adafruit_products_2012_10_15_IMG_0702-1024.jpg?1396781379)
 
 Adafruit propose une library pour piloter ce module. 
 
@@ -23,7 +20,7 @@ https://github.com/adafruit/Adafruit-PWM-Servo-Driver-Library/archive/master.zip
 Une fois installée, on peut charger l'exemple `servo` pour voir successivement
 tourner les moteurs de 180 degrés.
 
-Le problème que celq me pose est que les moteurs tournent à la vitesse maximale.
+Le problème que cela me pose est que les moteurs tournent à la vitesse maximale.
 Cela est dû au fait que les servomoteurs premier prix, n'ont pas de contrôle de
 vitesse. 
 
@@ -33,7 +30,7 @@ Prenons un exemple. On souhaite faire tourner le moteur de 30 degrés mais
 lentement. Pour cela, on va le faire tourner de 1 degré trente fois en
 effectuant une micro-pause à chaque étape.
 
-Comme ceci :
+Voici un petit programme en C qui fait exactement cela.
 
 ``` c
 /*************************************************** 
