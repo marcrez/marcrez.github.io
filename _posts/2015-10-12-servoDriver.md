@@ -7,7 +7,8 @@ tags: [arduino, electronique]
 category: arduino
 ---
 
-![img]({{ site.baseurl }}/images/arduiDrone01/ensemble.png)
+![img](https://learn.adafruit.com/system/assets/assets/000/002/290/medium640/adafruit_products_2012_10_15_IMG_0702-1024.jpg?1396781379)
+
 
 Pour fabriquer un robot quadrupède, il faut un paquet de moteurs.
 Trois par patte, c'est bien mais cela fait 12 ...
