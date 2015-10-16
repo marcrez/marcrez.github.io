@@ -1,5 +1,5 @@
 ---
-title: Piloter 12 servomoteurs avec Arduino
+title: Piloter 16 servomoteurs avec Arduino
 permalink: servoDriver
 layout: post
 date: 2015-10-12 20:31:00
@@ -24,7 +24,8 @@ Le problème que cela me pose est que les moteurs tournent à la vitesse maximal
 Cela est dû au fait que les servomoteurs premier prix, n'ont pas de contrôle de
 vitesse. 
 
-Voici comment contourner cette limitation : faire un PWM maison.
+Voici comment contourner cette limitation : effectuer le mouvement en petites
+étapes avec des pauses entre chaque..
 
 Prenons un exemple. On souhaite faire tourner le moteur de 30 degrés mais 
 lentement. Pour cela, on va le faire tourner de 1 degré trente fois en
