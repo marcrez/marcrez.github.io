@@ -6,13 +6,13 @@ date: 2016-09-12 23:30:00
 tags: [raspberryPi]
 category: raspberryPi
 ---
-![img]({{ site.baseurl }}/images/livestreamRaspivid/mjpegStreamer.png)
 
 Le problème du streaming vidéo avec le RaspberryPi, c'est la latence de parfois
 plusieurs secondes qui rend impossible le pilotage d'un robot à distance.
-
 Après avoir essayé plusieurs méthodes, voici celle qui me semble donner le
 meilleur résultat sur un RaspberryPi 2 : jacksonliam/mjpg-streamer.
+![img]({{ site.baseurl }}/images/livestreamRaspivid/mjpegStreamer.png)
+
 
 Il s'agit d'un fork de mjpeg-streamer qui fonctionne avec le capteur vidéo de
 RaspberryPi vi le plugin input_raspicam.
