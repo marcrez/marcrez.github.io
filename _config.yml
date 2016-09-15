@@ -54,6 +54,16 @@ collections:
   my_tags:
     output: true
     permalink: /tag/:name/
+
+
+default
+  -
+    scope:
+      path: ""
+      type: my_tags
+    values:
+      layout: blog_by_tag
+
 #
 # !! You don't need to change any of the configuration flags below !!
 #
