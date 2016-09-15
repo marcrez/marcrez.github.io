@@ -26,6 +26,9 @@ du nécessaire :
     make
     sudo make install
 
-On peut alors lancer le serveur web qui va permettre d'accéser au flux :
+On peut alors lancer le serveur web qui va permettre d'accéder au flux :
 
     ./mjpg_streamer -o "output_http.so -w ./www -p 8078" -i "input_raspicam.so -q 5 -fps 15 -vf -hf" &
+
+Sur l'ordinateur client, on accède alors à la page http://IP_RaspberryPi:8078/
+pour voir la vidéo.
