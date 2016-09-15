@@ -51,10 +51,9 @@ baseurl: ""
 
 
 collections:
-  my_categories:
+  my_tags:
     output: true
-    permalink: /category/:name/
-
+    permalink: /tag/:name/
 #
 # !! You don't need to change any of the configuration flags below !!
 #
