@@ -1,6 +1,13 @@
 ---
 layout: default
 ---
+{% assign category = site.my_categories | where: "slug", post.category %}
+{% assign category = category[0] %}
+{% if category %}
+    {% capture category_content %}<a class="label" href="{{ category.url }}">{{ category.name }}</a>{% endcapture %}
+{% endif %}
+
+
 
 {% assign post = page %}
 {% if post.tags.size > 0 %}
@@ -28,7 +35,7 @@ layout: default
 
   <div class="well">
     <div class="date">
-      Rédigé le {{ page.date | date: '%d' }} 
+      Rédigé le {{ page.date | date: '%d' }}
 {% assign m = page.date | date: "%-m" %}
 {% case m %}
   {% when '1' %}janvier
@@ -43,14 +50,16 @@ layout: default
   {% when '10' %}octobre
   {% when '11' %}novembre
   {% when '12' %}décembre
-{% endcase %} 
-{{ page.date | date: '%Y' }} 
+{% endcase %}
+{{ page.date | date: '%Y' }}
     </div>
     <div class="category">
     Catégorie <span class="label label-primary">{{ page.categories }}</span>
-    &nbsp;&mdash;&nbsp; <span id="post-meta">{{ tags_content }}</span>     
+    &nbsp;&mdash;&nbsp; <span id="post-meta">{{ tags_content }}</span>
     </div>
   </div>
+
+  <p id="post-meta">{{ category_content }}</p>
 
 
   <div class="entry">

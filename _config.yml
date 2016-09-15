@@ -49,6 +49,12 @@ url: http://nicolaspoulain.github.io
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: ""
 
+
+collections:
+  my_categories:
+    output: true
+    permalink: /category/:name/
+
 #
 # !! You don't need to change any of the configuration flags below !!
 #
