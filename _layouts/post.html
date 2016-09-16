@@ -34,7 +34,7 @@ layout: default
 {{ page.date | date: '%Y' }}
     </div>
     <div class="category">
-      <i class="fa fa-tags"/> Tags :
+      <i class="fa fa-tags"> Tags </i>:
        {% for tag in page.tags %}
         {% for data_tag in site.data.tags %}
          {% if data_tag.slug == tag %}
