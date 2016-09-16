@@ -37,6 +37,16 @@ layout: default
   YYYY<span id="post-meta">{{ category_content }}</span>YYYY
     Catégorie <span class="label label-primary">{{ page.categories }}</span>
     &nbsp;&mdash;&nbsp; <span id="post-meta">{{ tags_content }}</span>
+       {% for tag in page.tags %}
+        {% for data_tag in site.data.tags %}
+         {% if data_tag.slug == tag %}
+          {% assign tagg = data_tag %}
+         {% endif %}
+        {% endfor %}
+        {% if tagg %}
+         <a href="/tag/{{ tagg.slug }}/">{{ tagg.name }}</a>{% if forloop.last == false %}, {% endif %}
+      {% endif %}
+      {% endfor %}
     </div>
   </div>
 
