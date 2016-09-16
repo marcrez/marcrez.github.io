@@ -1,7 +1,7 @@
 - slug: markdown
   name: Markdown
-- slug: raspberryPi
-  name: Raspberry Pi
+- slug: raspberrypi
+  name: Raspberrypi
 - slug: python
   name: Python
 - slug: pandoc
@@ -14,7 +14,7 @@
   name: Linux
 - slug: mysql
   name: MySQL
-- slug: vim 
+- slug: vim
   name: Vim
 - slug: twig
   name: Twig
