@@ -3,7 +3,7 @@ title: Un RaspberryPi, une LED, un bouton poussoir
 permalink: raspberryPi-led-poussoir
 layout: post
 date: 2015-05-26 13:30:00
-tags: [raspberryPi , python]
+tags: [raspberrypi , python]
 category: raspberryPi
 ---
 
@@ -32,11 +32,11 @@ RaspberryPi 2 est doté de 40 broches de sortie dont 25 broches GPIO.
 
 ![GPIO]({{ site.baseurl }}/images/iniRasp/rPi-GPIO.png)
 
-Pour désigner les broches GPIO, on peut 
+Pour désigner les broches GPIO, on peut
 - soit donner leur numéro sur la carte *BOARD* en anglais, de 1 à 40
 - soit donner le nom de GPIO de 2 à 26 dans la nomenclature *BCM* (pour *Broadcom SoC channel*)
 
-Par exemple la broche 18 dans la nomenclature BOARD correspond 
+Par exemple la broche 18 dans la nomenclature BOARD correspond
 à la GPIO 18 dans la nomenclature BCM.
 
 On on reparlera dans le paragraphe qui vient.
@@ -62,15 +62,15 @@ GPIO.output(21, GPIO.HIGH)
 
 Explications ligne par ligne
 
-1. On commence par importer la librairie RPi.GPIO qu'on nomme GPIO. 
+1. On commence par importer la librairie RPi.GPIO qu'on nomme GPIO.
    Ses fonctions, classes et méthodes seront désormais disponibles.
 2. On déclare la numérotation choisie pour se référer aux broches
    de sortie. On a choisi GPIO.BCM plutôt que GPIO.BOARD ce qui va permettre
    de parler de la broche nommée GPIO21 plutôt que de la broche numéro 40
    de la carte. Choisir BCM plutôt que BOARD permet permet juste de se
    simplifier le repérage.
-3. On déclare la broche GPIO21 comme sortie. Elle délivrera    
-   - soit un signal haut (un 1, c'est à dire une tension de +3,3V)    
+3. On déclare la broche GPIO21 comme sortie. Elle délivrera
+   - soit un signal haut (un 1, c'est à dire une tension de +3,3V)
    - soit un signal bas (un 0, c'est à dire 0V)
 4. On modifie l'état de sortie de la broche GPIO21, qui passe à 1. Cela devrait
    envoyer un courant de 3,3V dans le circuit de la LED qui va s'allumer.
@@ -105,8 +105,8 @@ GPIO.output(21, GPIO.LOW)
 Le principe de base étant posé, on va maintenant intéragir avec le RaspberryPi
 via un bouton poussoir.
 
-On choisit ici de raccorder (pourquoi pas ?)  la broche GPIO16 au bouton 
-poussoir. 
+On choisit ici de raccorder (pourquoi pas ?)  la broche GPIO16 au bouton
+poussoir.
 Par mesure de sécurité, le raccordement au 3,3V se fait via
 une résistance pour éviter un court circuit si par erreur le GPIO16 était
 configuré en sortie plutôt qu'en entrée.
@@ -199,7 +199,7 @@ finally:
 {% endhighlight %}
 
 
-Un article complémentaire très bien fait : 
+Un article complémentaire très bien fait :
 http://eskimon.fr/96-arduino-204-un-simple-bouton
 
 
