@@ -2,8 +2,8 @@
 title: Accéleromètre ADXL345 sous RaspberryPi
 layout: post
 date: 2015-05-14 13:30:00
-tags: [raspberryPi, python]
-category: raspberryPi
+tags: [raspberrypi, python]
+category: raspberrypi
 ---
 
 Le module ADXL345 est un accéléromètre à trois axes.
@@ -23,7 +23,7 @@ $ sudo apt-get install python-smbus i2c-tools
 ```
 
 Ensuite, on active le chargement automatique du module I2C au noyau
-dans le menu 8 *Advanced Options* 
+dans le menu 8 *Advanced Options*
 
 ```
 $ sudo raspi-config
@@ -34,18 +34,18 @@ Repondre Yes à tout puis redémarrer.
 Sous Raspbian, il reste du travail à faire.
 
 - Lancer la commande `sudo nano /etc/modules` pour ajouter au fichier
-  `modules` les deux lignes suivantes 
+  `modules` les deux lignes suivantes
   *(Ctrl+O puis Ctrl+X pour enregistrer puis quitter nano)*
 
   ```
-  i2c-bcm2708 
+  i2c-bcm2708
   i2c-dev
   ```
 - Si le fichier de blacklist existe
   (`ls /etc/modprobe.d/` pour vérifier),
-   lancer la commande `sudo nano /etc/modprobe.d/raspi-blacklist.conf` 
+   lancer la commande `sudo nano /etc/modprobe.d/raspi-blacklist.conf`
    pour commenter avec un `#` les éventuelles
-   lignes suivantes 
+   lignes suivantes
    *(Ctrl+O puis Ctrl+X pour enregistrer puis quitter nano)*
 
    ```
@@ -127,7 +127,7 @@ import RPi.GPIO as GPIO
 from Adafruit_I2C import *
 from Adafruit_ADXL345 import *
 
-FREQ = 100 #Hz 
+FREQ = 100 #Hz
 RUNNING = True
 
 GPIO.setmode(GPIO.BCM)
@@ -143,7 +143,7 @@ BWD = GPIO.PWM(bwd, 100)
 
 lft = 12
 GPIO.setup(lft, GPIO.OUT)
-LFT = GPIO.PWM(lft, 100) 
+LFT = GPIO.PWM(lft, 100)
 
 rgt = 20
 GPIO.setup(rgt, GPIO.OUT)
@@ -153,7 +153,7 @@ accel = Adafruit_ADXL345()
 
 try:
     while RUNNING:
-        sleep(0.1) 
+        sleep(0.1)
         print accel.read()
         RGT.start(0)
         FWD.start(0)
