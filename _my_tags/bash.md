@@ -1,4 +1,4 @@
 ---
-name: bash
+slug: bash
 name: bash
 ---

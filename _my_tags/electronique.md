@@ -1,4 +1,4 @@
 ---
 slug: electronique
-slug: electronique
+name: electronique
 ---

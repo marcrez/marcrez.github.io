@@ -1,4 +1,4 @@
 ---
-name: symfony
+slug: symfony
 name: symfony
 ---

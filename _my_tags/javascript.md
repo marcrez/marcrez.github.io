@@ -1,4 +1,4 @@
 ---
 slug: javascript
-slug: javascript
+name: javascript
 ---

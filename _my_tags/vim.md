@@ -1,4 +1,4 @@
 ---
-name: vim
+slug: vim
 name: vim
 ---

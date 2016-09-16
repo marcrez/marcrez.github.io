@@ -1,4 +1,4 @@
 ---
-name: video
+slug: video
 name: video
 ---

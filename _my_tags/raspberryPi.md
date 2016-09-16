@@ -1,5 +1,5 @@
 ---
-name: raspberryPi
+slug: raspberryPi
 name: raspberryPi
 ---
 

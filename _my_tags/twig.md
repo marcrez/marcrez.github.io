@@ -1,4 +1,4 @@
 ---
-name: twig
+slug: twig
 name: twig
 ---

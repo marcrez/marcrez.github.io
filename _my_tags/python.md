@@ -1,5 +1,5 @@
 ---
-name: python
+slug: python
 name: python
 ---
 

@@ -1,4 +1,4 @@
 ---
 slug: mysql
-slug: mysql
+name: mysql
 ---

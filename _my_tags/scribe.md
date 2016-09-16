@@ -1,4 +1,4 @@
 ---
-name: scribe
+slug: scribe
 name: scribe
 ---

@@ -1,4 +1,4 @@
 ---
 slug: linux
-slug: linux
+name: linux
 ---

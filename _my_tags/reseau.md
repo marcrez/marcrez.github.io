@@ -1,4 +1,4 @@
 ---
 name: reseau
-name: reseau
+slug: reseau
 ---
