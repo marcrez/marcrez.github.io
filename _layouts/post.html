@@ -34,6 +34,7 @@ layout: default
 {{ page.date | date: '%Y' }}
     </div>
     <div class="category">
+      <div class="pull-right">{{ page.content | number_of_words }} mots</div>
       <i class="fa fa-tags"> Tags </i>:
        {% for tag in page.tags %}
         {% for data_tag in site.data.tags %}
