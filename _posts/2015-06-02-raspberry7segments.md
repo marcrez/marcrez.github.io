@@ -3,7 +3,7 @@ title: Codeur rotatif et afficheur 7 segments sous RaspberryPi
 permalink: raspberryPi-codeurRotatif-afficheur7segments-led
 layout: post
 date: 2015-05-15 20:31:00
-tags: [raspberryPi, python, electronique]
+tags: [raspberrypi, python, electronique]
 category: raspberryPi
 ---
 
@@ -12,10 +12,10 @@ segments via un multiplexeur 74HC595N.
 On va aussi faire fonctionner un codeur rotatif.
 Le but est de simuler le comportement d'un bouton de volume.
 
-Le comportement sera le suivant 
+Le comportement sera le suivant
 
 - L'appui sur le bouton central, allume ou éteint l'afficheur LED
-- La rotation dans le sens des aiguilles d'une montre incrémente 
+- La rotation dans le sens des aiguilles d'une montre incrémente
   le compteur qui s'affiche avec un maximum à 9
 - La rotation dans le sens inverse des aiguilles d'une montre décrémente
   le compteur qui s'affiche avec un minimum à 0
@@ -40,7 +40,7 @@ Le kit [*Sunfounder Project Super Starter Kit for Raspberry Pi*](http://www.amaz
 fournit deux afficheurs à cathode commune, c'est de ce type d'afficheur dont il
 est désormais question.
 
-Un afficheur 7 segments (8 en fait si on compte le DP pour *Decimal Point* 
+Un afficheur 7 segments (8 en fait si on compte le DP pour *Decimal Point*
 en bas à droite) possède 10 connecteurs.
 
 - deux cathodes communes, on relie l'une d'entre elles à la masse via une
@@ -52,16 +52,16 @@ en bas à droite) possède 10 connecteurs.
 > résistance sur la cathode commune, les lois de l'électricité nous apprennent
 > que l'intensité pour chacun des segments va dépendre du nombre de segments
 > allumés : un `1` avec ses 2 segments allumés sera 3 fois plus lumineux qu'un
-> `0` avec ses 6 segments allumés.   
+> `0` avec ses 6 segments allumés.
 > Le montage correct consiste à relier une des deux cathodes communes à la
-> masse et connecter les 8 segments via chacun une résistance de 200&#8486;.   
+> masse et connecter les 8 segments via chacun une résistance de 200&#8486;.
 > Voir à ce sujet
 > [un bon article en anglais](http://melabs.com/resources/articles/ledart.htm).
 
-Maintenant, reste à connaitre le schema de branchement 
+Maintenant, reste à connaitre le schema de branchement
 pour allumer les bons segments.
 
-![74HC595N schema]({{ site.baseurl }}/images/7segments/7_segment_display_labeled.png)    
+![74HC595N schema]({{ site.baseurl }}/images/7segments/7_segment_display_labeled.png)
 
 ### Le registre à décalage 74HC595N
 
@@ -73,17 +73,17 @@ comment multiplexer l'afficheur 7 Segments avec un registre à décalage
 ![74HC595N]({{ site.baseurl }}/images/7segments/74hc595n.jpeg)
 
 Pour faire simple, un registre à décalage reçoit une entrée série
-(signaux à la suite les uns des autres) sur une broche et renvoie une sortie 
+(signaux à la suite les uns des autres) sur une broche et renvoie une sortie
 parallèle sur 8 broches.
 
 
-![74HC595N schema]({{ site.baseurl }}/images/7segments/74HC595N.png)    
+![74HC595N schema]({{ site.baseurl }}/images/7segments/74HC595N.png)
 (image issue de [DatasheetCatalog.com](http://www.datasheetcatalog.com/datasheets_pdf/7/4/H/C/74HC595N.shtml) )
 
 - les broches 8 `GND` et 13 `OE` sont reliées à la masse
 - la broche 16 `VCC` est reliée au +5V
 - Les 8 sorties, de `Q0` à `Q7` vont être connectées aux segments de
-  l'afficheur : `Q0` sur `A`, `Q1` sur `B`, ... , `Q5` sur `F`, `Q6` sur `G` 
+  l'afficheur : `Q0` sur `A`, `Q1` sur `B`, ... , `Q5` sur `F`, `Q6` sur `G`
   et `Q7` sur `DP`.
 
 Le principe de fonctionnement est le suivant :
@@ -100,8 +100,8 @@ HIGH, les valeurs des 8 bits du STORAGE REGISTER sont envoyées aux
 
 Concernant les trois dernières broches, on a
 
-- La broche *Memory Reset* (broche 10 `MR`) reçoit un état HIGH en général. 
-  Un signal LOW efface le STORAGE REGISTER. 
+- La broche *Memory Reset* (broche 10 `MR`) reçoit un état HIGH en général.
+  Un signal LOW efface le STORAGE REGISTER.
 - La broche *Output Enable* (broche 13 `OE`) doit être LOW pour qu'il y ait
   affichage.
 - La broche (broche 9 `Q7S`) permet de brancher un second circuit 74HC595N
@@ -113,7 +113,7 @@ Concernant les trois dernières broches, on a
 
 ### Branchement et mise en route
 
-![74HC595N schema]({{ site.baseurl }}/images/7segments/7segments2.png)    
+![74HC595N schema]({{ site.baseurl }}/images/7segments/7segments2.png)
 
 
 Mettons tout cela en application dans un petit programme Python.
@@ -122,7 +122,7 @@ tour.
 
 ![Anim]({{ site.baseurl }}/images/7segments/7segAnim96.gif)
 
-Se référer à 
+Se référer à
 l'article [*LED et poussoir*]({% post_url 2015-5-26-raspberryLedPoussoir %})
 si besoin.
 
@@ -175,7 +175,7 @@ GPIO.cleanup()
 
 
 Les bases sont maintenant posées, on peut théoriquement afficher des chiffres.
-Essayons avec le chiffre 2. Pour cela il va falloir allumer les segments 
+Essayons avec le chiffre 2. Pour cela il va falloir allumer les segments
 A, B, D, E et G.
 Autrement dit, remplir le STORAGE REGISTER avec `11011010`.
 On va donc pousser successivement les bits dans l'ordre inverse
@@ -353,7 +353,7 @@ finally:
   print("On arrete tout")
 ```
 
-On peut maintenant lancer le programme 
+On peut maintenant lancer le programme
 
 ```
 $ sudo python rotary.py

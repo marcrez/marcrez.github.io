@@ -2,13 +2,13 @@
 title: HC-SR04 Mesure de distance par ultrasons
 layout: post
 date: 2015-06-18 13:30:00
-tags: [raspberryPi, python, electronique]
-category: raspberryPi
+tags: [raspberrypi, python, electronique]
+category: raspberrypi
 ---
 
 ![echolocation](https://upload.wikimedia.org/wikipedia/commons/8/82/Delfinekko.gif)
 Le module HC-SR04 est un module à moins de 2€ constitué d'un emetteur et d'un
-récepteur d'ultrasons. Comme le font les chauve-souris, ou les cétacés, 
+récepteur d'ultrasons. Comme le font les chauve-souris, ou les cétacés,
 il va mesurer le temps qui sépare l'emission de la reception de l'echo
 lorsque le son rebondit contre la surface qui fait face au module.
 La vitesse du son étant (relativement) constante, on en déduit la distance.
@@ -28,7 +28,7 @@ d'une durée proportionelle à la distance.
 
 La [fiche technique](http://www.mpja.com/download/hc-sr04_ultrasonic_module_user_guidejohn.pdf)
 nous apprend que la tension de fonctionnement du module est de 5V.
-Les broches GPIO du raspberryPi reçoivent normalement du 3.3V, on va donc utiliser un montage 
+Les broches GPIO du raspberryPi reçoivent normalement du 3.3V, on va donc utiliser un montage
 [diviseur de tension](https://fr.wikipedia.org/wiki/Diviseur_de_tension) pour protéger la broche
 branchée sur `echo`.
 
@@ -53,7 +53,7 @@ ce qui sera suffisant.
 
 ## Programme Python
 
-On va utiliser le programme de 
+On va utiliser le programme de
 [Matt Hawkins](http://www.raspberrypi-spy.co.uk/2012/12/ultrasonic-distance-measurement-using-python-part-1/)
 pour faire fonctionner le module. La seule chose à faire sera d'adapter les numéros des groches GPIO au
 montage qu'on aura cablé.
@@ -129,7 +129,7 @@ GPIO.cleanup()
 ## Tests
 
 
-Pour vérifier la fiabilité des mesures, on va effectuer deux séries de deux mesures 
+Pour vérifier la fiabilité des mesures, on va effectuer deux séries de deux mesures
 avec deux HC-SR04 côte à côte.
 
 ![Tests]({{ site.baseurl }}/images/HC-SR04/tests.png)
@@ -138,7 +138,7 @@ Voici les résultats obtenus.
 
 ![echantillon]({{ site.baseurl }}/images/HC-SR04/echantillon.png)
 
-Mis à part un bug sur la mesure à 15cm, on constate aue les quatre mesures 
+Mis à part un bug sur la mesure à 15cm, on constate aue les quatre mesures
 en bleu sont proches de la mesure théorique en vert.
 Il faudrait refaire une série de mseusre pour confirmer ce graphique.
 
@@ -149,12 +149,12 @@ Ci-dessous le programme utilisé pour générer ces statistiques.
 import RPi.GPIO as GPIO                    #Import GPIO library
 import time                                #Import time library
 import matplotlib.pyplot as plt
-GPIO.setmode(GPIO.BCM)                     #Set GPIO pin numbering 
+GPIO.setmode(GPIO.BCM)                     #Set GPIO pin numbering
 
 TRIG1 = 19
 ECHO1 = 20
 TRIG2 = 26
-ECHO2 = 21 
+ECHO2 = 21
 
 GPIO.setup(TRIG1,GPIO.OUT)                  #Set pin as GPIO out
 GPIO.setup(TRIG2,GPIO.OUT)                  #Set pin as GPIO out
@@ -168,7 +168,7 @@ y = [0]
 while d!= -1:
 
   d = input("dist : ")
-  
+
   GPIO.output(TRIG1, False)                 #Set TRIG as LOW
   #print "Waitng For Sensor To Settle"
   time.sleep(2)                            #Delay of 2 seconds
@@ -181,7 +181,7 @@ while d!= -1:
     pulse_start = time.time()              #Saves the last known time of LOW pulse
 
   while GPIO.input(ECHO1)==1:               #Check whether the ECHO is HIGH
-    pulse_end = time.time()                #Saves the last known time of HIGH pulse 
+    pulse_end = time.time()                #Saves the last known time of HIGH pulse
 
   pulse_duration = pulse_end - pulse_start #Get pulse duration to a variable
 
@@ -202,7 +202,7 @@ while d!= -1:
     pulse_start = time.time()              #Saves the last known time of LOW pulse
 
   while GPIO.input(ECHO2)==1:               #Check whether the ECHO is HIGH
-    pulse_end = time.time()                #Saves the last known time of HIGH pulse 
+    pulse_end = time.time()                #Saves the last known time of HIGH pulse
 
   pulse_duration = pulse_end - pulse_start #Get pulse duration to a variable
 

@@ -3,13 +3,13 @@ title: Un ordinateur portable dans la poche
 permalink: raspberry-android-ebook-reader-laptop
 layout: post
 date: 2015-06-23 20:31:00
-tags: [raspberryPi, linux, reseau]
-category: raspberryPi
+tags: [raspberrypi, linux, reseau]
+category: raspberrypi
 ---
 
 ![Canon XP3000]({{ site.baseurl }}/images/rPiLaptop/install2.png)
 Le but est ici de trouver une solution pour disposer d'un ordinateur portable
-complet en utilisant un RaspberryPi, 
+complet en utilisant un RaspberryPi,
 un télephone Android et
 une liseuse d'eBook Sony PRS-T1.
 
@@ -28,8 +28,8 @@ D'abord, partager la connexion du télephone : pour cela dans les paramètres,
 choisir **Plus...** puis **Partage de connexion** et cocher la case **Via USB**.
 
 Maintenant, le RaspberryPi a une adresse IP fournie par le serveur DHCP du télephone.
-Pour la connaître, on lance le *Terminal Emulator* puis les commandes suivantes 
-pour obtenir les droits de root puis afficher la table 
+Pour la connaître, on lance le *Terminal Emulator* puis les commandes suivantes
+pour obtenir les droits de root puis afficher la table
 [ARP](https://fr.wikipedia.org/wiki/Address_Resolution_Protocol)
 
 ```
@@ -49,7 +49,7 @@ $ ssh pi@192.168.42.51
 
 ![Canon XP3000]({{ site.baseurl }}/images/rPiLaptop/Screen01.png)
 
-## Étape 2 : Un téléphone Android et une liseuse Sony PRS-T1 
+## Étape 2 : Un téléphone Android et une liseuse Sony PRS-T1
 
 Dans ce paragraphe, la liseuse devient un écran annexe pour une session de
 travail en console sur un téléphone Android.
@@ -58,18 +58,18 @@ travail en console sur un téléphone Android.
 
 ### Rooter la liseuse
 
-La procédure est assez simple : télécharger `minimal-root.zip` sur le 
+La procédure est assez simple : télécharger `minimal-root.zip` sur le
 [dossier de Porkupan](http://projects.mobileread.com/reader/users/porkupan/PRST1/flash_packages/)
 
 Déziper et déposer les fichiers à la racine de SDCARD.
 
-La racine de SDCARD doit contenir le fichier `PRS-T1 Updater.package` et 
+La racine de SDCARD doit contenir le fichier `PRS-T1 Updater.package` et
 les dossiers `tmp` et `updates`.
 
 Éteindre la liseuse puis redémarrer en maintenant les boutons **Home** et **Menu**
 jusqu'à l'apparition de l'écran *Opening book*.
 
-C'est fini. Pour plus d'informations ou en cas de problème 
+C'est fini. Pour plus d'informations ou en cas de problème
 
 - [PRST1 Rooting and Tweaks](http://wiki.mobileread.com/wiki/PRST1_Rooting_and_Tweaks)
 - [Sony PRS-T1 step-by-step rooting and tweaking guide](http://www.mobileread.com/forums/showthread.php?t=184646)
@@ -85,18 +85,18 @@ https://f-droid.org/ et télécharger l'installeur.
 
 Une fois F-Droid installé, on peut lancer l'installation de **ConnectBot**.
 
-Pour plus de confort, il est utile de passer en mode paysage. La liseuse ne 
+Pour plus de confort, il est utile de passer en mode paysage. La liseuse ne
 disposant du capteur permettant la rotation automatique, on va installer une
 application qui permet de choisir manuellement l'orientation.
 
-F-Droid ne poposant pas une telle application, on va télécharger puis installer 
+F-Droid ne poposant pas une telle application, on va télécharger puis installer
 l'archive apk de
 [SetOrientation](http://apk-dl.com/download/android/com.googlecode.eyesfree.setorientation/set-orientation-1-1-4)
 qui est compatible avec la version 2.2 d'android installé sur la liseuse.
 
 ### Installer SSH Server sur le téléphone
 
-Par défaut, le téléphone n'accepte pas les connexionx entrantes. On va donc 
+Par défaut, le téléphone n'accepte pas les connexionx entrantes. On va donc
 installer un serveur ssh pour que la liseuse puisse se conncter au téléphone.
 
 ![Canon XP3000]({{ site.baseurl }}/images/rPiLaptop/sshserver.png)
@@ -126,7 +126,7 @@ l'adresse IP et le masque permettent de connaitre l'adresse du réseau servi par
 le télephone : 192.168.43.1
 
 
-Le bouton **Info** de l'application **SSH Server** du téléphone permet de 
+Le bouton **Info** de l'application **SSH Server** du téléphone permet de
 retrouver l'adresse ip wifi du téléphone. On crée un serveur avec un nom quelconque
 et un port choisi au hasard : p.ex 46304. Puis retour en arrière.
 
@@ -154,7 +154,7 @@ Il ne reste plus que deux opérations à effectuer :
 2. Depuis la liseuse, dans ConnectBot connecté au téléphone, se connecter au RaspberryPi
    et rejoindre la session screen nommée `foo`.
 
-   
+
 ## Un article sur le même sujet avec une liseuse Kindle
 
 http://www.ponnuki.net/2012/09/kindleberry-pi/
