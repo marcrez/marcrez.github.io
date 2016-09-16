@@ -1,5 +1,5 @@
 ---
 slug: raspberrypi
-name: raspberryPi
+name: raspberrypi
 ---
 
