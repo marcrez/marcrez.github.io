@@ -4,7 +4,7 @@ permalink: raspberryPi-codeurRotatif-afficheur7segments-led
 layout: post
 date: 2015-05-15 20:31:00
 tags: [raspberrypi, python, electronique]
-category: raspberryPi
+category: raspberrypi
 ---
 
 Dans cet article, on va décrire comment pour piloter un affichier LED à sept
