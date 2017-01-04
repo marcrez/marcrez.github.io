@@ -55,11 +55,11 @@ mais en déplaçant des blocs graphiques correspondant à des instructions.
 
 BlocklyDuino
 
-http://easycoding.tn/bde/demos/code/?lang=fr
-https://github.com/BlocklyDuino
+- le projet : <https://github.com/BlocklyDuino>
+- démo : <http://easycoding.tn/bde/demos/code/?lang=fr>
 
 Blockly@rduino
 
-http://www.techmania.fr/BlocklyDuino/
-https://github.com/technologiescollege/Blockly-at-rduino
+- le projet : <https://github.com/technologiescollege/Blockly-at-rduino>
+- démo : <http://www.techmania.fr/BlocklyDuino/>
 
