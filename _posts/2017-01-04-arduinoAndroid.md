@@ -7,23 +7,25 @@ tags: [arduino, electronique]
 category: arduino
 ---
 
-![img]({{ site.baseurl }}/images/arduinoAndroid/androidLogo.jpg)
-![img]({{ site.baseurl }}/images/arduinoAndroid/arduinoLogo.png)
+![img]({{ site.baseurl }}/images/arduinoAndroid/arduinoAndroidLogo.jpg)
+
+Programmer une carte arduino depuis une tablette est possible,
+on peut même le faire avec de des interfaces de programmation
+graphique par blocs (comme avec Scratch), c'est ce que nous allons voir
+dans cet article.
 
 
 ## Le matériel nécessaire
 
-Le montage est essentiellement basé sur Arduino Uno et une boîte à engrenages
-double qui va faire office de traction et de direction pour le drone.
+Il faut évidemment une carte arduino officielle (environ 20€)
+ou compatible (moins de 5€) avec leur câble de connexion.
 
-![img]({{ site.baseurl }}/images/arduiDrone01/tamiya.png)
+![img]({{ site.baseurl }}/images/arduinoAndroid/unoR3.jpg)
+![img]({{ site.baseurl }}/images/arduinoAndroid/robotdyn.jpg)
 
-Le matériel peut être acheté en ligne, par exemple chez http://www.robotshop.com
+Un câble USB OTG pour brancher le cable arduino sur le port USB du téléphone.
 
-Ci-dessous le panier avec presque tout le nécessaire, il faudra ajouter un circuit
-L293D (moins de 3€ sur eBay) dont nous allons parler dans le paragraphe suivant.
-
-![img]({{ site.baseurl }}/images/arduiDrone01/shop.png)
+![img]({{ site.baseurl }}/images/arduinoAndroid/USB-OTG.jpg)
 
 
 ## Alimenter des moteurs à courant continu
