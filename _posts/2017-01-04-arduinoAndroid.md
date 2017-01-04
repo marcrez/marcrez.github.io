@@ -43,7 +43,7 @@ Google Play
 
 [![img]({{ site.baseurl }}/images/arduinoAndroid/arduinodroid.png)](https://play.google.com/store/apps/details?id=name.antonsmirnov.android.arduinodroid2&hl=fr)
 
-![img]({{ site.baseurl }}/images/arduinodroidScreen.jpg)
+![img]({{ site.baseurl }}/images/arduinoAndroid/arduinodroidScreen.jpg)
 
 ## Programmer par blocs
 
@@ -51,7 +51,7 @@ Deux projets basés sur [Blockly](https://fr.wikipedia.org/wiki/Blockly)
 permettent de construire des programmes arduino (en C++) sans écrire de code
 mais en déplaçant des blocs graphiques correspondant à des instructions.
 
-![img]({{ site.baseurl }}/images/blockly.png)
+![img]({{ site.baseurl }}/images/arduinoAndroid/blockly.png)
 
 BlocklyDuino
 
