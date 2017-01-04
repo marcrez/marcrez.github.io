@@ -1,5 +1,5 @@
 ---
-title: Programmer Arduino sur une tablette Android
+title: Programmer Arduino sous Android en USB
 permalink: arduino-android
 layout: post
 date: 2017-01-04 20:31:00
@@ -9,7 +9,7 @@ category: arduino
 
 ![img]({{ site.baseurl }}/images/arduinoAndroid/arduinoAndroidLogo.jpg)
 
-Programmer une carte arduino depuis une tablette ou un téléphone Android
+Programmer une carte Arduino depuis une tablette ou un téléphone Android
 est possible, on peut même le faire avec de des interfaces de programmation
 graphique par blocs (comme avec Scratch), c'est ce que nous allons voir
 dans cet article.
@@ -17,7 +17,7 @@ dans cet article.
 
 ## Le matériel nécessaire
 
-1. Il faut évidemment une carte arduino
+1. Il faut évidemment une carte Arduino
 
    - soit une carte Arduino officielle (environ 20€) avec son câble de connexion USB-A - USB-B
 
@@ -25,7 +25,7 @@ dans cet article.
    - soit une carte compatible (moins de 5€) avec son câble de connexion qui peut être USB-A - Micro-USB.
      ![img]({{ site.baseurl }}/images/arduinoAndroid/robotdyn.jpg)
 
-2. Il faut aussi un câble USB OTG (On-The-Go) pour brancher le cable arduino
+2. Il faut aussi un câble USB OTG (On-The-Go) pour brancher le cable Arduino
    sur le port USB du téléphone.
 
    ![img]({{ site.baseurl }}/images/arduinoAndroid/USB-OTG.jpg)
@@ -37,7 +37,7 @@ dans cet article.
 
 Pour programmer la carte Arduino il faut une application permettant
 d'écrire des programmes et de se connecter à la carte pour y déposer
-le code. C'est ce que fait l'application arduinoDroid, disponible sur
+le code. C'est ce que fait l'application ArduinoDroid, disponible sur
 Google Play
 
 
@@ -48,8 +48,9 @@ Google Play
 ## Programmer par blocs
 
 Deux projets basés sur [Blockly](https://fr.wikipedia.org/wiki/Blockly)
-permettent de construire des programmes arduino (en C++) sans écrire de code
+permettent de construire des programmes Arduino (en C++) sans écrire de code
 mais en déplaçant des blocs graphiques correspondant à des instructions.
+Le code correspondant est alors automatiquement généré.
 
 BlocklyDuino
 
@@ -63,14 +64,13 @@ Blockly@rduino
 
 
 Voici une exemple dans lequel 4 blocs ont été disposés pour faire clignoter
-au rythme de 1 seconde la LED de la carte arduino (pin 13)
+au rythme de 1 seconde la LED de la carte Arduino (pin 13)
 ![img]({{ site.baseurl }}/images/arduinoAndroid/blockly.png)
 
-On va pouvoir copier le code généré automatiquement, le coller dans
-l'application arduinoDroid. Après compilation puis téléversement dans la carte,
+On va pouvoir copier le code généré, le coller dans
+l'application ArduinoDroid. Après compilation puis téléversement dans la carte,
 le résultat est la :
 
 ![img]({{ site.baseurl }}/images/ardublock/led13.gif)
-
 
 
