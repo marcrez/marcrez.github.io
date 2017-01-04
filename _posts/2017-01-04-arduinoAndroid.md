@@ -50,8 +50,9 @@ fonctions utiles mais non indispensables).
 
 Deux projets basés sur [Blockly](https://fr.wikipedia.org/wiki/Blockly)
 permettent de construire des programmes Arduino (en C++) sans écrire de code
-mais en déplaçant des blocs graphiques correspondant à des instructions.
-Le code correspondant est alors automatiquement généré.
+mais en déplaçant des blocs graphiques correspondant à des instructions. Le
+code correspondant est alors automatiquement généré. Aucune installation n'est
+nécessaire : ce sont des applications web, un navigateur suffit.
 
 BlocklyDuino
 
