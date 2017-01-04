@@ -51,8 +51,6 @@ Deux projets basés sur [Blockly](https://fr.wikipedia.org/wiki/Blockly)
 permettent de construire des programmes arduino (en C++) sans écrire de code
 mais en déplaçant des blocs graphiques correspondant à des instructions.
 
-![img]({{ site.baseurl }}/images/arduinoAndroid/blockly.png)
-
 BlocklyDuino
 
 - le projet : <https://github.com/BlocklyDuino>
@@ -62,4 +60,17 @@ Blockly@rduino
 
 - le projet : <https://github.com/technologiescollege/Blockly-at-rduino>
 - démo : <http://www.techmania.fr/BlocklyDuino/>
+
+
+Voici une exemple dans lequel 4 blocs ont été disposés pour faire clignoter
+au rythme de 1 seconde la LED de la carte arduino (pin 13)
+![img]({{ site.baseurl }}/images/arduinoAndroid/blockly.png)
+
+On va pouvoir copier le code généré automatiquement, le coller dans
+l'application arduinoDroid. Après compilation puis téléversement dans la carte,
+le résultat est la :
+
+![img]({{ site.baseurl }}/images/ardublock/led13.gif)
+
+
 
