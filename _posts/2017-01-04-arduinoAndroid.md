@@ -25,8 +25,8 @@ dans cet article.
    - soit une carte compatible (moins de 5€) avec son câble de connexion qui peut être USB-A - Micro-USB.
      ![img]({{ site.baseurl }}/images/arduinoAndroid/robotdyn.jpg)
 
-2. Il faut aussi un câble USB OTG (On-The-Go) pour brancher le cable Arduino
-   sur le port USB du téléphone.
+2. Il faut aussi un câble USB OTG *On-The-Go* (environ 3€) pour brancher le
+   cable Arduino sur le port USB du téléphone.
 
    ![img]({{ site.baseurl }}/images/arduinoAndroid/USB-OTG.jpg)
 
@@ -38,7 +38,8 @@ dans cet article.
 Pour programmer la carte Arduino il faut une application permettant
 d'écrire des programmes et de se connecter à la carte pour y déposer
 le code. C'est ce que fait l'application ArduinoDroid, disponible sur
-Google Play
+Google Play (la version payante n'affiche pas de publicités et donne accès à des
+fonctions utiles mais non indispensables).
 
 
 [![img]({{ site.baseurl }}/images/arduinoAndroid/arduinodroid.png)](https://play.google.com/store/apps/details?id=name.antonsmirnov.android.arduinodroid2&hl=fr)
