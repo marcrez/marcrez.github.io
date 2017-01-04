@@ -17,11 +17,13 @@ dans cet article.
 
 ## Le matériel nécessaire
 
-1. Il faut évidemment une carte arduino officielle (environ 20€)
-   ou compatible (moins de 5€) avec leur câble de connexion.
+1. Il faut évidemment une carte arduino
 
-   ![img]({{ site.baseurl }}/images/arduinoAndroid/unoR3.jpg)
-   ![img]({{ site.baseurl }}/images/arduinoAndroid/robotdyn.jpg)
+   - soit une carte Arduino officielle (environ 20€) avec son câble de connexion USB-A - USB-B
+
+     ![img]({{ site.baseurl }}/images/arduinoAndroid/unoR3.jpg)
+   - soit une carte compatible (moins de 5€) avec son câble de connexion qui peut être USB-A - Micro-USB-A.
+     ![img]({{ site.baseurl }}/images/arduinoAndroid/robotdyn.jpg)
 
 2. Il faut aussi un câble USB OTG pour brancher le cable arduino
    sur le port USB du téléphone.
