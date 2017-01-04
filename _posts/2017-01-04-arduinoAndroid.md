@@ -28,6 +28,9 @@ dans cet article.
 
    ![img]({{ site.baseurl }}/images/arduinoAndroid/USB-OTG.jpg)
 
+
+![img]({{ site.baseurl }}/images/arduinoAndroid/cablage.jpg)
+
 ## Installation sur la tablette ou le téléphone Android
 
 Pour programmer la carte Arduino il faut une application permettant
