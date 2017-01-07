@@ -24,8 +24,8 @@ Android est compatible USB OTG, il suffit d'installer une application du type
 «USB OTG checker» comme par exemple
 [USB OTG Check Compatibilité](https://play.google.com/store/apps/details?id=com.faitaujapon.otg&hl=fr)
 
-2. Il faut aussi un câble USB OTG  (environ 3€) pour brancher le
-   cable Arduino sur le port USB du téléphone.
+2. Il faut aussi un câble USB OTG  (environ 3€) pour brancher les cables USB classiques comme le
+   cable Arduino sur le port Micro-USB de la tablette/smartphone.
 
    ![img]({{ site.baseurl }}/images/arduinoAndroid/USB-OTG.jpg)
 
