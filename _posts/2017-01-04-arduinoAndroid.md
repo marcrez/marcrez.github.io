@@ -17,18 +17,25 @@ dans cet article.
 
 ## Le matériel nécessaire
 
-1. Il faut évidemment une carte Arduino
+1. La tablette/smartphone Android doit être compatible USB OTG. Cela signifie
+que le port Micro-USB peut servir d'USB-Host, autrement dit, qu'il est capable
+de recevoir une clé USB ou un clavier. Pour vérifier si votre périphérique
+Android est compatible USB OTG, il suffit d'installer une application du type
+«USB OTG checker» comme par exemple
+[USB OTG Check Compatibilité](https://play.google.com/store/apps/details?id=com.faitaujapon.otg&hl=fr)
+
+2. Il faut aussi un câble USB OTG *On-The-Go* (environ 3€) pour brancher le
+   cable Arduino sur le port USB du téléphone.
+
+   ![img]({{ site.baseurl }}/images/arduinoAndroid/USB-OTG.jpg)
+
+3. Il faut enfin évidemment une carte Arduino
 
    - soit une carte Arduino officielle (environ 20€) avec son câble de connexion USB-A - USB-B
 
      ![img]({{ site.baseurl }}/images/arduinoAndroid/unoR3.jpg)
    - soit une carte compatible (moins de 5€) avec son câble de connexion qui peut être USB-A - Micro-USB.
      ![img]({{ site.baseurl }}/images/arduinoAndroid/robotdyn.jpg)
-
-2. Il faut aussi un câble USB OTG *On-The-Go* (environ 3€) pour brancher le
-   cable Arduino sur le port USB du téléphone.
-
-   ![img]({{ site.baseurl }}/images/arduinoAndroid/USB-OTG.jpg)
 
 
 ![img]({{ site.baseurl }}/images/arduinoAndroid/cablage.jpg)
