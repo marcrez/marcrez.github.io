@@ -17,14 +17,14 @@ dans cet article.
 
 ## Le matériel nécessaire
 
-1. La tablette/smartphone Android doit être compatible USB OTG. Cela signifie
+1. La tablette/smartphone Android doit être compatible USB OTG *On-The-Go*. Cela signifie
 que le port Micro-USB peut servir d'USB-Host, autrement dit, qu'il est capable
 de recevoir une clé USB ou un clavier. Pour vérifier si votre périphérique
 Android est compatible USB OTG, il suffit d'installer une application du type
 «USB OTG checker» comme par exemple
 [USB OTG Check Compatibilité](https://play.google.com/store/apps/details?id=com.faitaujapon.otg&hl=fr)
 
-2. Il faut aussi un câble USB OTG *On-The-Go* (environ 3€) pour brancher le
+2. Il faut aussi un câble USB OTG  (environ 3€) pour brancher le
    cable Arduino sur le port USB du téléphone.
 
    ![img]({{ site.baseurl }}/images/arduinoAndroid/USB-OTG.jpg)
