@@ -6,6 +6,13 @@ tags: [TeX]
 category: notes
 ---
 
+On le sait, LaTeX est construit sur TeX, le programme original développé par
+Donald Knuth à la fin des années 70. Pourquoi donc s'intéresser à un logiciel
+développé voici trente ans ?!
+
+![TeX](https://i.stack.imgur.com/QAxnD.png)
+
+
 # Introduction à Plain TeX
 
 ## Prérequis
