@@ -2,7 +2,7 @@
 title: Introduction à Plain TeX
 layout: post
 date: 2017-04-28__17:30
-tags: [TeX]
+tags: [tex]
 category: notes
 ---
 
