@@ -149,11 +149,9 @@ se réduisent aux quatre opérations de base mais c'est déjà très bien
     \cntA=-3\cntA              \divide \dimA by -2
     -3cntA : \number\cntA \ --- dimA/(-2) : \the\dimA
 ```
-\begin{center}
     cntA : 3              --- dimA : -3.0pt\\ 
     cntA-2 : 1              --- dimA-2.01 : -5.01pt\\  
     -3*cntA : -3             --- dimA/(-2) : 2.50499pt
-\end{center}
 
 On peut constater que les calculs sont exacts à $10^{-5}$ près.
 
@@ -179,9 +177,7 @@ Application : calcul de discriminant
     et pour $0.25x^2+3x+0.1,\ \Delta=\sanspt\discr$
 ```
 
-\begin{center}
 Pour $5x^2-10x+2,\ \Delta=60$ et pour $5x^2-10x+2,\ \Delta=8.9$
-\end{center}
 
 La définition de la commande `\discriminant` fonctionne ainsi : on commence par
 initialiser la dimension `\discr` avec le contenu du paramètre `#2`, c'est à
