@@ -12,6 +12,8 @@
   name: Vidéo
 - slug: linux
   name: Linux
+- slug: tex
+  name: TeX-LaTeX
 - slug: mysql
   name: MySQL
 - slug: vim
