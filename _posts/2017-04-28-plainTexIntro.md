@@ -89,9 +89,7 @@ Le plus simple est d'en créer soi-même avec des noms sans équivoque
 
 En \number\annee, $\pi$ s'approche de \the\valpi.
 ```
-$$
-\text{En 2017, $\pi$ s'approche de 3.14pt}.
-$$
+En 2017, $\pi$ s'approche de 3.14pt.
 
 On voit que grâce aux commandes `\number` et `\the`, on a pu afficher le
 contenu des registres, avec l'obligatoire unité de dimension pour le registre
@@ -112,9 +110,7 @@ précédent ?
 
 En \the\annee, $\pi$ s'approche de \number\valpi.
 ```
-$$
-\text{En 2017, $\pi$ s'approche de 205783}.
-$$
+En 2017, $\pi$ s'approche de 205783.
 
 Aucun problème pour le compteur `\annee`, tout se passe bien.
 En revanche, en ce qui concerne la dimension `\valpi`, deux choses :
@@ -209,9 +205,7 @@ Il est alors temps de redonner au carctère `@` son statut particulier avec
 ```
 \annee=2017 \the\annee { \annee=1977 -- \the\annee } -- \the\annee
 ```
-$$
-\text{ 2017 -- 1977 -- 2017}
-$$
+2017 -- 1977 -- 2017
 
 # Boucle répétitive
 
