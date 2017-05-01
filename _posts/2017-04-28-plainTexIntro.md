@@ -1,7 +1,9 @@
 ---
-date: 2017-04-28__17:30
-tags: TeX
 title: Introduction à Plain TeX
+layout: post
+date: 2017-04-28__17:30
+tags: [TeX]
+category: notes
 ---
 
 # Introduction à Plain TeX
