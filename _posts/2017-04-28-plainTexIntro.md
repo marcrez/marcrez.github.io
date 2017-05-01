@@ -149,8 +149,8 @@ se réduisent aux quatre opérations de base mais c'est déjà très bien
     \cntA=-3\cntA              \divide \dimA by -2
     -3cntA : \number\cntA \ --- dimA/(-2) : \the\dimA
 ```
-cntA : 3              --- dimA : -3.0pt\\ 
-cntA-2 : 1              --- dimA-2.01 : -5.01pt\\  
+cntA : 3              --- dimA : -3.0pt  
+cntA-2 : 1              --- dimA-2.01 : -5.01pt  
 -3 x cntA : -3             --- dimA/(-2) : 2.50499pt
 
 On peut constater que les calculs sont exacts à $10^{-5}$ près.
