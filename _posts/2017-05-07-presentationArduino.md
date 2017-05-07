@@ -44,11 +44,10 @@ matériel électronique.  Arduino Uno, Genuino, Arduino Nano, Leonardo, Arduino
 mega, Seeduino... sans parler des génériques sans véritable nom.
 
 À l'origine, c'est la carte Arduino Uno qui a fait le succès de ce type de carte.
-Elle a été dévloppée en italie pour rendre l'électronique plus accessible.
-Dans l'ensemble, Arduino est un standard et les cartes faisant référence à ce
-nom sont compatibles dans le sens où les programmes qu'on pourra écrire
+Elle a été développée en italie pour rendre l'électronique plus accessible.
+Depuis, Arduino est devenu un standard et les cartes faisant référence à ce
+nom sont compatibles ce qui signifie que les programmes qu'on pourra écrire
 fonctionneront sur toutes.
-
 
 Aujourd'hui, les cartes nommées UNO (Arduino, Genuino et autres r3) sont 
 compatibles et choisir l'une plutôt que l'autre est une question de qualité et 
