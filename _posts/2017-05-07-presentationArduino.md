@@ -59,7 +59,11 @@ Arduino Due, Yun, Leonardo ou Mega.
 Enfin, pour les projets avec un volume ou un poids minimum on choisira 
 les cartes Arduino Nano ou Mini.
 
+Il exte même une version nommée lilypad qui peut être cousue pour s'intégrer
+à un vêtement !
 
+
+# Des idées de projets
 
 
 
