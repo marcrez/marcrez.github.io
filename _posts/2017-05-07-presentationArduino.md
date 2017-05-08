@@ -7,12 +7,9 @@ tags: [electronique, algo, arduino]
 category: raspberrypi
 ---
 
-# Introduction
-
 Comment faire de l'électronique quand on ne sait pas souder, qu'on n'est pas 
 très calé en électicité mais qu'on a déjà un peu programmé, par exemple avec
-Scratch ?
-
+Scratch ?  
 Réponse  : Arduino.
 ![img]({{ site.baseurl }}/images/presentationArduino/arduino.jpg)
 
@@ -62,6 +59,8 @@ les cartes Arduino Nano ou Mini.
 Il exte même une version nommée lilypad qui peut être cousue pour s'intégrer
 à un vêtement !
 
+
+# La programmation d'une carte Arduino
 
 # Des idées de projets
 
