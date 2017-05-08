@@ -18,10 +18,12 @@ Arduino est une carte programmable sur laquelle on peut connecter des capteurs
 (de pression, de luminosité, de mouvement, etc.) pour déclencher des actions sur 
 des moteurs, des diodes, des écans d'affichage, etc.
 
-Les activités d'algorithmique et de programmation peuvent trouver des 
-applications concrètes en robotique en domotique ou pour des expériences
-scientifiques
-ou des réalisations artistiques.
+Les activités d'algorithmique et de programmation peuvent trouver des
+applications concrètes en robotique, pour des expériences scientifiques ou des
+réalisations artistiques.
+Dans le cadre d'EPI, des options ISN ou ICN, on pourra construire des projets
+d'objets interactifs autonomes comme un drone, une station météo ou encore un 
+jeu de lumière.
 
 Arduino présente de nombreux avantages :
 - elle est permet de réaliser des petits projets à la portée de tous grâce à des 
@@ -62,7 +64,7 @@ version nommée lilypad qui peut être cousue pour s'intégrer à un vêtement !
 
 <https://www.arduino.cc/en/Main/Products>
 
-# La programmation d'une carte Arduino
+# Programmation d'une carte Arduino
 
 Programmer une carte arduino, c'est donner des instructions au circuit intégré
 (le mini-ordinateur qui est le cœur de la carte) pour qu'il traite les
@@ -80,13 +82,21 @@ au rythme de 1 seconde la LED de la carte Arduino (pin 13)
 ![img]({{ site.baseurl }}/images/arduinoAndroid/blockly.png)
 
 Pour ceux qui préfèrent écrire le code à la main, il existe des environnements 
-de développement dédiés : à installer ou en ligne : 
+de développement dédiés, à installer ou en ligne : 
 <https://www.arduino.cc/en/main/software>
 
-![img]({{ site.baseurl }}/images/arduinoAndroid/ide.png)
+![img]({{ site.baseurl }}/images/presentationArduino/ide.png)
 
-# Des idées de projets
+# Branchement des composants
 
+Avant de contruire réellement le circuit électrique avec la carte Arduino et
+tous ses composants, il est possible de simuler le montage et de tester le code
+sur une plateforme nommée circuits.io.
+
+Voici par exemple un petit montage pour un jeu de lumières avec quatre diodes électroluminescentes
+(DEL ou LED). La
+
+![img]({{ site.baseurl }}/images/presentationArduino/montage1.png)
 
 
 
