@@ -21,9 +21,14 @@ des moteurs, des diodes, des écans d'affichage, etc.
 Les activités d'algorithmique et de programmation peuvent trouver des
 applications concrètes en robotique, pour des expériences scientifiques ou des
 réalisations artistiques.
+
+Les réalisations autour d'Arduino peuvent être très simples : un jeu de lumière
+ou un télémètre à sonar ou un instrument de musique ne nécessitent aucune
+compétence technique mais demandent un travail sur l'algorithmique qui entre
+tout à fait dans le cadre des nouveaux programmes de mathématiques.  
+
 Dans le cadre d'EPI, des options ISN ou ICN, on pourra construire des projets
-d'objets interactifs autonomes comme un drone, une station météo ou encore un 
-jeu de lumière.
+plus ambitieux comme un drone, une station météo ou un ensemble domotique.
 
 Arduino présente de nombreux avantages :
 - elle est permet de réaliser des petits projets à la portée de tous grâce à des 
