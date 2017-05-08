@@ -40,6 +40,8 @@ On peut être perdu dans l'offre proposée chez les différents marchands de
 matériel électronique.  Arduino Uno, Genuino, Arduino Nano, Leonardo, Arduino
 mega, Seeduino... sans parler des génériques sans véritable nom.
 
+![img]({{ site.baseurl }}/images/presentationArduino/arduino.jpg)
+
 À l'origine, c'est la carte Arduino Uno qui a fait le succès de ce type de carte.
 Elle a été développée en italie pour rendre l'électronique plus accessible.
 Depuis, Arduino est devenu un standard et les cartes faisant référence à ce
@@ -59,6 +61,7 @@ les cartes Arduino Nano ou Mini.
 Il exte même une version nommée lilypad qui peut être cousue pour s'intégrer
 à un vêtement !
 
+<https://www.arduino.cc/en/Main/Products>
 
 # La programmation d'une carte Arduino
 
