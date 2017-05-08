@@ -42,28 +42,48 @@ mega, Seeduino... sans parler des génériques sans véritable nom.
 
 ![img]({{ site.baseurl }}/images/presentationArduino/gamme.png)
 
-À l'origine, c'est la carte Arduino Uno qui a fait le succès de ce type de carte.
-Elle a été développée en italie pour rendre l'électronique plus accessible.
-Depuis, Arduino est devenu un standard et les cartes faisant référence à ce
-nom sont compatibles ce qui signifie que les programmes qu'on pourra écrire
-fonctionneront sur toutes.
+À l'origine, c'est la carte Arduino Uno qui a fait le succès de ce type de
+carte.  Elle a été développée en italie pour rendre l'électronique plus
+accessible.  Depuis, Arduino est devenu un standard et les cartes faisant
+référence à ce nom sont compatibles, ce qui signifie que les programmes qu'on
+pourra écrire pour l'une fonctionneront pour les autres.
 
-Aujourd'hui, les cartes nommées UNO (Arduino, Genuino et autres r3) sont 
-compatibles et choisir l'une plutôt que l'autre est une question de qualité et 
-de prix mais dans l'ensemble la différence n'est pas évidente.
+Aujourd'hui, les cartes nommées UNO quelle qu'en soit la marque sont des clones
+les unes des autres. Le choix est une question de prix et de qualité.
 
-Pour de projets très ambitieux, on pourra se tourner vers les cartes 
-Arduino Due, Yun, Leonardo ou Mega.
+Pour démarrer, les sites marchands proposent des kits contenant une carte
+arduino et divers composants électroniques (capteurs, moteurs, diodes...).  Ces
+kits sont souvent accompagnés de petits manuels pour s'initier sans peine.
 
-Enfin, pour les projets avec un volume ou un poids minimum on choisira 
-les cartes Arduino Nano ou Mini.
-
-Il exte même une version nommée lilypad qui peut être cousue pour s'intégrer
-à un vêtement !
+Pour de projets très ambitieux, on pourra se tourner vers les cartes Arduino
+Yun, Leonardo ou Mega.  Si le volume ou le poids sont des critères, on choisira
+les cartes Arduino Nano ou Mini. L'offre est très étoffée ; Il existe même une
+version nommée lilypad qui peut être cousue pour s'intégrer à un vêtement !
 
 <https://www.arduino.cc/en/Main/Products>
 
 # La programmation d'une carte Arduino
+
+Programmer une carte arduino, c'est donner des instructions au circuit intégré
+(le mini-ordinateur qui est le cœur de la carte) pour qu'il traite les
+informations données par les capteurs et envoie des informations aux
+actionneurs qui vont agir sur le monde physique.
+
+Pour programmer, on peut commencer en utilisant des environnements de
+développement par blocs qui ressemeblent à Scratch
+
+- BlocklyDuino : <http://easycoding.tn/bde/demos/code/?lang=fr>
+- Blockly@rduino : <http://www.techmania.fr/BlocklyDuino/>
+
+Voici une exemple dans lequel 4 blocs ont été disposés pour faire clignoter
+au rythme de 1 seconde la LED de la carte Arduino (pin 13)
+![img]({{ site.baseurl }}/images/arduinoAndroid/blockly.png)
+
+Pour ceux qui préfèrent écrire le code à la main, il existe des environnements 
+de développement dédiés : à installer ou en ligne : 
+<https://www.arduino.cc/en/main/software>
+
+![img]({{ site.baseurl }}/images/arduinoAndroid/ide.png)
 
 # Des idées de projets
 
