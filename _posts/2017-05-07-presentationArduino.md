@@ -97,7 +97,5 @@ Voici par exemple un petit montage pour un jeu de lumières avec quatre diodes
 électroluminescentes (DEL ou LED). À gauche le montage en cours de construction
 sur circuits.io et à droite le montage réalisé.
 
-[montage pour un jeu de lumières](http://www.url.com)
-
 ![img]({{ site.baseurl }}/images/presentationArduino/montage1.png)
 
