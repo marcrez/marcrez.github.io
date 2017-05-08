@@ -40,7 +40,7 @@ On peut être perdu dans l'offre proposée chez les différents marchands de
 matériel électronique.  Arduino Uno, Genuino, Arduino Nano, Leonardo, Arduino
 mega, Seeduino... sans parler des génériques sans véritable nom.
 
-![img]({{ site.baseurl }}/images/presentationArduino/arduino.jpg)
+![img]({{ site.baseurl }}/images/presentationArduino/gamme.png)
 
 À l'origine, c'est la carte Arduino Uno qui a fait le succès de ce type de carte.
 Elle a été développée en italie pour rendre l'électronique plus accessible.
