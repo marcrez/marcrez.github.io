@@ -99,7 +99,7 @@ tous ses composants, il est possible de simuler le montage et de tester le code
 sur une plateforme nommée circuits.io.
 
 Voici par exemple un petit montage pour un jeu de lumières avec quatre diodes
-électroluminescentes (DEL ou LED). À gauche le montage en cours de construction
+électroluminescentes (LED). À gauche le montage en cours de construction
 sur circuits.io et à droite le montage réalisé.
 
 ![img]({{ site.baseurl }}/images/presentationArduino/montage1.png)
