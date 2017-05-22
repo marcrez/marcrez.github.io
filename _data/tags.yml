@@ -4,8 +4,6 @@
   name: Raspberrypi
 - slug: python
   name: Python
-- slug: pandoc
-  name: Pandoc
 - slug: bash
   name: Bash
 - slug: video
@@ -18,8 +16,8 @@
   name: MySQL
 - slug: vim
   name: Vim
-- slug: pandoc
-  name: Pandoc
+- slug: drupal
+  name: Drupal
 - slug: twig
   name: Twig
 - slug: symfony

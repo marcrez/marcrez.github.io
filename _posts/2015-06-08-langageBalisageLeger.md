@@ -2,7 +2,7 @@
 title: Balisage léger et conversion de documents
 layout: post
 date: 2015-06-08 13:30:00
-tags: [markdown, pandoc]
+tags: [markdown]
 category: notes
 ---
 
