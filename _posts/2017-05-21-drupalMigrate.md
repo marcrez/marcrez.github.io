@@ -36,11 +36,11 @@ $ drush en migrate migrate_source_csv migrate_plus migrate_tools
 
 Nous disposons de données sous la forme d'un fichier csv. En voici un extrait
 
-id    , vocab  , weight , name  , descr      , code
-"752" , "lang" , "1"    , "ALL" , "ALLEMAND" , "2S11"
-"753" , "lang" , "2"    , "ANG" , "ANGLAIS"  , "2S12"
-"762" , "lang" , "3"    , "ESP" , "ESPAGNOL" , "2S22"
-"765" , "lang" , "4"    , "ITA" , "ITALIEN"  , "2S25"
+    id    , vocab  , weight , name  , descr      , code
+    "752" , "lang" , "1"    , "ALL" , "ALLEMAND" , "2S11"
+    "753" , "lang" , "2"    , "ANG" , "ANGLAIS"  , "2S12"
+    "762" , "lang" , "3"    , "ESP" , "ESPAGNOL" , "2S22"
+    "765" , "lang" , "4"    , "ITA" , "ITALIEN"  , "2S25"
 
 Ce fichier est enregistré dans le dossier `public://langs.csv`
 (cf.**Configuration > Media > Système de fichiers**
@@ -62,7 +62,7 @@ $ drush cex
 Rendez-vous maintenant dans
 **Configuration > Développement > Synchornisation de configuration**
 puis **Importer > Élément individuel**
-(`/admin/config/development/configuration/single/import')
+(`/admin/config/development/configuration/single/importi`)
 
 Concernant le type de configuration, nous choisissons **Migration**
 
@@ -128,8 +128,8 @@ $ drush config-delete nom_de _la_config_a_supprimer
 
 # Lectures
 
-- https://www.drupal.org/docs/8/api/migrate-api/migrate-api-overview
-- https://evolvingweb.ca/blog/drupal-8-migration-migrating-basic-data-part-1
-- https://makina-corpus.com/blog/metier/2016/utiliser-migrate-en-drupal-8
-- https://opc.com.au/media/blog/drupal-8-migrate-source-csv-migrating-structured-taxonomy-terms
-- https://www.drupal.org/docs/8/modules/migrate-source-csv/using-the-migrate-source-csv-plugin
+- <https://www.drupal.org/docs/8/api/migrate-api/migrate-api-overview>
+- <https://evolvingweb.ca/blog/drupal-8-migration-migrating-basic-data-part-1>
+- <https://makina-corpus.com/blog/metier/2016/utiliser-migrate-en-drupal-8>
+- <https://opc.com.au/media/blog/drupal-8-migrate-source-csv-migrating-structured-taxonomy-terms>
+- <https://www.drupal.org/docs/8/modules/migrate-source-csv/using-the-migrate-source-csv-plugin>
