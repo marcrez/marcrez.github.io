@@ -18,6 +18,8 @@
   name: MySQL
 - slug: vim
   name: Vim
+- slug: pandoc
+  name: Pandoc
 - slug: twig
   name: Twig
 - slug: symfony
