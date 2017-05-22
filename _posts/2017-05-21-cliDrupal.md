@@ -7,6 +7,12 @@ tags: [drupal]
 category: raspberrypi
 ---
 
+Administrer Drupal depuis la ligne de commande présente de nombreux
+avantages. Nous allons en voir ici quelques-uns.
+![Twig](https://raw.githubusercontent.com/drush-ops/drush/master/drush_logo-black.png)
+
+# Drush
+
 Télécharger la dernière version
 
 ```
