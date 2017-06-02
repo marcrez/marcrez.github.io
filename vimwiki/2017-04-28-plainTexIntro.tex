@@ -1,0 +1,104 @@
+\section{Introduction à Plain TeX}\label{introduction-uxe0-plain-tex}
+
+\subsection{Prérequis}\label{pruxe9requis}
+
+Connaître LaTeX.
+
+\section{TeX vs LaTeX}\label{tex-vs-latex}
+
+LaTeX est bien différent de TeX.
+
+Pour être compilable par LaTeX, un fichier doit contenir au minimum
+l'instruction de classe de document un groupe document :
+
+\begin{verbatim}
+\documentclass{article}
+\begin{document}
+Hello, world !
+\end{document}
+\end{verbatim}
+
+En ce qui concerne TeX, le fichier est plus simple :
+
+\begin{verbatim}
+Hello, world !
+\bye
+\end{verbatim}
+
+La seule commande nécessaire est \texttt{\textbackslash{}bye} qui clôt
+lance la construction du fichier final au format DVI.
+
+Nombreuses sont les habitudes d'un utilisateur de LaTeX qui ne
+fonctionnent pas avec TeX :
+
+\begin{itemize}
+\tightlist
+\item
+  Les listes
+  \texttt{\textbackslash{}begin\{enumerate\}...\textbackslash{}end\{enumerate\}}
+\item
+  Le chapitrage \texttt{\textbackslash{}section\{...\}},
+  \texttt{\textbackslash{}subsection\{...\}}
+\item
+  Le tailles de police \texttt{\textbackslash{}Huge},
+  \texttt{\textbackslash{}large}, \texttt{\textbackslash{}small}
+\end{itemize}
+
+Avec TeX, il faut tout gérer à la main : créer des compteurs, charger
+des fontes, etc.
+
+En clair pour le travail de rédaction usuel, inutile de s'intéresser aux
+particularités de TeX, les macros LaTeX sont infiniment plus pratiques.
+
+Pourquoi faudrait-il alors se plonger dans l'étude de la version
+originale ? Parce que TeX propose un véritable langage de programmation
+avec des commandes permettant de travailler avec des variables, de
+construire des structures conditionnelles des boucles et aussi des
+procédures.
+
+\subsection{Registres ou Variables}\label{registres-ou-variables}
+
+Pour stocker des valeurs, TeX utilise une notion proche de celle de
+variable typée nommée registre. Nous nous intéressons ici à deux types
+de registres
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{count} pour des nombres entiers
+\item
+  \texttt{dimen} pour des nombres réels avec dimension
+\end{itemize}
+
+Pour son fonctionnement, TeX utilise évidemment de nombreux registres.
+Par exemple pour définir l'espacement entre les lignes, la taille des
+marges ou encore les numéros de page. Il fait donc être prudent quand on
+choisit de modifier un registre. Le plus simple est d'en créer soi-même
+avec des noms sans équivoque
+
+\begin{verbatim}
+\newcount\annee         % défnit le compteur \annee
+\annee=2017             % assigne 2017 au compteur
+\newdimen\valpi         % définit la dimension \valpi
+\valpi=3.14pt           % assigne 3.14pt à la dimension
+
+En \number\annee, $\pi$ s'approche de \the\valpi.
+% renvoie
+% En 2017, π s'approche de 3.14pt.
+\end{verbatim}
+
+\begin{longtable}[c]{@{}rllc@{}}
+\caption{Demonstration of pipe table syntax.}\tabularnewline
+\toprule
+Right & Left & Default & Center\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+Right & Left & Default & Center\tabularnewline
+\midrule
+\endhead
+12 & 12 & 12 & 12\tabularnewline
+123 & 123 & 123 & 123\tabularnewline
+1 & 1 & 1 & 1\tabularnewline
+\bottomrule
+\end{longtable}

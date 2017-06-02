@@ -1,0 +1,26 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdftex 2016.4.23)  1 MAY 2017 12:53
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**2017-04-28-plainTexIntro.md
+(./2017-04-28-plainTexIntro.md
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.2 date: 2017-04-28_
+                     _17:30
+? 
+! Missing { inserted.
+<to be read again> 
+                   _
+l.2 date: 2017-04-28__
+                      17:30
+? x
+No pages of output.
+PDF statistics:
+ 0 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
