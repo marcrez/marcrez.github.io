@@ -7,7 +7,7 @@ tags: [drupal]
 category: raspberrypi
 ---
 
-Migrate est un module qui permet d'importer des données dans des entités
+Migrate est excellent un module qui permet d'importer des données dans des entités
 existantes.
 Nous nous instéressons ici à Migrate pour Drupal 8. Le module est déjà présent
 dans le cœur mais non actif, de plus pour réussir à injecter des données issues
