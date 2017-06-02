@@ -7,13 +7,8 @@ tags: [drupal]
 category: raspberrypi
 ---
 
-<<<<<<< HEAD:vimwiki/2017-05-21-drupalMigrate.md
-Migrate est formidable un module qui permet d'importer des données dans des
-entités existantes.
-=======
-Migrate est excellent un module qui permet d'importer des données dans des entités
+Migrate est un module qui permet d'importer des données dans des entités
 existantes.
->>>>>>> reverting:_posts/2017-05-21-drupalMigrate.md
 Nous nous instéressons ici à Migrate pour Drupal 8. Le module est déjà présent
 dans le cœur mais non actif, de plus pour réussir à injecter des données issues
 de fichiers csv, nous allons installer des modules supplémentaires.
