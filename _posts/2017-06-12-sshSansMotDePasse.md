@@ -3,7 +3,7 @@ title: Se connecter en SSH sans mot de passe
 permalink: sshSansMotDePasse
 layout: post
 date: 2017-06-12
-tags: [linux, shell]
+tags: [linux, bash]
 ---
 
 Pour se connecter via SSH sur une machine distante, on peut éviter la saisie
