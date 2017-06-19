@@ -10,7 +10,6 @@ tags: [linux, vim]
 Cela faisait longtemps que je cherchais un moyen simple et efficace pour
 rédiger des notes, des memos et autres TODO lists synchronisées à la fois sur
 téléphone et editables avec mon editeur préféré ordinateur.
-
 ![img]({{ site.baseurl }}/images/notes_vim_android/iA.png)
 
 # Premiers essais avec Evernote et Google Keep
