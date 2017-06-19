@@ -1,5 +1,10 @@
---- title: Prendre des notes avec Vim (et android) permalink:
-notes_vim_et_android layout: post date: 2017-06-12 tags: [linux, vim] ---
+---
+title: Prendre des notes avec Vim (et android)
+permalink: notes_vim_et_android
+layout: post
+date: 2017-06-12
+tags: [linux, vim]
+---
 
 
 Cela faisait longtemps que je cherchais un moyen simple et efficace pour
