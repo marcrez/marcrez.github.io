@@ -2,11 +2,13 @@
 title: Drupal 8 and Git
 permalink: drupal8-and-git
 layout: post
-date: 2017-06-12
+date: 2018-03-04
 tags: [drupal]
 ---
 
 
+
+Maintenir un site drupal 8 en prod cohérent avec la pré-prod grâce à drush et git.
 
 # En pré-prod
 
