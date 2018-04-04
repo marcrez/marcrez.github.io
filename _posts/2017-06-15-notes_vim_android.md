@@ -50,6 +50,7 @@ peu de temps avec JotterPad qui est très bon dans sa version payante (environ
 5€).  Finalement, j'ai choisi iA Writer qui répond à tous les critères et
 dispose en plus d'un raccourci pour créer et utiliser des todo lists comme
 celle-ci
+
     - [x] écrire un article
     - [ ] publier un article
 
