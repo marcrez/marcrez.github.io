@@ -9,8 +9,6 @@ tags: [vim]
 Ultisnips est capable de transformer ce que vous tapez en à peu près ce que vous
 voulez. Un exemple.
 
-# Ultisnips slugify
-
 On souhaite ici taper un titre et générer un permalien à partir de ce titre.
 Nous aurons besoin des modules `re` (généralement installé par défaut) et 
 `unidecode` qu'on installera au besoin.
