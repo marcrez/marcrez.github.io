@@ -2,11 +2,13 @@
 title: gbJmeB
 permalink: gbJmeB
 layout: post
-date: 2019-02-24
+date: 2019-02-24 19:04:10
 tags: [ellipses]
+category: ellipses
 ---
 
-```latex\begin{tikzpicture}[bend angle=25, scale=2]
+```latex
+\begin{tikzpicture}[bend angle=25, scale=2]
 \tikzstyle{vide}=[inner sep=0pt, minimum width=0pt]
 
 \foreach \a [count = \noeud] in {0,51.429,...,360}

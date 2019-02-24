@@ -2,11 +2,13 @@
 title: yF7tW6
 permalink: yF7tW6
 layout: post
-date: 2019-02-24
+date: 2019-02-24 19:04:10
 tags: [ellipses]
+category: ellipses
 ---
 
-```latex\begin{tikzpicture}
+```latex
+\begin{tikzpicture}
 % Les points M, P et Q
 \tkzDefPoint(0,0){M}
 \tkzDefPoint(1.5,3){P}

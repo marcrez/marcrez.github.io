@@ -2,11 +2,13 @@
 title: baxhwp
 permalink: baxhwp
 layout: post
-date: 2019-02-24
+date: 2019-02-24 19:04:10
 tags: [ellipses]
+category: ellipses
 ---
 
-```latex% Voici un cadre de dessin dans une ligne de texte.
+```latex
+% Voici un cadre de dessin dans une ligne de texte.
   % \begin{tikzpicture}
     % \draw (0,0) circle (2mm);
   % \end{tikzpicture}

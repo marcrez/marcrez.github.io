@@ -2,11 +2,13 @@
 title: CJp5MX
 permalink: CJp5MX
 layout: post
-date: 2019-02-24
+date: 2019-02-24 19:04:10
 tags: [ellipses]
+category: ellipses
 ---
 
-```latex\begin{tikzpicture}[node distance=2.5cm]
+```latex
+\begin{tikzpicture}[node distance=2.5cm]
 \node(g){$G$};
 \node(im)  [right of=g] {$\mathrm{im}(f)$};
 \node(quo) [below of=g] {$G/\ker(f)$};

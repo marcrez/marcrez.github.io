@@ -2,11 +2,13 @@
 title: msTxKh
 permalink: msTxKh
 layout: post
-date: 2019-02-24
+date: 2019-02-24 19:04:10
 tags: [ellipses]
+category: ellipses
 ---
 
-```latex\framebox[4cm]{texte 1}
+```latex
+\framebox[4cm]{texte 1}
 
 \framebox[4cm][l]{texte 2}
 

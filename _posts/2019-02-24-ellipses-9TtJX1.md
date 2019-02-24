@@ -2,11 +2,13 @@
 title: 9TtJX1
 permalink: 9TtJX1
 layout: post
-date: 2019-02-24
+date: 2019-02-24 19:04:10
 tags: [ellipses]
+category: ellipses
 ---
 
-```latex\begin{enumerate}
+```latex
+\begin{enumerate}
   \item Un document \LaTeX{} est :
   \begin{enumerate}
     \item rigoureux

@@ -2,11 +2,13 @@
 title: w5NjKC
 permalink: w5NjKC
 layout: post
-date: 2019-02-24
+date: 2019-02-24 19:04:10
 tags: [ellipses]
+category: ellipses
 ---
 
-```latex\newtheorem{thm}{Théorème}[section]
+```latex
+\newtheorem{thm}{Théorème}[section]
 \newtheorem{coro}{Corollaire}[thm]
 
 \section{Élements}

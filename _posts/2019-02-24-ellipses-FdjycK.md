@@ -2,11 +2,13 @@
 title: FdjycK
 permalink: FdjycK
 layout: post
-date: 2019-02-24
+date: 2019-02-24 19:04:10
 tags: [ellipses]
+category: ellipses
 ---
 
-```latex\begin{tikzpicture}[scale=1.5]
+```latex
+\begin{tikzpicture}[scale=1.5]
 \draw[->, thick] (-1.3,0) -- (1.3,0);
 \draw[->, thick] (0,-1.3) -- (0,1.3);
 \foreach \x in {-1,1}

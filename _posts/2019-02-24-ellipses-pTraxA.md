@@ -2,11 +2,13 @@
 title: pTraxA
 permalink: pTraxA
 layout: post
-date: 2019-02-24
+date: 2019-02-24 19:04:10
 tags: [ellipses]
+category: ellipses
 ---
 
-```latex\begin{tikzpicture}
+```latex
+\begin{tikzpicture}
 \draw[step=.25cm,lightgray,very thin]
      (-3,-1) grid (1,2);
 \draw[->, thick] (-3,0) -- (1,0);

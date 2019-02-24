@@ -2,11 +2,13 @@
 title: 4KTJkJ
 permalink: 4KTJkJ
 layout: post
-date: 2019-02-24
+date: 2019-02-24 19:04:10
 tags: [ellipses]
+category: ellipses
 ---
 
-```latex\newenvironment{extraitter}[1]
+```latex
+\newenvironment{extraitter}[1]
 {\og \def\foo{#1}}
 {\fg{}\begin{flushright}
         \textsc \foo

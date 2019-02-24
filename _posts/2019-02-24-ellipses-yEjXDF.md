@@ -2,11 +2,13 @@
 title: yEjXDF
 permalink: yEjXDF
 layout: post
-date: 2019-02-24
+date: 2019-02-24 19:04:10
 tags: [ellipses]
+category: ellipses
 ---
 
-```latex% \begin{tikzpicture}
+```latex
+% \begin{tikzpicture}
 % \draw[step=.5cm,gray,very thin] (-3,-1) grid (3,2);
 % \draw[->, thick] (-3,0) -- (3,0);
 % \draw[->, thick] (0,-1) -- (0,2);

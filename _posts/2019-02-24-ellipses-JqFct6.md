@@ -2,11 +2,13 @@
 title: JqFct6
 permalink: JqFct6
 layout: post
-date: 2019-02-24
+date: 2019-02-24 19:04:10
 tags: [ellipses]
+category: ellipses
 ---
 
-```latex\begin{tikzpicture}[very thin]
+```latex
+\begin{tikzpicture}[very thin]
 
 \foreach \a/\b/\label/\p in
 { 0/158.4/Pacifique/44,

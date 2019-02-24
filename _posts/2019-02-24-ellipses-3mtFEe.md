@@ -2,11 +2,13 @@
 title: 3mtFEe
 permalink: 3mtFEe
 layout: post
-date: 2019-02-24
+date: 2019-02-24 19:04:10
 tags: [ellipses]
+category: ellipses
 ---
 
-```latex\begin{tikzpicture}[scale=0.5]
+```latex
+\begin{tikzpicture}[scale=0.5]
 \foreach \a in {0,30,...,330} {
   \draw[lightgray,thin] (0,0)--(\a:3);
  \draw (\a:3.4) node{\a}; }

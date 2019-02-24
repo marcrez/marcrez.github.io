@@ -2,11 +2,13 @@
 title: nDfKnQ
 permalink: nDfKnQ
 layout: post
-date: 2019-02-24
+date: 2019-02-24 19:04:10
 tags: [ellipses]
+category: ellipses
 ---
 
-```latex\begin{tikzpicture}[bend angle=20]
+```latex
+\begin{tikzpicture}[bend angle=20]
   \tikzstyle{dblanc}=[circle, draw, inner sep=0pt, minimum width=6pt]
   \node[dblanc] (A) at (0,0) {};
   \node[dblanc] (B) at (1,1) {};

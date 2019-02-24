@@ -2,11 +2,13 @@
 title: M96qBa
 permalink: M96qBa
 layout: post
-date: 2019-02-24
+date: 2019-02-24 19:04:10
 tags: [ellipses]
+category: ellipses
 ---
 
-```latex\begin{tikzpicture}
+```latex
+\begin{tikzpicture}
 \matrix[nodes={draw,circle}, row sep=0.5cm,
                              column sep=0.5cm] {
   \node (a){A}; & \node (b){B}; & \node (c){C}; \\

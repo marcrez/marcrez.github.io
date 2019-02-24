@@ -2,11 +2,13 @@
 title: tB43EE
 permalink: tB43EE
 layout: post
-date: 2019-02-24
+date: 2019-02-24 19:04:10
 tags: [ellipses]
+category: ellipses
 ---
 
-```latex\documentclass{article}
+```latex
+\documentclass{article}
 \usepackage{index}
 \makeidx
 \begin{document}

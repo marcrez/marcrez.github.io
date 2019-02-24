@@ -2,11 +2,13 @@
 title: PxRNG6
 permalink: PxRNG6
 layout: post
-date: 2019-02-24
+date: 2019-02-24 19:04:10
 tags: [ellipses]
+category: ellipses
 ---
 
-```latex\begin{tikzpicture}
+```latex
+\begin{tikzpicture}
 \tikzstyle{noir}=[circle, draw, fill=black, inner sep=0pt, minimum width=6pt]
 \tikzstyle{blanc}=[circle, draw, inner sep=0pt, minimum width=6pt]
 \tikzstyle{fleche} = [draw,thick,->,>=latex]

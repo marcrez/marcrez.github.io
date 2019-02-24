@@ -2,11 +2,13 @@
 title: wDgXXX
 permalink: wDgXXX
 layout: post
-date: 2019-02-24
+date: 2019-02-24 19:04:10
 tags: [ellipses]
+category: ellipses
 ---
 
-```latex\tikzset{
+```latex
+\tikzset{
   LabelStyle/.style = { rectangle, rounded corners, draw, fill=white},
   VertexStyle/.append style = { inner sep=5pt},
   EdgeStyle/.append style = {->, bend left} }

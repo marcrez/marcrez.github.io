@@ -2,11 +2,13 @@
 title: RbaxkS
 permalink: RbaxkS
 layout: post
-date: 2019-02-24
+date: 2019-02-24 19:04:10
 tags: [ellipses]
+category: ellipses
 ---
 
-```latex\begin{tikzpicture}[xscale=0.6,yscale=0.06]
+```latex
+\begin{tikzpicture}[xscale=0.6,yscale=0.06]
 \draw[<->] (0,45)--(0,0)--(7,0);
 \foreach \x in {1,2,...,6}
   \draw (\x,-4) node{\x};

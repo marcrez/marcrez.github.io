@@ -2,11 +2,13 @@
 title: ngJjI9
 permalink: ngJjI9
 layout: post
-date: 2019-02-24
+date: 2019-02-24 19:04:10
 tags: [ellipses]
+category: ellipses
 ---
 
-```latex\section{Chimie \label{chimie}}
+```latex
+\section{Chimie \label{chimie}}
 On parle de molécules.
 
 \section{Biologie}

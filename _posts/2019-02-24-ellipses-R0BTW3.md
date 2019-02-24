@@ -2,11 +2,13 @@
 title: R0BTW3
 permalink: R0BTW3
 layout: post
-date: 2019-02-24
+date: 2019-02-24 19:04:10
 tags: [ellipses]
+category: ellipses
 ---
 
-```latex\[ I_n = \left(
+```latex
+\[ I_n = \left(
  \begin{array}{c|ccc}
  1     &0& \cdots & 0 \\
  \hline

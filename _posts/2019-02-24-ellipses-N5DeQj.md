@@ -2,11 +2,13 @@
 title: N5DeQj
 permalink: N5DeQj
 layout: post
-date: 2019-02-24
+date: 2019-02-24 19:04:10
 tags: [ellipses]
+category: ellipses
 ---
 
 ```latex
+
 \begin{tikzpicture}
  \tikzstyle{ligne} = [draw,thick,-]
  \tikzstyle{plots}=[circle, draw,fill=black, inner sep=0pt]

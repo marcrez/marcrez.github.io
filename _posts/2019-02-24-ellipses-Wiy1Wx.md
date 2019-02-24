@@ -2,11 +2,13 @@
 title: Wiy1Wx
 permalink: Wiy1Wx
 layout: post
-date: 2019-02-24
+date: 2019-02-24 19:04:10
 tags: [ellipses]
+category: ellipses
 ---
 
-```latex\renewcommand{\arraystretch}{2}
+```latex
+\renewcommand{\arraystretch}{2}
 
 \begin{tabular}{|l|c|c|r}
   \cline{1-3}

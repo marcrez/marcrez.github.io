@@ -2,11 +2,13 @@
 title: S8NqxD
 permalink: S8NqxD
 layout: post
-date: 2019-02-24
+date: 2019-02-24 19:04:10
 tags: [ellipses]
+category: ellipses
 ---
 
-```latex\begin{tikzpicture}
+```latex
+\begin{tikzpicture}
 \begin{tikzpicture}[xscale=1,yscale=0.5]
 % Les points A, B et C
 \tkzDefPoint(4,-0.5){B} \tkzDefPoint(3,1){C} \tkzDefPoint(2,0){D}

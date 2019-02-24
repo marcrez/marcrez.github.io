@@ -2,11 +2,13 @@
 title: qj6JpX
 permalink: qj6JpX
 layout: post
-date: 2019-02-24
+date: 2019-02-24 19:04:10
 tags: [ellipses]
+category: ellipses
 ---
 
-```latexQuelques mots pour
+```latex
+Quelques mots pour
 montrer\label{MaReference}
 le fonctionnement du système.
 
