@@ -1,6 +1,6 @@
 ---
-title: k278hY
-permalink: k278hY
+title: k278hZ
+permalink: k278hZ
 layout: post
 date: 2019-02-24
 tags: [ellipses]
@@ -8,7 +8,7 @@ tags: [ellipses]
 
 
 ```latex
-Que préférez-vous ?
+Que préférez-vous oooooooooooooooooooooooooooooo ?
 \[
 | \int_0^{+\infty}f(t)dt |
 \quad \text{ ou } \quad
