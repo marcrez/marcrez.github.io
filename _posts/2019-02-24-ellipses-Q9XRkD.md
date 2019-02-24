@@ -3,6 +3,8 @@ title: Q9XRkD
 permalink: Q9XRkD
 layout: post
 date: 2019-02-24
+tags: [bash]
+category: ellipses
 ---
 
 ```latex
