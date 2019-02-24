@@ -3,7 +3,7 @@ title: X3w1Nt
 permalink: X3w1Nt
 layout: post
 date: 2019-02-24 19:04:10
-tags: [ellipses]
+tags: []
 category: ellipses
 ---
 
