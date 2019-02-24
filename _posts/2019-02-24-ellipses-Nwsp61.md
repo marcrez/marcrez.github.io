@@ -1,6 +1,6 @@
 ---
-title: Q9XRkD
-permalink: Q9XRkD
+title: Nwsp61
+permalink: Nwsp61
 layout: post
 date: 2019-02-24 19:04:10
 category: ellipses
@@ -11,10 +11,9 @@ category: ellipses
 % -----------------
 \usepackage{siunitx}
 \sisetup{locale = FR,
-    inter-unit-product = \ensuremath{ {}\cdot{}}}
+         group-digits = integer,
+         exponent-product = \cdot}
 % -----------------
 
-\si{\meter\joule\per\second\tothe{3}}
-
-\si[per-mode=symbol]{\meter\joule\per\second\tothe{3}}
+\num{12345.678912} \num{6,02e23}
 ```
