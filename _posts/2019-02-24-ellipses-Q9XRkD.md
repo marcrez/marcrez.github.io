@@ -1,7 +1,7 @@
 ---
 title: Q9XRkD
 permalink: Q9XRkD
-layout: post
+layout: page
 date: 2019-02-24
 tags: [bash]
 category: ellipses
