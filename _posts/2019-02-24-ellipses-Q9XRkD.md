@@ -8,7 +8,7 @@ Dans le préambule
 ```latex
 \usepackage{siunitx}
 \sisetup{locale = FR,
-    inter-unit-product = \ensuremath{{}\cdot{}}}
+    inter-unit-product = \ensuremath{ {}\cdot{}}}
 ```
 
 
