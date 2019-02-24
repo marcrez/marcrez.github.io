@@ -4,4 +4,8 @@ permalink: Q9XRkD
 layout: page
 ---
 
-Oh lala
+```latex
+\si{\meter\joule\per\second\tothe{3}}
+
+\si[per-mode=symbol]{\meter\joule\per\second\tothe{3}}
+```
