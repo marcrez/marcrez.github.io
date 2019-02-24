@@ -3,7 +3,6 @@ title: 1YQQ3N
 permalink: 1YQQ3N
 layout: post
 date: 2019-02-24 19:04:10
-tags: []
 category: ellipses
 ---
 

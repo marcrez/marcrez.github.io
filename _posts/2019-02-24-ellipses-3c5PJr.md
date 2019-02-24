@@ -3,7 +3,6 @@ title: 3c5PJr
 permalink: 3c5PJr
 layout: post
 date: 2019-02-24 19:04:10
-tags: []
 category: ellipses
 ---
 
