@@ -2,10 +2,10 @@
 title: Q9XRkD
 permalink: Q9XRkD
 layout: post
-date: 2017-01-04 20:31:00
-tags: [arduino, electronique]
-category: arduino
+date: 2019-02-24
+tags: [ellipses]
 ---
+
 
 ```latex
 % Dans le préambule
